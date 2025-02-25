@@ -1,0 +1,598 @@
+/* home */
+
+#mynetworkBackground {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  transition: transform 0.1s;
+}
+
+#home {
+  display: none;
+}
+.shift-cursor {
+  cursor: crosshair !important;
+}
+
+
+/* Custom cursor */
+.custom-cursor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #e02c2c;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 100;
+  pointer-events: none;
+  transition: transform 0.1s ease, background-color 0.3s ease;
+  mix-blend-mode: difference;
+}
+
+
+
+nav {
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+.navtitle {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+
+/* Reset CSS cơ bản */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: rgb(244, 234, 222);
+  
+}
+
+header {
+  background-color: #202e3e; /* Màu nền header */
+  padding-top: 10px;
+  margin: 0px;
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+
+.navigation {
+  text-shadow: 1px 1px rgb(38, 38, 38);
+}
+.navigation-checked{
+  color: #fff4b7;
+  text-shadow: 2px 2px rgb(38, 38, 38);
+}
+
+
+.navigation:hover {
+  color: #fff4b7; /* Chuyển màu chữ khi hover */
+  text-shadow: #fafa82 2px;
+  transform: scale(1.03);
+  transition: transform 0.3s ease;
+}
+
+
+
+
+
+main {
+  margin: 10px;
+  display: flex;
+  
+}
+
+h1 {
+  text-align: center;
+  margin: 10px auto;
+  width: fit-content;
+}
+
+h2 {
+  text-align: center;
+  margin: 10px 0 !important;
+  font-size: 20px !important;
+  font-weight: bold !important;
+  
+}
+
+
+
+
+
+.container {
+  display: flex;
+  flex-direction: column; /* Chuyển các phần tử vào hàng dọc */
+  align-items: center; /* Căn chỉnh các phần tử theo chiều dọc */
+  margin: 10px 10px;
+  padding: 20px;
+  border: 2px solid #7e7e7e;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+#formbox {
+  height: fit-content;
+  width: 230px;
+  min-width: 230px;
+}
+#munberNodes {
+  grid-area: munberNodes;
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+#graphOption {
+  display: flex;
+  flex-direction: column;
+  grid-area: graphOption;
+  gap: 0px;
+  width: 100%;
+  margin: 10px 0;
+}
+
+
+
+
+
+
+
+
+
+
+/* Thêm hiệu ứng tập trung (focus) */
+#nodes,
+textarea,
+#startNode {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  resize: none;
+}
+
+#nodes:focus,
+#startNode:focus {
+  border-color: #218a24;
+  background-color: #f0f8ff;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(106, 90, 205, 0.5);
+}
+
+textarea:focus {
+  border-color: #218a24;
+  background-color: #f0f8ff;
+  transform: scale(1.02);
+  box-shadow: 0 0 15px rgba(106, 90, 205, 0.5);
+}
+
+/* Hiệu ứng khi hover vào ô input */
+#nodes:hover,
+textarea:hover,
+#startNode:hover {
+  background-color: #f9f9f9;
+  border-color: #4caf50;
+}
+
+/* Nhãn tương tác */
+label {
+  transition: color 0.3s ease-in-out;
+}
+
+input:focus + label {
+  color: #6a5acd;
+}
+
+
+
+.listedges {
+  grid-area: listedges;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.graph-container{
+  position: relative;
+  padding: 0;
+}
+#mynetwork {
+  width: 100%;
+  height: 100%;
+  min-width: auto;
+  border: 0px solid #7e7e7e;
+  border-radius: 7px;
+  padding: 0;
+  background-color:  #f9f9f9;
+
+}
+
+
+#zoomExtendsButton{
+  z-index: 10;
+  position: absolute;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 10px;
+  bottom: 5px;
+  right: 5px;
+  border-radius: 50%;
+}
+#zoomExtendsButton:hover {
+  background-color: #54a0b391;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transform: scale(1.1); /* Phóng to icon khi hover */
+}
+
+#zoomExtendsButton:active {
+  transform: scale(0.9); /* Thu nhỏ icon khi click */
+}
+
+
+
+/* Container for the switch */
+.switch {
+  display: inline-flex;
+  align-items: center;
+  font-family: sans-serif;
+  font-size: 16px;
+  color: #000000;
+  cursor: pointer;
+}
+
+/* Hide the default checkbox */
+.switch input {
+  display: none;
+}
+
+/* Style for the slider */
+.slider {
+  position: relative;
+  width: 50px;
+  height: 24px;
+  background-color: #ccc;
+  border-radius: 34px;
+  margin: 0 20px 0 auto;
+  transition: background-color 0.3s ease;
+}
+#vedothi div label .slider {
+  margin: 0 0 0 auto;
+}
+/* Circle inside the slider */
+.slider::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* When checked, change the slider's background and move the circle */
+input:checked + .slider {
+  background-color: #4caf50;
+}
+
+input:checked + .slider::before {
+  transform: translateX(26px);
+  background-color: #fff;
+}
+
+/* Add a glowing effect when active */
+input:checked + .slider {
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.6);
+}
+
+label {
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+
+input[type="number"] {
+  width: 69px;
+  padding: 8px !important;
+  margin-left: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  
+  width: 100%;
+  padding: 8px !important;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  
+  
+}
+
+input[type="number"], textarea, textarea::placeholder {
+  font-family: monospace !important; 
+  font-size: 14px !important;
+
+}
+/* Vedothi */
+
+.guild {
+  margin-top: 10px;
+}
+.guild ul {
+  margin-left: 5px;
+}
+
+#controlsform {
+  width: 190px;
+  min-width: 190px;
+  height: fit-content;
+}
+
+#controlsform h3 {
+  font-size: 16px;
+  text-align: center;
+}
+
+#controlsform ul li {
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+/* Duyetdothi */
+
+.typeOfBrowe {
+  margin: 10px 0;
+}
+
+.typeOfBrowe p {
+  font-weight: bold;
+}
+
+.typeOfBrowe div input[type="submit"] {
+  background: linear-gradient(135deg, #006A67, #3f9d99);
+  color: #eeeeee;
+  border: none;
+  padding: 8px 10px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 8px;
+  margin: 5px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+.typeOfBrowe div input[type="submit"]:hover {
+  background: linear-gradient(135deg, #004442, #1c6360);
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.typeOfBrowe div input[type="submit"]:active {
+  transform: translateY(1px);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* duongdingannhat */
+#graphOption .start {
+  display: flex;
+  margin: 5px 0;
+  align-items: center;
+}
+
+.start #startNode {
+  margin-right: 0px;
+  margin-left: auto;
+}
+
+#result {
+  display: none; /* Ẩn mặc định */
+  width: 300px;
+  padding: 15px;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  height: fit-content;
+}
+
+#result h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
+}
+
+#resultTable {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+#resultTable thead {
+  background: #616e7e;
+  color: white;
+  font-weight: bold;
+}
+
+#resultTable th,
+#resultTable td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+#resultTable tbody tr {
+  background: #f9f9f9;
+  transition: background 0.3s ease-in-out;
+}
+
+#resultTable tbody tr:nth-child(even) {
+  background: #f1f1f1;
+}
+
+#resultTable tbody tr:hover {
+  background: #d4edda;
+  transform: scale(1.02);
+  transition: transform 0.2s ease-in-out;
+}
+
+#resultTable td {
+  font-size: 16px;
+  font-weight: 500;
+  color: #555;
+}
+
+/* Hiệu ứng cho ô khoảng cách vô cực */
+#resultTable td:contains("∞") {
+  color: red;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  
+  header a {
+    display: none;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+  .navigation-checked{
+    color: #fff;
+    text-shadow:none;
+  }
+  .navigation {
+    text-shadow: none;
+  }
+  .navigation:hover{
+    color: white
+  }
+
+ 
+  /* Hiển thị menu khi mở */
+
+  main {
+    flex-direction: column;
+    gap: 0;
+    transition: margin-top 0.3s ease;
+    min-height: 1000px;
+  }
+  main.active {
+    margin-top: 100px;
+  }
+
+  #formbox {
+    width: initial;
+    margin: 10px 10px;
+  }
+  #graphOption {
+    gap: 10px;
+  }
+  #mynetwork {
+    width: auto;
+    margin: 10px;
+    min-height: 600px;
+    max-height: 600px;
+  }
+
+  #graphForm {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 80px;
+    grid-template-columns: 40% 60%;
+    grid-template-areas:
+      "munberNodes listedges"
+      "graphOption    listedges";
+    align-items: baseline;
+    gap: 10px;
+  }
+
+  #munberNodes {
+    grid-area: munberNodes;
+    display: flex;
+    flex-direction: column;
+  }
+  #nodes {
+    margin: 0;
+  }
+
+  .listedges {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+  }
+  .switch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 0 auto;
+  }
+  .slider,
+  #vedothi div label .slider {
+    margin: 0 auto;
+  }
+  textarea {
+    height: 200px;
+  
+  }    
+
+
+
+  /* vedothi */
+  #controlsform {
+    width: initial;
+    margin: 0 10px;
+  }
+  #vedothi div #graphOption {
+    flex-direction: row;
+  }
+
+  /* duyedothi */
+
+  .typeOfBrowe div {
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  .typeOfBrowe p {
+    text-align: center;
+  }
+
+  /* duongdingannhat */
+  #graphOption .start {
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .start label {
+    margin: 0;
+  }
+
+  .start #startNode {
+    margin: 0;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+      max-width: 100% !important;
+  }
+}
