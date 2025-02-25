@@ -1,4 +1,4 @@
-import{r as yf,j as V,L as og}from"./index-BST3_XFo.js";import{i as bf,L as wf}from"./index-BE6ZwGK9.js";/**
+import{r as yf,j as V,L as og}from"./index-TLxUcl1b.js";import{i as bf,L as wf}from"./index-BfKMOjw4.js";/**
  * vis-network
  * https://visjs.github.io/vis-network/
  *
