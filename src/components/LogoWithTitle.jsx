@@ -5,7 +5,7 @@ function LogoWithTitle() {
     <>
       <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
         <img
-          src=".\src\assets\img\iconGraphTheory.png"
+          src="./src/assets/img/iconGraphTheory.png"
           className="h-8"
           alt="Logo"
         />

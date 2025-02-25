@@ -5,8 +5,7 @@ import LogoWithTitle from "../components/LogoWithTitle.jsx";
 import  { Background } from "../script/background.js";
 import { initFlowbite } from "flowbite";
 
-
-
+import styles from "../style/homepage.module.css";
 
 const Trangchu = () => {
   useEffect(() => {
@@ -14,14 +13,14 @@ const Trangchu = () => {
     initFlowbite(); 
     // import vis from '/src/tool/vis-network-wrapper.js';
     Background();
+    
   
   }, []);
 
   return (
     <>
      <title>Trang chủ</title>
-     
-      <link rel="stylesheet" href="/public/style/homepage.css"></link>
+     <link rel="stylesheet" href="/src/style/homepage.css"></link>
       <header>
         <nav className="border-gray-200 bg-transparent">
           <div className="flex flex-wrap items-center justify-between mx-auto p-4 gap-[20px]">

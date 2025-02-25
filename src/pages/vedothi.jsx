@@ -43,7 +43,7 @@ const Vedothi = () => {
   return (
     <>
       <title>Vẽ đồ thị</title>
-      <link rel="stylesheet" href="/src/style/style.css"></link>
+      <link rel="stylesheet" href="./src/style/style.css"></link>
 
       <div>
         <header>
