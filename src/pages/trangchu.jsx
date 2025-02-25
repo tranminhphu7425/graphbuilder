@@ -21,7 +21,7 @@ const Trangchu = () => {
     <>
      <title>Trang chủ</title>
      
-      <link rel="stylesheet" href="./src/style/homepage.css"></link>
+      <link rel="stylesheet" href="./public\style\homepage.css"></link>
       <header>
         <nav className="border-gray-200 bg-transparent">
           <div className="flex flex-wrap items-center justify-between mx-auto p-4 gap-[20px]">
