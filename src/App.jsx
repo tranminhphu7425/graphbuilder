@@ -1,0 +1,53 @@
+import React, { Suspense } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+// Lazy load các trang
+const Trangchu = React.lazy(() => import('./pages/trangchu.jsx'));
+const Vedothi = React.lazy(() => import('./pages/vedothi.jsx'));
+const Nhapdothi = React.lazy(() => import('./pages/nhapdothi.jsx'));
+const Duyetdothi = React.lazy(() => import('./pages/duyetdothi.jsx'));
+const Timlienthong = React.lazy(() => import('./pages/timlienthong.jsx'));
+const Duongdingannhat = React.lazy(() => import('./pages/duongdingannhat.jsx'));
+const Xephangdothi = React.lazy(() => import('./pages/xephangdothi.jsx'));
+const Caykhungnhonhat = React.lazy(() => import('./pages/caykhungnhonhat.jsx'));
+const Timluongcucdai = React.lazy(() => import('./pages/timluongcucdai.jsx'));
+
+
+
+
+const Vechungtoi = React.lazy(() => import('./pages/vechungtoi.jsx'));
+const Donate = React.lazy(() => import('./pages/donate.jsx'));
+
+
+import Loading from './components/Loading.jsx';
+
+
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Suspense fallback={<Loading />}>
+      
+        <Routes>
+          <Route path="/" element={<Trangchu />} />
+          <Route path="/vedothi" element={<Vedothi />} />
+          <Route path="/nhapdothi" element={<Nhapdothi />} />
+          <Route path="/duyetdothi" element={<Duyetdothi />} />
+          <Route path="/timlienthong" element={<Timlienthong />} />
+          <Route path="/duongdingannhat" element={<Duongdingannhat />} />
+          <Route path="/xephangdothi" element={<Xephangdothi/>} />
+          <Route path="/caykhungnhonhat" element={<Caykhungnhonhat />} />
+          <Route path="/timluongcucdai" element={<Timluongcucdai />} />
+          <Route path="/vechungtoi" element={<Vechungtoi />} />
+          <Route path="/donate" element={<Donate />} />
+          
+        </Routes>
+        
+      </Suspense>
+    </BrowserRouter>
+  );
+}
+
+export default App;
+
+

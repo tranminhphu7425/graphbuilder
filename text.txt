@@ -1,0 +1,79 @@
+2. Các mục navigation chính
+Dưới đây là các mục navigation bạn có thể triển khai:
+
+2.1. Trang chủ (Home)
+Giới thiệu ngắn gọn về trang web và mục đích.
+
+Các tính năng nổi bật.
+
+Nút bắt đầu nhanh (Quick Start) để vẽ đồ thị.
+
+2.2. Vẽ đồ thị (Draw Graph)
+Công cụ vẽ đồ thị trực quan với giao diện kéo thả.
+
+Tùy chọn loại đồ thị (có hướng, vô hướng, có trọng số).
+
+Thêm/xóa đỉnh (node) và cạnh (edge).
+
+Tùy chỉnh màu sắc, kích thước, nhãn cho đỉnh và cạnh.
+
+2.3. Phân tích đồ thị (Analyze Graph)
+Các công cụ phân tích đồ thị:
+
+Tìm đường đi ngắn nhất (Shortest Path).
+
+Kiểm tra tính liên thông (Connected Components).
+
+Tìm chu trình (Cycle Detection).
+
+Tìm cây khung nhỏ nhất (Minimum Spanning Tree).
+
+Phân tích bậc của đỉnh (Degree Analysis).
+
+Hiển thị kết quả trực quan và chi tiết.
+
+2.4. Thuật toán (Algorithms)
+Danh sách các thuật toán đồ thị được hỗ trợ:
+
+DFS (Depth-First Search).
+
+BFS (Breadth-First Search).
+
+Dijkstra.
+
+Floyd-Warshall.
+
+Kruskal.
+
+Prim.
+
+Giải thích ngắn gọn về từng thuật toán và cách sử dụng.
+
+2.5. Nhập/Xuất đồ thị (Import/Export)
+Nhập đồ thị từ file (JSON, CSV, hoặc định dạng khác).
+
+Xuất đồ thị đã vẽ hoặc phân tích ra file.
+
+Tích hợp với các dịch vụ đám mây (Google Drive, Dropbox).
+
+2.6. Hướng dẫn (Tutorials)
+Hướng dẫn sử dụng từng công cụ.
+
+Ví dụ minh họa về cách vẽ và phân tích đồ thị.
+
+Video hướng dẫn (nếu có).
+
+2.7. Tài nguyên (Resources)
+Tài liệu tham khảo về lý thuyết đồ thị.
+
+Liên kết đến các thư viện đồ thị phổ biến.
+
+Blog hoặc bài viết liên quan.
+
+2.8. Về chúng tôi (About Us)
+Giới thiệu về nhóm phát triển.
+
+Mục đích và tầm nhìn của trang web.
+
+Thông tin liên hệ.
+
