@@ -25,7 +25,7 @@ import Loading from './components/Loading.jsx';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/graphbuilder">
       <Suspense fallback={<Loading />}>
       
         <Routes>
