@@ -1,12 +1,159 @@
-/* home */
+/* homepage */
 
-#mynetworkBackground {
+
+
+
+/* index.css hoặc App.css */
+
+
+
+#trangchu body {
+  font-family: sans-serif;
+  background-color: #202e3e;
+}
+#trangchu header{
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  margin-top: 10px;
+  background-color: transparent;
+  
+}
+#trangchu nav {
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+#trangchu h2 {
+  text-align: left;
+}
+
+#trangchu .gradient-text {
+  background: linear-gradient(
+    to right,
+    #34d399,
+    #4ade80,
+    #a78bfa,
+    #ec4899,
+    #f472b6
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+#trangchu .textAnimation {
+  animation: textAnimation 1.5s ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes textAnimation {
+  from {
+    transform: translateY(40px); /* Bắt đầu từ dưới */
+    opacity: 0; /* Ẩn khi bắt đầu */
+  }
+  to {
+    transform: translateY(0); /* Kết thúc ở vị trí ban đầu */
+    opacity: 1; /* Hiện lên */
+  }
+
+}
+
+
+#trangchu .navigation {
+  text-shadow: 1px 1px rgb(38, 38, 38);
+}
+#trangchu .navigation-checked{
+  color: #fff4b7;
+  text-shadow: 2px 2px rgb(38, 38, 38);
+}
+
+
+#trangchu .navigation:hover {
+  color: #fff4b7; /* Chuyển màu chữ khi hover */
+  text-shadow: #fafa82 2px;
+  transform: scale(1.03);
+  transition: transform 0.3s ease;
+}
+
+
+
+
+#trangchu .bg-gray {
+  background-color: #202e3e;
+}
+
+
+
+#trangchu #mynetworkBackground {
   width: 100%;
   height: 100%;
-  position: absolute;
-  z-index: -1;
-  transition: transform 0.1s;
+  background-color: #ccebbe;
+  
 }
+@media screen and (max-width: 1023px) {
+  #trangchu #mynetworkBackground {
+    height: 800px;
+    pointer-events: none;
+    
+  }
+  #trangchu header {
+    position: relative;
+
+  }
+  #trangchu .transparentColor {
+    background-color: #202e3e;
+  }
+  
+  #trangchu .navigation {
+    text-shadow: none;
+
+  }
+  #trangchu .navigation:hover{
+    color: white
+  }
+  #trangchu header{
+    background-color: #202e3e;
+    margin-top: 0;
+  }
+  
+}
+
+@media screen and (min-width: 1024px) {
+
+  #trangchu #dropdownNavbar1, #dropdownNavbar2 {
+      background-color: rgba(55, 65, 81, 0.866);
+  }
+  
+
+  #trangchu .leftSite{
+    background: rgb(32,46,62);
+    background: linear-gradient(75deg, rgba(32,46,62,1) 0%, rgba(33,48,64,1) 51%, rgba(34,57,102,1) 100%);
+  }
+
+
+}
+
+
+
+
+
+
+@media screen and (max-width: 768px){
+  #trangchu .navigation-checked{
+    color: #fff;
+    text-shadow:none;
+  }
+}
+
+
+
+
+/* home */
+
+
 
 #home {
   display: none;
@@ -99,9 +246,9 @@ h1 {
 
 h2 {
   text-align: center;
-  margin: 10px 0 !important;
-  font-size: 20px !important;
-  font-weight: bold !important;
+  margin: 10px 0 ;
+  font-size: 20px;
+  font-weight: bold ;
   
 }
 
