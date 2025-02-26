@@ -9,6 +9,9 @@ import LogoWithTitle from "../components/LogoWithTitle.jsx";
 
 import { NhapdothiEffect } from "../script/nhapdothi.js";
 import { DuongdingannhatEffect } from "../script/duongdingannhat.js";
+
+import extendable from '/src/assets/img/extendable.png';
+
 import '../style/style.css';
 
 const Duongdingannhat = () => {
@@ -298,7 +301,7 @@ const Duongdingannhat = () => {
         <div className="graph-container container">
           <div id="mynetwork"></div>
           <button id="zoomExtendsButton">
-            <img src="src\assets\img\extendable.png" alt="" width={40} />
+            <img src={extendable}   alt="" width={40} />
           </button>
         </div>
         <div id="result" className="container">
