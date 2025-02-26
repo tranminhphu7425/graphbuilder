@@ -643,7 +643,7 @@ input[type="number"], textarea, textarea::placeholder {
 
   #formbox {
     width: initial;
-    margin: 10px 10px;
+    margin: 0;
   }
   #graphOption {
     gap: 10px;
@@ -698,11 +698,16 @@ input[type="number"], textarea, textarea::placeholder {
   }    
 
 
+  .container{
+    margin: 10px 0;
+  }
+
+
 
   /* vedothi */
   #controlsform {
     width: initial;
-    margin: 0 10px;
+    margin: 0;
   }
   #vedothi div #graphOption {
     flex-direction: row;
