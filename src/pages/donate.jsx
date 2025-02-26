@@ -6,6 +6,10 @@ import { Link } from "react-router-dom";
 
 import LogoWithTitle from "../components/LogoWithTitle.jsx";
 
+import qrPic from "../assets/img/VietcombankDonate.jpg";
+import '../style/style.css';
+
+
 const Donate = () => {
     useEffect(() => {
         configFullPage();
@@ -14,8 +18,8 @@ const Donate = () => {
   return (
     <>
     <title>Donate</title>
-    <link rel="stylesheet" href="/src/style/style.css"></link>
-    <link rel="stylesheet" href="/src/style/mainfull.css"></link>
+   
+   
       <div className=" bg-gray-100 ">
       <header>
           <nav className="border-gray-200 transparentColor">
@@ -191,7 +195,7 @@ const Donate = () => {
           </nav>
         </header>
 
-        <main className="p-8 bg-gray-100">
+        <main className="p-8 bg-gray-100 fullmain">
           <section className="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg">
             <h1 className="text-3xl font-bold text-center mb-6">
               Quyên góp ủng hộ
@@ -257,7 +261,7 @@ const Donate = () => {
                 </div>
 
                 <img
-                  src="src\assets\img\VietcombankDonate.jpg"
+                  src={qrPic}
                   alt=""
                   className="w-[170px] rounded-lg"
                 />

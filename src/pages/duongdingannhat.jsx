@@ -9,6 +9,7 @@ import LogoWithTitle from "../components/LogoWithTitle.jsx";
 
 import { NhapdothiEffect } from "../script/nhapdothi.js";
 import { DuongdingannhatEffect } from "../script/duongdingannhat.js";
+import '../style/style.css';
 
 const Duongdingannhat = () => {
   const [nodes, setNodes] = useState("");
@@ -31,7 +32,7 @@ const Duongdingannhat = () => {
   return (
     <>
       <title>Đường đi ngắn nhất</title>
-      <link rel="stylesheet" href="/src/style/style.css"></link>
+      
       <header>
         <nav className=" border-gray-200">
           <div className="flex flex-wrap items-center justify-between mx-auto p-4 gap-[20px]">

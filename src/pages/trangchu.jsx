@@ -7,6 +7,9 @@ import { initFlowbite } from "flowbite";
 
 import '../style/style.css';
 
+import donatePic from "/src/assets/img/save-money.png";
+
+
 
 const Trangchu = () => {
   useEffect(() => {
@@ -216,7 +219,7 @@ const Trangchu = () => {
                to="/donate"
                className="space-x-2 flex items-center transition-transform duration-300 hover:-translate-y-0.5 hover:shadow-lg px-4 py-3 rounded-full"
              >
-               <img src="src\assets\img\save-money.png" alt="" />
+               <img src={donatePic} alt="" />
                Donate
              </Link>
            </div>

@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 
 import LogoWithTitle from "../components/LogoWithTitle.jsx";
 
+import '../style/style.css';
+
 const Vechungtoi = () => {
   useEffect(() => {
   configFullPage();
@@ -15,8 +17,8 @@ const Vechungtoi = () => {
   return (
     <>
       <title>Về chúng tôi</title>
-      <link rel="stylesheet" href="/src/style/style.css"></link>
-      <link rel="stylesheet" href="/src/style/mainfull.css"></link>
+     
+
       <div className="bg-gray-100">
         <header>
           <nav className="border-gray-200 transparentColor">
@@ -192,7 +194,7 @@ const Vechungtoi = () => {
           </nav>
         </header>
 
-        <main className="p-8 bg-gray-100 h-fit">
+        <main className="p-8 bg-gray-100 h-fit fullmain">
           <section className="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg">
             <h1 className="w-full text-3xl font-bold text-center mb-6">
               Về chúng tôi

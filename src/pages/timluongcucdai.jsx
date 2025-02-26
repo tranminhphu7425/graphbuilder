@@ -10,6 +10,8 @@ import LogoWithTitle from "../components/LogoWithTitle.jsx";
 import { NhapdothiEffect } from "../script/nhapdothi.js";
 import { TimluongcucdaiEffect } from "../script/timluongcucdai.js";
 
+import '../style/style.css';
+
 const Caykhungnhonhat = () => {
   const [nodes, setNodes] = useState("");
   const [edges, setEdges] = useState("");
@@ -28,7 +30,7 @@ const Caykhungnhonhat = () => {
   return (
     <>
       <title>Tìm luồng cực đại trong mạng</title>
-      <link rel="stylesheet" href="/src/style/style.css"></link>
+      
       <header>
         <nav className=" border-gray-200">
           <div className="flex flex-wrap items-center justify-between mx-auto p-4 gap-[20px]">

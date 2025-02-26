@@ -10,6 +10,8 @@ import LogoWithTitle from "../components/LogoWithTitle.jsx";
 import { NhapdothiEffect } from "../script/nhapdothi.js";
 import { TimlienthongEffect } from "../script/timlienthong.js";
 
+import '../style/style.css';
+
 const Timlienthong = () => {
   const [nodes, setNodes] = useState("");
   const [edges, setEdges] = useState("");
@@ -33,7 +35,7 @@ const Timlienthong = () => {
   return (
     <>
       <title>Tìm liên thông mạnh</title>
-      <link rel="stylesheet" href="/src/style/style.css"></link>
+  
       <header>
         <nav className=" border-gray-200">
           <div className="flex flex-wrap items-center justify-between mx-auto p-4 gap-[20px]">

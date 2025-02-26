@@ -10,6 +10,8 @@ import LogoWithTitle from "../components/LogoWithTitle.jsx";
 import { NhapdothiEffect } from "../script/nhapdothi.js";
 import { DuyetdothiEffect } from "../script/duyetdothi.js";
 
+import '../style/style.css';
+
 const Duyetdothi = () => {
   const [nodes, setNodes] = useState("");
   const [edges, setEdges] = useState("");
@@ -30,7 +32,7 @@ const Duyetdothi = () => {
   return (
     <>
       <title>Duyệt đồ thị</title>
-      <link rel="stylesheet" href="/src/style/style.css"></link>
+   
       <header>
         <nav className=" border-gray-200">
           <div className="flex flex-wrap items-center justify-between mx-auto p-4 gap-[20px]">

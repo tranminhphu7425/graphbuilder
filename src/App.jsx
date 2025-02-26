@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter , Routes, Route } from 'react-router-dom';
 
 // Lazy load các trang
 const Trangchu = React.lazy(() => import('./pages/trangchu.jsx'));
@@ -25,7 +25,7 @@ import Loading from './components/Loading.jsx';
 
 function App() {
   return (
-    <BrowserRouter basename="/graphbuilder">
+    <HashRouter >
       <Suspense fallback={<Loading />}>
       
         <Routes>
@@ -44,7 +44,7 @@ function App() {
         </Routes>
         
       </Suspense>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

@@ -1,4 +1,4 @@
-import {useEffect , useState } from "react";
+import { useEffect, useState } from "react";
 
 import adjustHeight from "../tool/adjustHeight.js";
 import configFullPage from "../tool/configfullpage.js";
@@ -9,11 +9,12 @@ import LogoWithTitle from "../components/LogoWithTitle.jsx";
 
 import { VedothiEffect } from "../script/vedothi.js";
 
+import '../style/style.css';
+
 const Vedothi = () => {
   const [isWeightedGraph, setIsWeightedGraph] = useState(false);
   const [isDirected, setIsDirected] = useState(false);
   const [isPhysics, setIsPhysics] = useState(true);
-
 
   useEffect(() => {
     adjustHeight();
@@ -43,7 +44,7 @@ const Vedothi = () => {
   return (
     <>
       <title>Vẽ đồ thị</title>
-      <link rel="stylesheet" href="./src/style/style.css"></link>
+     
 
       <div>
         <header>
@@ -96,20 +97,20 @@ const Vedothi = () => {
                         aria-labelledby="dropdownLargeButton"
                       >
                         <li>
-                          <a
-                            href="/vedothi"
+                          <Link
+                            to="/vedothi"
                             className="block px-4 py-2 bg-gray-600 text-white"
                           >
                             Vẽ đồ thị
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a
-                            href="/nhapdothi"
+                          <Link
+                            to="/nhapdothi"
                             className="block px-4 py-2 hover:bg-gray-600 hover:text-white"
                           >
                             Nhập đồ thị
-                          </a>
+                          </Link>
                         </li>
                       </ul>
                     </div>
@@ -146,28 +147,28 @@ const Vedothi = () => {
                         aria-labelledby="dropdownLargeButton"
                       >
                         <li>
-                          <a
-                            href="/duyetdothi"
+                          <Link
+                            to="/duyetdothi"
                             className="block px-4 py-2 hover:bg-gray-600 hover:text-white"
                           >
                             Duyệt đồ thị
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a
-                            href="/timlienthong"
+                          <Link
+                            to="/timlienthong"
                             className="block px-4 py-2 hover:bg-gray-600 hover:text-white"
                           >
                             Tìm liên thông
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a
-                            href="/duongdingannhat"
+                          <Link
+                            to="/duongdingannhat"
                             className="block px-4 py-2 hover:bg-gray-600 hover:text-white"
                           >
                             Tìm đường đi ngắn nhất
-                          </a>
+                          </Link>
                         </li>
                         <li>
                           <Link
@@ -197,20 +198,20 @@ const Vedothi = () => {
                     </div>
                   </li>
                   <li>
-                    <a
-                      href="#"
+                    <Link
+                      to="#"
                       className="block py-2 px-3 rounded-sm hover:bg-gray-100 md:border-0 md:p-0 text-white hover:bg-gray-700 md:hover:bg-transparent font-bold navigation"
                     >
                       Tài nguyên & Học tập
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="/vechungtoi"
+                    <Link
+                      to="/vechungtoi"
                       className="block py-2 px-3 rounded-sm hover:bg-gray-100 md:border-0 md:p-0 text-white hover:bg-gray-700 md:hover:bg-transparent font-bold navigation"
                     >
                       Về chúng tôi
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>

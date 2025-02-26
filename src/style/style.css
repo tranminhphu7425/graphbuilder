@@ -1,10 +1,8 @@
 /* homepage */
 
-
-
-
-/* index.css hoặc App.css */
-
+.fullmain{
+  height: fit-content !important;
+}
 
 
 #trangchu body {
@@ -15,7 +13,7 @@
   position: fixed;
   width: 100%;
   z-index: 10;
-  margin-top: 10px;
+  margin-top: 0px;
   background-color: transparent;
   
 }
@@ -123,7 +121,7 @@
 
 @media screen and (min-width: 1024px) {
 
-  #trangchu #dropdownNavbar1, #dropdownNavbar2 {
+  #trangchu #dropdownNavbar1, #trangchu #dropdownNavbar2 {
       background-color: rgba(55, 65, 81, 0.866);
   }
   

@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom";
+import logo from "/src/assets/img/iconGraphTheory.png";
+
 
 function LogoWithTitle() {
   return (
     <>
       <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
         <img
-          src="./src/assets/img/iconGraphTheory.png"
+          src={logo}
           className="h-8"
           alt="Logo"
         />

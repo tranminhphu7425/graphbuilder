@@ -9,6 +9,7 @@ import LogoWithTitle from "../components/LogoWithTitle.jsx";
 
 import { NhapdothiEffect } from "../script/nhapdothi.js";
 import { CaykhungnhonhatEffect } from "../script/caykhungnhonhat.js";
+import '../style/style.css';
 
 const Caykhungnhonhat = () => {
   const [nodes, setNodes] = useState("");
@@ -30,7 +31,7 @@ const Caykhungnhonhat = () => {
   return (
     <>
       <title>Tìm cây khung nhỏ nhất</title>
-      <link rel="stylesheet" href="/src/style/style.css"></link>
+    
       <header>
         <nav className=" border-gray-200">
           <div className="flex flex-wrap items-center justify-between mx-auto p-4 gap-[20px]">
