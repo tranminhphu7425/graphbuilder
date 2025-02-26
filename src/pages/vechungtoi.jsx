@@ -73,7 +73,7 @@ const Vechungtoi = () => {
                         <li>
                           <Link
                             to="/vedothi"
-                            className="block px-4 py-2 hover:bg-gray-600 text-white"
+                            className="block px-4 py-2 hover:bg-gray-600 hover:text-white"
                           >
                             Vẽ đồ thị
                           </Link>
