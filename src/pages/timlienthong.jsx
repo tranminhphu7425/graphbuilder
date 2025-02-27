@@ -116,6 +116,14 @@ const Timlienthong = () => {
                           Nhập đồ thị
                         </Link>
                       </li>
+                      <li>
+                        <Link
+                          to="/chuyendoi"
+                          className="block px-4 py-2 hover:bg-gray-600 hover:text-white"
+                        >
+                          Chuyển đổi
+                        </Link>
+                      </li>
                     </ul>
                   </div>
                 </li>

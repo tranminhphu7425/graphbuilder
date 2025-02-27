@@ -5,14 +5,13 @@ import { HashRouter , Routes, Route } from 'react-router-dom';
 const Trangchu = React.lazy(() => import('./pages/trangchu.jsx'));
 const Vedothi = React.lazy(() => import('./pages/vedothi.jsx'));
 const Nhapdothi = React.lazy(() => import('./pages/nhapdothi.jsx'));
+const Chuyendoi = React.lazy(() => import('./pages/chuyendoi.jsx'));
 const Duyetdothi = React.lazy(() => import('./pages/duyetdothi.jsx'));
 const Timlienthong = React.lazy(() => import('./pages/timlienthong.jsx'));
 const Duongdingannhat = React.lazy(() => import('./pages/duongdingannhat.jsx'));
 const Xephangdothi = React.lazy(() => import('./pages/xephangdothi.jsx'));
 const Caykhungnhonhat = React.lazy(() => import('./pages/caykhungnhonhat.jsx'));
 const Timluongcucdai = React.lazy(() => import('./pages/timluongcucdai.jsx'));
-
-
 
 
 const Vechungtoi = React.lazy(() => import('./pages/vechungtoi.jsx'));
@@ -33,6 +32,7 @@ function App() {
           <Route path="/" element={<Trangchu />} />
           <Route path="/vedothi" element={<Vedothi />} />
           <Route path="/nhapdothi" element={<Nhapdothi />} />
+          <Route path="/chuyendoi" element={<Chuyendoi />} />
           <Route path="/duyetdothi" element={<Duyetdothi />} />
           <Route path="/timlienthong" element={<Timlienthong />} />
           <Route path="/duongdingannhat" element={<Duongdingannhat />} />
