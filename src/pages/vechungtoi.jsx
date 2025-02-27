@@ -199,7 +199,7 @@ const Vechungtoi = () => {
             <h1 className="w-full text-3xl font-bold text-center mb-6">
               Về chúng tôi
             </h1>
-            <p className="text-gray-700 mb-6 text-center text-left">
+            <p className="text-gray-700 mb-6 text-left">
               Chào mừng bạn đến với trang web của chúng tôi – nơi cung cấp những
               ví dụ trực quan về lý thuyết đồ thị! Chúng tôi mang đến các khái
               niệm, thuật toán và ứng dụng thực tế của đồ thị. Cùng khám phá và
