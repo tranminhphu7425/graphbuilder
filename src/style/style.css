@@ -407,12 +407,17 @@ input:focus + label {
   height: 24px;
   background-color: #ccc;
   border-radius: 34px;
-  margin: 0 20px 0 auto;
+  margin: 0 0px 0 auto;
   transition: background-color 0.3s ease;
 }
-#vedothi div label .slider {
+#vedothi .slider {
   margin: 0 0 0 auto;
 }
+
+#chuyendoi .slider {
+  margin-left: 10px;
+}
+
 /* Circle inside the slider */
 .slider::before {
   content: "";
