@@ -13,6 +13,7 @@ import {
   convertEdgeListToAdjList,
   convertAdjMatrixToEdgeList,
   convertAdjMatrixToAdjList,
+  outputOptions 
 } from '../script/chuyendoi.js'; // Nhập các hàm từ file bên ngoài
 
 
@@ -26,10 +27,12 @@ const Chuyendoi = () => {
   }, []);
 
   const [inputType, setInputType] = useState('danhsachcung');
-    const [outputType, setOutputType] = useState('danhsachcung');
+    const [outputType, setOutputType] = useState('matranke');
     const [isDirected, setDirected] = useState(false);
     const [graphInput, setGraphInput] = useState('');
     const [graphOutput, setGraphOutput] = useState('');
+    
+    const filteredOutputOptions = outputOptions(inputType);
 
     const convert = () => {
       const input = graphInput.trim().split('\n').map(line => line.trim().split(' ').map(Number));
@@ -64,7 +67,7 @@ const Chuyendoi = () => {
     <>
       <title>Chuyển đổi</title>
 
-      <div className="bg-gray-100">
+      <div  id="chuyendoi">
         <header>
           <nav className="border-gray-200 transparentColor">
             <div className="flex flex-wrap items-center justify-between mx-auto p-4 gap-[20px]">
@@ -247,7 +250,7 @@ const Chuyendoi = () => {
           </nav>
         </header>
 
-        <main className="p-2 bg-gray-100 h-fit fullmain" id="chuyendoi">
+        <main className="p-2 h-fit fullmain" id="chuyendoi">
           <section className="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg">
             <h1 className="w-full text-3xl font-bold text-center mb-6">
               Chuyển đổi giữa các định dạng
@@ -260,7 +263,7 @@ const Chuyendoi = () => {
                         value={inputType}
                         onChange={(e) => setInputType(e.target.value)}
                     >
-                        <option value="danhsachcung">Danh sách cung</option>
+                        <option value="danhsachcung" selected>Danh sách cung</option>
                         <option value="matranke">Ma trận kề</option>
                     </select>
                     <label className="switch ml-[10px] mt-3 mb-3">
@@ -282,16 +285,18 @@ const Chuyendoi = () => {
                 <button type="submit"  className="px-6 py-2 bg-green-600 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition duration-200 cursor-pointer">Chuyển đổi</button>
             </form>
 
-            <div className="flex">
-                <h2  className="mb-6 text-left w-fit mr-[10px]">Đầu ra:</h2>
+            <div className="flex mt-3">
+                <h2  className="mt-3 mb-3 content-center text-left w-fit mr-[10px]">Đầu ra:</h2>
                 <select
                     value={outputType} name="inputType" className="h-fit mt-2 px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-green-600 bg-white text-gray-700 hover:bg-gray-100 transition duration-200"
                   id="inputType"
                     onChange={(e) => setOutputType(e.target.value)}
                 >
-                    <option value="danhsachcung">Danh sách cung</option>
-                    <option value="matranke">Ma trận kề</option>
-                    <option value="danhsachdinhke">Danh sách đỉnh kề</option>
+                    {filteredOutputOptions.map((option) => (
+                        <option key={option.value} value={option.value}>
+                            {option.label}
+                        </option>
+                    ))}
                 </select>
             </div>
             <textarea  name="graphOutput" id="" rows="10" value={graphOutput} readOnly></textarea>

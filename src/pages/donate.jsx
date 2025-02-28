@@ -20,7 +20,7 @@ const Donate = () => {
     <title>Donate</title>
    
    
-      <div className=" bg-gray-100 ">
+      <div>
       <header>
           <nav className="border-gray-200 transparentColor">
             <div className="flex flex-wrap items-center justify-between mx-auto p-4 gap-[20px]">
@@ -203,7 +203,7 @@ const Donate = () => {
           </nav>
         </header>
 
-        <main className="p-2 bg-gray-100 fullmain">
+        <main className="p-2  fullmain">
           <section className="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg">
             <h1 className="text-3xl font-bold text-center mb-6">
               Quyên góp ủng hộ

@@ -5,6 +5,7 @@
 }
 
 
+
 #trangchu body {
   font-family: sans-serif;
   background-color: #202e3e;
@@ -195,9 +196,10 @@ nav {
 
 body {
   font-family: sans-serif;
-  background-color: rgb(244, 234, 222);
+  background-color: rgb(241, 238, 234);
   
 }
+
 
 header {
   background-color: #202e3e; /* Màu nền header */
