@@ -1,4 +1,4 @@
-function Uc(){const r=document.querySelector("header"),n=document.querySelector("main"),e=document.querySelector(".graph-container");if(!r||!n)return;const t=window.innerHeight,i=window.innerWidth,a=window.scrollY;var o=0;i>=967?o=74:i>=769&&i<=966&&(o=118),a>=o?(n.style.height="fit-content",e.style.marginTop=`${a-o}px`,e.style.height=`${t-30}px`):(n.style.height=`${t-o-30+a}px`,e.style.marginTop="10px",e.style.height=`${t-o-30+a}px`)}window.addEventListener("load",Uc);window.addEventListener("scroll",Uc);window.addEventListener("resize",Uc);/**
+function Uc(){const r=document.querySelector("header"),n=document.querySelector("main"),e=document.querySelector(".graph-container");if(!r||!n)return;const t=window.innerHeight,i=window.innerWidth,a=window.scrollY;var o=0;i>=967?o=74:i>=769&&i<=966&&(o=118),i>=769&&(a>=o?(n.style.height="fit-content",e.style.marginTop=`${a-o}px`,e.style.height=`${t-30}px`):(n.style.height=`${t-o-30+a}px`,e.style.marginTop="10px",e.style.height=`${t-o-30+a}px`))}window.addEventListener("load",Uc);window.addEventListener("scroll",Uc);window.addEventListener("resize",Uc);/**
  * vis-data
  * http://visjs.org/
  *
