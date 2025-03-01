@@ -643,7 +643,7 @@ input[type="number"], textarea, textarea::placeholder {
     flex-direction: column;
     gap: 0;
     transition: margin-top 0.3s ease;
-    min-height: 800px;
+    min-height: 700px;
   }
   main.active {
     margin-top: 100px;

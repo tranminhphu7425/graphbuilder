@@ -33,7 +33,7 @@ function updateMainHeight() {
     else {
 
         main.style.height = 'fit-content';
-        graphContainer.style.height = `${windowHeight-30}px`;
+        graphContainer.style.height = `${windowHeight-30-40}px`;
 
 
     }
