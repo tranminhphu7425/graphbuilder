@@ -18,15 +18,17 @@ function updateMainHeight() {
         headerHeightRight = 118;
     }
 
-    if (scrollY >= headerHeightRight) {
-        main.style.height = 'fit-content';
-        graphContainer.style.marginTop  = `${ scrollY- headerHeightRight}px`;
-        graphContainer.style.height = `${windowHeight-30}px`;
-        
-    } else {
-        main.style.height = `${windowHeight - headerHeightRight - 30 + scrollY}px`;
-        graphContainer.style.marginTop  = "10px";
-        graphContainer.style.height = `${windowHeight - headerHeightRight - 30 + scrollY}px`;
+    if(windowWidth >= 769){
+        if (scrollY >= headerHeightRight) {
+            main.style.height = 'fit-content';
+            graphContainer.style.marginTop  = `${ scrollY- headerHeightRight}px`;
+            graphContainer.style.height = `${windowHeight-30}px`;
+            
+        } else {
+            main.style.height = `${windowHeight - headerHeightRight - 30 + scrollY}px`;
+            graphContainer.style.marginTop  = "10px";
+            graphContainer.style.height = `${windowHeight - headerHeightRight - 30 + scrollY}px`;
+        }
     }
 }
 
