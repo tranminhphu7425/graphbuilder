@@ -35,7 +35,8 @@ const Duyetdothi = () => {
     <>
       <title>Duyệt đồ thị</title>
    
-      <header>
+    <div className="fade-in">
+    <header>
         <nav className=" border-gray-200">
           <div className="flex flex-wrap items-center justify-between mx-auto p-4 gap-[20px]">
             <LogoWithTitle />
@@ -297,6 +298,7 @@ const Duyetdothi = () => {
             </button>
           </div>
       </main>
+    </div>
     </>
   );
 };

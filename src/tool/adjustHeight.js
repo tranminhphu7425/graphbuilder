@@ -1,16 +1,32 @@
 function updateMainHeight() {
     const header = document.querySelector("header");
     const main = document.querySelector("main");
+    const graphContainer = document.querySelector(".graph-container");
+    // const mynetwork = document.getAnimations("mynetwork");
     if (!header || !main) return;
     
-    const headerHeight = header.offsetHeight;
+    // const headerHeight = header.offsetHeight;
     const windowHeight = window.innerHeight;
+    const windowWidth = window.innerWidth;
     const scrollY = window.scrollY;
     
-    if (scrollY >= 75) {
-        main.style.height = `${windowHeight}px`;
+    var headerHeightRight = 0;
+
+    if (windowWidth >= 967) {
+        headerHeightRight = 74;
+    } else if (windowWidth >= 769 && windowWidth <= 966) {
+        headerHeightRight = 118;
+    }
+
+    if (scrollY >= headerHeightRight) {
+        main.style.height = 'fit-content';
+        graphContainer.style.marginTop  = `${ scrollY- headerHeightRight}px`;
+        graphContainer.style.height = `${windowHeight-30}px`;
+        
     } else {
-        main.style.height = `${windowHeight - headerHeight - 20 + scrollY}px`;
+        main.style.height = `${windowHeight - headerHeightRight - 30 + scrollY}px`;
+        graphContainer.style.marginTop  = "10px";
+        graphContainer.style.height = `${windowHeight - headerHeightRight - 30 + scrollY}px`;
     }
 }
 

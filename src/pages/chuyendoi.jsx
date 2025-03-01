@@ -67,7 +67,7 @@ const Chuyendoi = () => {
     <>
       <title>Chuyển đổi</title>
 
-      <div  id="chuyendoi">
+      <div  id="chuyendoi" className="fade-in">
         <header>
           <nav className="border-gray-200 transparentColor">
             <div className="flex flex-wrap items-center justify-between mx-auto p-4 gap-[20px]">
@@ -278,7 +278,7 @@ const Chuyendoi = () => {
                     </label>
                 </div>
                 <textarea
-                    rows="10" name="graphInput" id=""
+                    rows="10" name="graphInput" id="" className="mb-3"
                     value={graphInput}
                     onChange={(e) => setGraphInput(e.target.value)}
                 ></textarea>

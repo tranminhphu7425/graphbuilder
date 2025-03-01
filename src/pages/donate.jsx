@@ -20,7 +20,7 @@ const Donate = () => {
     <title>Donate</title>
    
    
-      <div>
+      <div className="fade-in">
       <header>
           <nav className="border-gray-200 transparentColor">
             <div className="flex flex-wrap items-center justify-between mx-auto p-4 gap-[20px]">

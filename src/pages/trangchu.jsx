@@ -22,9 +22,8 @@ const Trangchu = () => {
 
   return (
     <>
-     <div id="trangchu">
      <title>Trang chủ</title>
-     
+     <div id="trangchu" className="fade-in">   
       
      <header>
        <nav className="border-gray-200 bg-transparent">

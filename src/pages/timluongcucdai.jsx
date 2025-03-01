@@ -34,6 +34,7 @@ const Caykhungnhonhat = () => {
     <>
       <title>Tìm luồng cực đại trong mạng</title>
       
+      <div className="fade-in">
       <header>
         <nav className=" border-gray-200">
           <div className="flex flex-wrap items-center justify-between mx-auto p-4 gap-[20px]">
@@ -301,6 +302,7 @@ const Caykhungnhonhat = () => {
           <div id="resultText"></div>
         </div>
       </main>
+      </div>
     </>
   );
 };

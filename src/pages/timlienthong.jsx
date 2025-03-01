@@ -38,6 +38,7 @@ const Timlienthong = () => {
     <>
       <title>Tìm liên thông mạnh</title>
   
+      <div className="fade-in">
       <header>
         <nav className=" border-gray-200">
           <div className="flex flex-wrap items-center justify-between mx-auto p-4 gap-[20px]">
@@ -288,6 +289,7 @@ const Timlienthong = () => {
 
         {/* <div id="result"></div> */}
       </main>
+      </div>
     </>
   );
 };
