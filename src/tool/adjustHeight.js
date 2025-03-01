@@ -10,7 +10,7 @@ function updateMainHeight() {
     const windowWidth = window.innerWidth;
     const scrollY = window.scrollY;
     
-    var headerHeightRight = 0;
+    var headerHeightRight = 50;
 
     if (windowWidth >= 967) {
         headerHeightRight = 74;
@@ -29,6 +29,13 @@ function updateMainHeight() {
             graphContainer.style.marginTop  = "10px";
             graphContainer.style.height = `${windowHeight - headerHeightRight - 30 + scrollY}px`;
         }
+    }
+    else {
+
+        main.style.height = 'fit-content';
+        graphContainer.style.height = `${windowHeight-30}px`;
+
+
     }
 }
 
