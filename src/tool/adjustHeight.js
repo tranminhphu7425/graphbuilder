@@ -10,7 +10,7 @@ function updateMainHeight() {
     const windowWidth = window.innerWidth;
     const scrollY = window.scrollY;
     
-    var headerHeightRight = 50;
+    var headerHeightRight = 0;
 
     if (windowWidth >= 967) {
         headerHeightRight = 74;

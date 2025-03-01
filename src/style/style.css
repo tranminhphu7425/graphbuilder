@@ -643,7 +643,7 @@ input[type="number"], textarea, textarea::placeholder {
     flex-direction: column;
     gap: 0;
     transition: margin-top 0.3s ease;
-    min-height: 1000px;
+    min-height: 800px;
   }
   main.active {
     margin-top: 100px;
@@ -659,8 +659,8 @@ input[type="number"], textarea, textarea::placeholder {
   #mynetwork {
     width: auto;
     margin: 10px;
-    min-height: 600px;
-    max-height: 600px;
+    min-height: calc(100% - 20px);
+    max-height: calc(100% - 20px);
   }
 
   #graphForm {
@@ -670,7 +670,7 @@ input[type="number"], textarea, textarea::placeholder {
     grid-template-columns: 40% 60%;
     grid-template-areas:
       "munberNodes listedges"
-      "graphOption    listedges";
+      "graphOption listedges";
     align-items: baseline;
     gap: 10px;
   }
