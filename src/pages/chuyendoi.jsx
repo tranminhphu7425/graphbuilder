@@ -90,7 +90,7 @@ const Chuyendoi = () => {
                     <button
                       id="dropdownNavbarLink1"
                       data-dropdown-toggle="dropdownNavbar1"
-                      className="flex items-center justify-between w-full py-2 px-3 rounded-sm md:hover:bg-transparent md:border-0 md:p-0 md:w-auto focus:text-white border-gray-700 md:bg-transparent font-bold navigation text-white hover:bg-gray-700"
+                      className="flex items-center justify-between w-full py-2 px-3 rounded-sm md:hover:bg-transparent md:border-0 md:p-0 md:w-auto focus:text-white border-gray-700 bg-blue-700 md:bg-transparent font-bold navigation-checked"
                     >
                       Tạo đồ thị
                       <svg
