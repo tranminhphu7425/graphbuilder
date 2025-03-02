@@ -219,7 +219,7 @@ const Donate = () => {
                 Tại sao quyên góp?
               </h2>
               <p className="text-gray-700 mb-4">
-                GraphBuild là một dự án phi lợi nhuận, được phát triển với mục
+                GraphBuilder là một dự án phi lợi nhuận, được phát triển với mục
                 đích cung cấp các công cụ miễn phí để vẽ và phân tích đồ thị.
                 Tuy nhiên, để duy trì và cải thiện chất lượng dịch vụ, chúng tôi
                 cần sự hỗ trợ từ cộng đồng.
