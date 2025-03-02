@@ -8,6 +8,7 @@ export const convertEdgeListToAdjMatrix = (edgeList, isDirected) => {
   for (let i = 1; i <= numEdges; i++) {
     const [u, v] = edgeList[i];
     adjMatrix[u - 1][v - 1]++;
+    if(u == v) continue;
     if (!isDirected) {
       adjMatrix[v - 1][u - 1]++;
     }
