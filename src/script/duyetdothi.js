@@ -13,12 +13,14 @@ export const DuyetdothiEffect = () => {
         let edgesInput = document.getElementById("edges").value.trim();
         let isDirected = document.getElementById("directed").checked;
         let traversalType = event.submitter.value; // DFS or BFS
+        var startNode = parseInt(document.getElementById("startNode").value);
+
 
         let edges = edgesInput
           .split("\n")
           .map((line) => line.trim().split(" ").map(Number));
         let graph = buildGraph(edges, isDirected, numNodes);
-        let result = traverseGraph(graph, numNodes, traversalType);
+        let result = traverseGraph(graph, numNodes, traversalType, startNode);
         displayResult(result);
         drawGraph(result, isDirected);
       });
@@ -45,7 +47,7 @@ export const DuyetdothiEffect = () => {
       return graph;
     }
 
-    function traverseGraph(graph, numNodes, type) {
+    function traverseGraph(graph, numNodes, type, startNode) {
       let visited = new Array(numNodes + 1).fill(false);
       let result = [];
       let component = new Array(numNodes + 1).fill(0);
@@ -79,11 +81,12 @@ export const DuyetdothiEffect = () => {
           }
         }
       }
-
+      type === "DFS" ? dfs(startNode, -1) : bfs(startNode);
       for (let i = 1; i <= numNodes; i++) {
         if (!visited[i]) {
           currentComponent++;
           type === "DFS" ? dfs(i, -1) : bfs(i);
+          
         }
       }
 

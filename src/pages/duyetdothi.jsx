@@ -20,6 +20,7 @@ const Duyetdothi = () => {
   // const [isWeightedGraph, setIsWeightedGraph] = useState(false);
   const [directed, setDirected] = useState(false);
   // const [physics, setPhysics] = useState(true);
+  const [startNode, setStartNodes] = useState("");
   useEffect(() => {
     adjustHeight();
     configFullPage();
@@ -279,7 +280,18 @@ const Duyetdothi = () => {
                 />
                 <span className="slider"></span>
               </label>
-
+              <div className="start">
+                <label htmlFor="startNode">Đi từ đỉnh:</label>
+                <input
+                  type="number"
+                  name="startNode"
+                  id="startNode"
+                  min="0"
+                  value={startNode}
+                  onChange={(e) => setStartNodes(e.target.value)}
+                  //   onInput={this.updateGraph}
+                />
+              </div>
               <div className="typeOfBrowe">
                 <p>Dựng cây duyệt đồ thị</p>
                 <div>
