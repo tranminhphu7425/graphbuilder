@@ -1,9 +1,10 @@
 import { isMobile } from 'react-device-detect';
 
 function Configfullpage() {
+  const isSmallScreen = window.innerWidth < 768;
   // Nếu là thiết bị di động, giảm kích thước văn bản đi 10%
-  if (isMobile) {
-    document.body.style.fontSize = "80%";
+  if (isMobile || isSmallScreen) {
+    document.body.style.fontSize = "90%";
   }
 }
 
