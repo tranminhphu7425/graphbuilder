@@ -1,1 +1,0 @@
-function o(){(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)||/Android|iPhone|iPad|iPod/i.test(navigator.platform))&&(document.body.style.fontSize="80%")}export{o as C};
