@@ -1,5 +1,5 @@
 // useTrangchuEffect.js
-import { Network, DataSet } from 'vis-network/standalone';
+import { Network, DataSet } from "vis-network/standalone";
 
 export const Background = () => {
   const nodes = [];
@@ -22,8 +22,12 @@ export const Background = () => {
       const from = nodes[Math.floor(Math.random() * nodes.length)].id;
       const to = nodes[Math.floor(Math.random() * nodes.length)].id;
 
-      if (from !== to && !usedEdges.has(`${from}-${to}`) && !usedEdges.has(`${to}-${from}`)) {
-        edges.push({ from, to, arrows: isDirected ? 'to' : undefined });
+      if (
+        from !== to &&
+        !usedEdges.has(`${from}-${to}`) &&
+        !usedEdges.has(`${to}-${from}`)
+      ) {
+        edges.push({ from, to, arrows: isDirected ? "to" : undefined });
         usedEdges.add(`${from}-${to}`);
         if (!isDirected) {
           usedEdges.add(`${to}-${from}`);
@@ -38,10 +42,14 @@ export const Background = () => {
 
   // Generate random edges
   const numEdges = 50; // Adjust this value to change the number of edges
-  const { usedNodes, usedEdges, isDirected } = generateRandomEdges(nodes, edges, numEdges);
+  const { usedNodes, usedEdges, isDirected } = generateRandomEdges(
+    nodes,
+    edges,
+    numEdges
+  );
 
   // Select 6 random nodes without edges
-  const nodesWithoutEdges = nodes.filter(node => !usedNodes.has(node.id));
+  const nodesWithoutEdges = nodes.filter((node) => !usedNodes.has(node.id));
   const selectedNodes = [];
   while (selectedNodes.length < 6 && nodesWithoutEdges.length > 0) {
     const randomIndex = Math.floor(Math.random() * nodesWithoutEdges.length);
@@ -49,10 +57,18 @@ export const Background = () => {
   }
 
   // Add edges to the selected nodes to ensure they have at least one edge
-  selectedNodes.forEach(node => {
+  selectedNodes.forEach((node) => {
     const randomNode = nodes[Math.floor(Math.random() * nodes.length)].id;
-    if (node.id !== randomNode && !usedEdges.has(`${node.id}-${randomNode}`) && !usedEdges.has(`${randomNode}-${node.id}`)) {
-      edges.push({ from: node.id, to: randomNode, arrows: isDirected ? 'to' : undefined });
+    if (
+      node.id !== randomNode &&
+      !usedEdges.has(`${node.id}-${randomNode}`) &&
+      !usedEdges.has(`${randomNode}-${node.id}`)
+    ) {
+      edges.push({
+        from: node.id,
+        to: randomNode,
+        arrows: isDirected ? "to" : undefined,
+      });
       usedEdges.add(`${node.id}-${randomNode}`);
       if (!isDirected) {
         usedEdges.add(`${randomNode}-${node.id}`);
@@ -67,7 +83,7 @@ export const Background = () => {
     const recStack = new Set();
 
     // Build the graph
-    edges.forEach(edge => {
+    edges.forEach((edge) => {
       if (!graph.has(edge.from)) {
         graph.set(edge.from, []);
       }
@@ -194,4 +210,7 @@ export const Background = () => {
     console.log(`Updated wind: x=${newWindX}`);
     console.log(`Updated wind: y=${newWindY}`);
   }, 3000);
+
+  
+
 };
