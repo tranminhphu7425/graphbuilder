@@ -271,7 +271,7 @@ const Donate = () => {
                 <img
                   src={qrPic}
                   alt=""
-                  className="w-[170px] rounded-lg"
+                  className="w-[170px] m-[auto] rounded-lg"
                 />
               </div>
             </div>
