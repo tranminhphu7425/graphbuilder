@@ -86,7 +86,14 @@ export const VedothiEffect = (isWeightedGraph, isDirected, isPhysics) => {
       if (!params.nodes.length) {
         // Nếu không nhấp vào node hiện tại
         lastNodeId++;
-        const newNode = { id: lastNodeId, label: `${lastNodeId}` };
+        const pointer = params.pointer;
+        const canvasPosition = pointer.canvas;
+        const newNode = { 
+          id: lastNodeId, 
+          label: `${lastNodeId}`,
+          x: canvasPosition.x,
+          y: canvasPosition.y
+        };
         nodesDataSet.add(newNode);
         actionHistory.push({ type: "addNode", data: newNode });
       }
