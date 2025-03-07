@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 
 import { Link } from "react-router-dom";
+import adjustHeight from "../tool/adjustHeightMain.js";
 import LogoWithTitle from "../components/LogoWithTitle.jsx";
 import  { Background } from "../script/background.js";
 import { initFlowbite } from "flowbite";
@@ -17,6 +18,7 @@ const Trangchu = () => {
     initFlowbite(); 
     // import vis from '/src/tool/vis-network-wrapper.js';
     Background();
+    adjustHeight();
   
   }, []);
 
@@ -205,7 +207,7 @@ const Trangchu = () => {
        </nav>
      </header>
 
-     <div className="flex flex-col lg:flex-row min-h-screen bg-gray text-white">
+     <div className="flex flex-col lg:flex-row min-h-screen bg-gray text-white" id="trangchu-main">
        <div className="leftSite lg:w-1/2 bg-gray p-8 lg:p-16 flex flex-col justify-center">
          <div className="w-fit m-auto">
            <h2 className="text-5xl font-bold mb-6 textAnimation select-none">

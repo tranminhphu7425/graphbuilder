@@ -94,7 +94,7 @@
 }
 @media screen and (max-width: 1023px) {
   #trangchu #mynetworkBackground {
-    height: 600px;
+    height: 900px;
     pointer-events: none;
     
   }
