@@ -26,9 +26,9 @@ const Chuyendoi = () => {
 
   }, []);
 
-  const [inputType, setInputType] = useState('danhsachcung');
-    const [outputType, setOutputType] = useState('matranke');
-    const [isDirected, setDirected] = useState(false);
+  var [inputType, setInputType] = useState('danhsachcung');
+    var [outputType, setOutputType] = useState('matranke');
+    var [isDirected, setDirected] = useState(false);
     const [graphInput, setGraphInput] = useState('');
     const [graphOutput, setGraphOutput] = useState('');
     
@@ -52,7 +52,7 @@ const Chuyendoi = () => {
       } else if (inputType === 'matranke') {
 
         input.shift();
-        if (outputType === 'danhsachcung') {
+        if (outputType !== 'danhsachdinhke') {
           output = convertAdjMatrixToEdgeList(input);
         } else if (outputType === 'danhsachdinhke') {
           output = convertAdjMatrixToAdjList(input, isDirected);
