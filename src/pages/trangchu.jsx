@@ -9,6 +9,7 @@ import { initFlowbite } from "flowbite";
 import '../style/style.css';
 
 import donatePic from "/src/assets/img/save-money.png";
+import githubPic from "/src/assets/img/githubicon.png";
 
 
 
@@ -217,7 +218,7 @@ const Trangchu = () => {
              Một công cụ giúp giải quyết một số bài toán, các giải thuật và
              thuật toán về đồ thị
            </p>
-           <div className="flex items-center space-x-4 textAnimation">
+           <div className="flex items-center textAnimation">
              <Link
                to="/nhapdothi"
                className="text-white px-6 py-3 rounded-full bg-[linear-gradient(135deg,#006a67,#3f9d99)] transition-all duration-300 hover:bg-[linear-gradient(135deg,#004442,#1c6360)] hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0.5 active:shadow-md px-4 py-2 text-white font-semibold"
@@ -226,11 +227,17 @@ const Trangchu = () => {
              </Link>
              <Link
                to="/donate"
-               className="space-x-2 flex items-center transition-transform duration-300 hover:-translate-y-0.5 hover:shadow-lg px-4 py-3 rounded-full"
+               className="space-x-2 flex items-center transition-transform duration-300 hover:-translate-y-0.5 hover:shadow-lg px-4 py-3 rounded-full  ml-4"
              >
                <img src={donatePic} alt="" />
                Donate
              </Link>
+             
+             <a href="https://github.com/tranminhphu7425/graphbuilder"  className="space-x-2 flex items-center transition-transform duration-300 hover:-translate-y-0.5 hover:shadow-lg px-4 py-3 rounded-full">
+             <img src={githubPic} alt="" width={36} height={36} className="rounded-full pr-1" />
+               Github
+              
+             </a>
            </div>
          </div>
        </div>
