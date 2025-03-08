@@ -39,7 +39,7 @@ const Chuyendoi = () => {
       let output;
   
       if (inputType === 'danhsachcung') {
-        if (outputType === 'matranke') {
+        if (outputType !== 'danhsachdinhke') {
           const result = convertEdgeListToAdjMatrix(input, isDirected);
           // Định dạng kết quả: số đỉnh + ma trận kề
           output = [
