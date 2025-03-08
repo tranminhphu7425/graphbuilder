@@ -207,8 +207,7 @@ export const Background = () => {
       },
     });
 
-    console.log(`Updated wind: x=${newWindX}`);
-    console.log(`Updated wind: y=${newWindY}`);
+   
   }, 3000);
 
   
