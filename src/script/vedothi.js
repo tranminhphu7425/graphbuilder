@@ -81,6 +81,7 @@ export const VedothiEffect = (isWeightedGraph, isDirected, isPhysics) => {
     // Xử lý sự kiện double-click để thêm nút mới
     let lastNodeId = 0; // ID của node cuối cùng
     let actionHistory = []; // Lưu trữ lịch sử hành động
+    let redoHistory = []; // Lưu trữ lịch sử redo
 
     network.on("doubleClick", function (params) {
       if (!params.nodes.length) {
@@ -96,6 +97,7 @@ export const VedothiEffect = (isWeightedGraph, isDirected, isPhysics) => {
         };
         nodesDataSet.add(newNode);
         actionHistory.push({ type: "addNode", data: newNode });
+        redoHistory = []; // Clear redo history when new action is performed
       }
     });
 
@@ -149,6 +151,7 @@ export const VedothiEffect = (isWeightedGraph, isDirected, isPhysics) => {
           nodesDataSet.update({ id: fromId, fixed: false });
           nodesDataSet.update({ id: toId, fixed: false });
           actionHistory.push({ type: "addEdge", data: newEdge });
+          redoHistory = []; // Clear redo history when new action is performed
           selectedNodes = []; // Reset sau khi thêm cung
         }
       } else {
@@ -238,8 +241,9 @@ export const VedothiEffect = (isWeightedGraph, isDirected, isPhysics) => {
       });
     });
 
-    // Xử lý Ctrl+Z để quay lại bước trước đó
+    // Xử lý Ctrl+Z để quay lại bước trước đó và Ctrl+Y để redo
     document.addEventListener("keydown", function (event) {
+      // Undo with Ctrl+Z
       if (event.ctrlKey && event.key === "z") {
         const lastAction = actionHistory.pop();
         if (lastAction) {
@@ -255,6 +259,7 @@ export const VedothiEffect = (isWeightedGraph, isDirected, isPhysics) => {
               }
             });
             lastNodeId--;
+            redoHistory.push(lastAction);
           } else if (lastAction.type === "addEdge") {
             const edge = lastAction.data;
             edgesDataSet.remove({ id: edge.id });
@@ -285,6 +290,39 @@ export const VedothiEffect = (isWeightedGraph, isDirected, isPhysics) => {
                 }
               }
             }
+            redoHistory.push(lastAction);
+          }
+        }
+      }
+      
+      // Redo with Ctrl+Y
+      if (event.ctrlKey && event.key === "y") {
+        const redoAction = redoHistory.pop();
+        if (redoAction) {
+          if (redoAction.type === "addNode") {
+            lastNodeId++;
+            nodesDataSet.add(redoAction.data);
+            actionHistory.push(redoAction);
+          } else if (redoAction.type === "addEdge") {
+            edgesDataSet.add(redoAction.data);
+            // If it's a self-loop, update the self-loop count
+            if (redoAction.data.from === redoAction.data.to) {
+              const fromId = redoAction.data.from;
+              selfLoopCounts[fromId] = (selfLoopCounts[fromId] || 0) + 1;
+              // Update node size if necessary
+              const loopCount = selfLoopCounts[fromId];
+              if (loopCount >= 6) {
+                const newSize = 35 + (loopCount - 5) * 5;
+                const newFontSize = 40 + (loopCount - 5) * 5;
+                const newVadjust = -80 - (loopCount - 5) * 10;
+                nodesDataSet.update({
+                  id: fromId,
+                  size: newSize,
+                  font: { size: newFontSize, vadjust: newVadjust },
+                });
+              }
+            }
+            actionHistory.push(redoAction);
           }
         }
       }
@@ -308,4 +346,10 @@ export const VedothiEffect = (isWeightedGraph, isDirected, isPhysics) => {
         network.fit();
       });
   }, [isWeightedGraph, isDirected, isPhysics]);
+
+
+
+
+
+  
 };

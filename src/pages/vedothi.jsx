@@ -278,6 +278,7 @@ const Vedothi = () => {
                   Nếu giữ phím shift và đúp 2 lần vào một đỉnh sẽ tạo khuyên
                 </li>
                 <li>Ctrl+Z để quay lại bước trước đó</li>
+                <li>Ctrl+Y để làm lại bước trước đó</li>
                 <li>Nhấp vào cạnh để có thể điền trọng số</li>
               </ul>
             </div>
