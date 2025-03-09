@@ -1,15 +1,33 @@
 import { useEffect } from "react";
 import configFullPage from "../tool/configfullpage.js";
 import { initFlowbite } from "flowbite";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import LogoWithTitle from "../components/LogoWithTitle.jsx";
 import "../style/style.css";
 
 const Tainguyenhoctap = () => {
+  const location = useLocation();
+
   useEffect(() => {
     configFullPage();
     initFlowbite();
   }, []);
+
+  useEffect(() => {
+    // Get the hash from the URL (e.g., #PCB)
+    const hash = location.hash;
+    if (hash) {
+      // Remove the # symbol
+      const id = hash.replace("#", "");
+      const element = document.getElementById(id);
+      if (element) {
+        // Add a small delay to ensure the page is fully loaded
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
+    }
+  }, [location]); // Re-run when location changes
 
   return (
     <div>
@@ -200,161 +218,200 @@ const Tainguyenhoctap = () => {
         <main className="p-2 bg-gray-100 fullmain">
           <nav className="menu p-8">
             <div>
-              <a href="#PCB">
+              <Link to="/tainguyenhoctap#PCB">
                 <h2>PHẦN CƠ BẢN</h2>
-              </a>
+              </Link>
               <div>
                 <ul>
-                  <a href="#ĐN&PL">I. ĐỊNH NGHĨA VÀ PHÂN LOẠI</a>
+                  <Link to="/tainguyenhoctap#ĐN&PL">
+                    I. ĐỊNH NGHĨA VÀ PHÂN LOẠI
+                  </Link>
                   <li>
-                    <a href="#ĐN">ĐỊNH NGHĨA</a>
+                    <Link to="/tainguyenhoctap#ĐN">ĐỊNH NGHĨA</Link>
                   </li>
                   <li>
-                    <a href="#BCĐT">BẬC CỦA ĐỒ THỊ</a>
+                    <Link to="/tainguyenhoctap#BCĐT">BẬC CỦA ĐỒ THỊ</Link>
                   </li>
                 </ul>
               </div>
               <div>
                 <ul>
-                  <a href="#DĐT">II. DUYỆT ĐỒ THỊ</a>
+                  <Link to="/tainguyenhoctap#DĐT">II. DUYỆT ĐỒ THỊ</Link>
                   <li>
-                    <a href="#BFS">DUYỆT ĐỒ THỊ THEO CHIỀU SÂU</a>
+                    <Link to="/tainguyenhoctap#BFS">
+                      DUYỆT ĐỒ THỊ THEO CHIỀU SÂU
+                    </Link>
                   </li>
                   <li>
-                    <a href="#DFSĐQ">DUYỆT ĐỒ THỊ THEO CHIỀU SÂU BẰNG ĐỆ QUY</a>
+                    <Link to="/tainguyenhoctap#DFSĐQ">
+                      DUYỆT ĐỒ THỊ THEO CHIỀU SÂU BẰNG ĐỆ QUY
+                    </Link>
                   </li>
                   <li>
-                    <a href="#BFS">DUYỆT ĐỒ THỊ THEO CHIỀU RỘNG</a>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <ul>
-                  <a href="#TLTĐT">III. TÍNH LIÊN THÔNG CỦA ĐỒ THỊ</a>
-                  <li>
-                    <a href="#ĐNLT">ĐỊNH NGHĨA</a>
-                  </li>
-                  <li>
-                    <a href="#SCC">TÌM CÁC BỘ PHẬN LIÊN THÔNG MẠNH</a>
+                    <Link to="/tainguyenhoctap#BFS">
+                      DUYỆT ĐỒ THỊ THEO CHIỀU RỘNG
+                    </Link>
                   </li>
                 </ul>
               </div>
               <div>
                 <ul>
-                  <a href="#DC">IV. DUYỆT ĐỒ THỊ VÀ ỨNG DỤNG</a>
+                  <Link to="/tainguyenhoctap#TLTĐT">
+                    III. TÍNH LIÊN THÔNG CỦA ĐỒ THỊ
+                  </Link>
                   <li>
-                    <a href="#KTCT">KIỂM TRA ĐỒ THỊ CHỨA CHU TRÌNH</a>
+                    <Link to="/tainguyenhoctap#ĐNLT">ĐỊNH NGHĨA</Link>
                   </li>
                   <li>
-                    <a href="#KTPĐ">KIỂM TRA ĐỒ THỊ PHÂN ĐÔI</a>
+                    <Link to="/tainguyenhoctap#SCC">
+                      TÌM CÁC BỘ PHẬN LIÊN THÔNG MẠNH
+                    </Link>
                   </li>
                 </ul>
               </div>
               <div>
                 <ul>
-                  <a href="">V. </a>
+                  <Link to="/tainguyenhoctap#DC">
+                    IV. DUYỆT ĐỒ THỊ VÀ ỨNG DỤNG
+                  </Link>
                   <li>
-                    <a href="">KIỂM TRA ĐỒ THỊ CHỨA CHU TRÌNH</a>
+                    <Link to="/tainguyenhoctap#KTCT">
+                      KIỂM TRA ĐỒ THỊ CHỨA CHU TRÌNH
+                    </Link>
                   </li>
                   <li>
-                    <a href="">KIỂM TRA ĐỒ THỊ PHÂN ĐÔI</a>
+                    <Link to="/tainguyenhoctap#KTPĐ">
+                      KIỂM TRA ĐỒ THỊ PHÂN ĐÔI
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <ul>
+                  <Link to="/tainguyenhoctap#">V. </Link>
+                  <li>
+                    <Link to="/tainguyenhoctap#KTCT">
+                      KIỂM TRA ĐỒ THỊ CHỨA CHU TRÌNH
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/tainguyenhoctap#KTPĐ">KIỂM TRA ĐỒ THỊ PHÂN ĐÔI</Link>
                   </li>
                 </ul>
               </div>
             </div>
             <div>
-              <a href="#PNC">
+              <Link to="/tainguyenhoctap#PNC">
                 <h2>PHẦN NÂNG CAO</h2>
-              </a>
+              </Link>
               <div>
                 <ul>
-                  <a href="#EULER&HAMILTON">
+                  <Link to="/tainguyenhoctap#EULER&HAMILTON">
                     I. ĐỒ THỊ EULER & ĐỒ THỊ HAMILTON
-                  </a>
+                  </Link>
                   <li>
-                    <a href="#EULER">ĐỒ THỊ EULER</a>
+                    <Link to="/tainguyenhoctap#EULER">ĐỒ THỊ EULER</Link>
                   </li>
                   <li>
-                    <a href="#HAMILTON">ĐỒ THỊ HAMILTON</a>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <ul>
-                  <a href="#TDDNN">II. TÌM ĐƯỜNG ĐI NGẮN NHẤT</a>
-                  <li>
-                    <a href="#ĐTTS">BIỂU DIỄN ĐỒ THỊ CÓ TRỌNG SỐ</a>
-                  </li>
-                  <li>
-                    <a href="#DDNN">ĐƯỜNG ĐI NGẮN NHẤT</a>
-                  </li>
-                  <li>
-                    <a href="#MOORE-DIJKSTRA">THUẬT TOÁN MOORE-DIJKSTRA</a>
+                    <Link to="/tainguyenhoctap#HAMILTON">ĐỒ THỊ HAMILTON</Link>
                   </li>
                 </ul>
               </div>
               <div>
                 <ul>
-                  <a href="#TOPO&UD">III. THỨ TỰ TOPO & ỨNG DỤNG</a>
+                  <Link to="/tainguyenhoctap#TDDNN">
+                    II. TÌM ĐƯỜNG ĐI NGẮN NHẤT
+                  </Link>
                   <li>
-                    <a href="#TOPO">THỨ TỰ TOPO</a>
+                    <Link to="/tainguyenhoctap#ĐTTS">
+                      BIỂU DIỄN ĐỒ THỊ CÓ TRỌNG SỐ
+                    </Link>
                   </li>
                   <li>
-                    <a href="#XHĐT">XẾP HẠNG CÁC ĐỈNH CỦA ĐỒ THỊ</a>
+                    <Link to="/tainguyenhoctap#DDNN">ĐƯỜNG ĐI NGẮN NHẤT</Link>
                   </li>
                   <li>
-                    <a href="#QLDA">QUẢN LÝ DỰ ÁN</a>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <ul>
-                  <a href="#C&CKTT">IV.CÂY & CÂY KHUNG TỐI THIỂU</a>
-                  <li>
-                    <a href="#CVH">CÂY VÔ HƯỚNG</a>
-                  </li>
-                  <li>
-                    <a href="#Kruskal">THUẬT TOÁN KRUSKAL</a>
-                  </li>
-                  <li>
-                    <a href="#Prim">THUẬT TOÁN PRIM</a>
+                    <Link to="/tainguyenhoctap#MOORE-DIJKSTRA">
+                      THUẬT TOÁN MOORE-DIJKSTRA
+                    </Link>
                   </li>
                 </ul>
               </div>
               <div>
                 <ul>
-                  <a href="#CCH&CKTT">V. CÂY CÓ HƯỚNG VÀ CÂY KHUNG TỐI THIỂU</a>
+                  <Link to="/tainguyenhoctap#TOPO&UD">
+                    III. THỨ TỰ TOPO & ỨNG DỤNG
+                  </Link>
                   <li>
-                    <a href="#CCH">CÂY CÓ HƯỚNG</a>
+                    <Link to="/tainguyenhoctap#TOPO">THỨ TỰ TOPO</Link>
                   </li>
                   <li>
-                    <a href="#ChuLiu/Edmonds">THUẬT TOÁN CHU-LIU/EDMONDS</a>
+                    <Link to="/tainguyenhoctap#XHĐT">
+                      XẾP HẠNG CÁC ĐỈNH CỦA ĐỒ THỊ
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/tainguyenhoctap#QLDA">QUẢN LÝ DỰ ÁN</Link>
                   </li>
                 </ul>
               </div>
               <div>
                 <ul>
-                  <a href="#LCDTM">VI. LUỒNG CỰC ĐẠI TRONG MẠNG</a>
+                  <Link to="/tainguyenhoctap#C&CKTT">
+                    IV.CÂY & CÂY KHUNG TỐI THIỂU
+                  </Link>
                   <li>
-                    <a href="#LTM">LUỒNG ( TRÊN MẠNG)</a>
+                    <Link to="/tainguyenhoctap#CVH">CÂY VÔ HƯỚNG</Link>
                   </li>
                   <li>
-                    <a href="#LC">LÁT CẮT</a>
+                    <Link to="/tainguyenhoctap#Kruskal">
+                      THUẬT TOÁN KRUSKAL
+                    </Link>
                   </li>
                   <li>
-                    <a href="#L&LC">LUỒNG & LÁT CẮT</a>
+                    <Link to="/tainguyenhoctap#Prim">THUẬT TOÁN PRIM</Link>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <ul>
+                  <Link to="/tainguyenhoctap#CCH&CKTT">
+                    V. CÂY CÓ HƯỚNG VÀ CÂY KHUNG TỐI THIỂU
+                  </Link>
+                  <li>
+                    <Link to="/tainguyenhoctap#CCH">CÂY CÓ HƯỚNG</Link>
                   </li>
                   <li>
-                    <a href="#Ford-Fulkerson">THUẬT TOÁN FORD - FULKERSON</a>
+                    <Link to="/tainguyenhoctap#ChuLiu/Edmonds">
+                      THUẬT TOÁN CHU-LIU/EDMONDS
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <ul>
+                  <Link to="/tainguyenhoctap#LCDTM">
+                    VI. LUỒNG CỰC ĐẠI TRONG MẠNG
+                  </Link>
+                  <li>
+                    <Link to="/tainguyenhoctap#LTM">LUỒNG ( TRÊN MẠNG)</Link>
+                  </li>
+                  <li>
+                    <Link to="/tainguyenhoctap#LC">LÁT CẮT</Link>
+                  </li>
+                  <li>
+                    <Link to="/tainguyenhoctap#L&LC">LUỒNG & LÁT CẮT</Link>
+                  </li>
+                  <li>
+                    <Link to="/tainguyenhoctap#Ford-Fulkerson">
+                      THUẬT TOÁN FORD - FULKERSON
+                    </Link>
                   </li>
                 </ul>
               </div>
             </div>
           </nav>
-          <section
-            className="max-w-6xl mx-auto bg-white p-8 rounded-lg shadow-lg w-[60%]"
-            
-          >
+          <section className="max-w-6xl mx-auto bg-white p-8 rounded-lg shadow-lg w-[60%]">
             <div id="PCB" className="mb-6">
               <h1>PHẦN CƠ BẢN</h1>
               <div id="ĐN&PL" className="mb-6">
