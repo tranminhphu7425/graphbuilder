@@ -111,6 +111,7 @@ export const VedothiEffect = (isWeightedGraph, isDirected, isPhysics) => {
           const fromId = selectedNodes[0];
           const toId = selectedNodes[1];
           const isSelfLoop = fromId === toId;
+          const isDirected = directedCheckbox.checked;
 
           // Xử lý self-loops
           if (isSelfLoop) {
@@ -138,13 +139,14 @@ export const VedothiEffect = (isWeightedGraph, isDirected, isPhysics) => {
           const newEdge = {
             from: fromId,
             to: toId,
-            arrows: directedCheckbox.checked ? "to" : "",
+            arrows: isDirected ? "to" : "",
             smooth: isSelfLoop
               ? { type: randomDirection, roundness: randomRoundness }
               : true,
             selfReferenceSize: isSelfLoop
               ? 20 + (selfLoopCounts[fromId] - 1) * 10
               : undefined,
+            isDirected: isDirected // Lưu trạng thái có hướng
           };
 
           edgesDataSet.add(newEdge);
@@ -243,7 +245,7 @@ export const VedothiEffect = (isWeightedGraph, isDirected, isPhysics) => {
 
     // Xử lý Ctrl+Z để quay lại bước trước đó và Ctrl+Y để redo
     document.addEventListener("keydown", function (event) {
-      // Undo with Ctrl+Z
+      // Undo with Ctrl+Z   
       if (event.ctrlKey && event.key === "z") {
         const lastAction = actionHistory.pop();
         if (lastAction) {
@@ -261,6 +263,7 @@ export const VedothiEffect = (isWeightedGraph, isDirected, isPhysics) => {
             lastNodeId--;
             redoHistory.push(lastAction);
           } else if (lastAction.type === "addEdge") {
+            
             const edge = lastAction.data;
             edgesDataSet.remove({ id: edge.id });
 
@@ -304,10 +307,16 @@ export const VedothiEffect = (isWeightedGraph, isDirected, isPhysics) => {
             nodesDataSet.add(redoAction.data);
             actionHistory.push(redoAction);
           } else if (redoAction.type === "addEdge") {
-            edgesDataSet.add(redoAction.data);
+            const isDirected = directedCheckbox.checked;
+            const edgeData = redoAction.data;
+            // Đảm bảo arrows được thiết lập đúng dựa trên trạng thái isDirected đã lưu
+            edgeData.arrows = isDirected ? "to" : "";
+            console.log(edgeData);
+            edgesDataSet.add(edgeData);
+
             // If it's a self-loop, update the self-loop count
-            if (redoAction.data.from === redoAction.data.to) {
-              const fromId = redoAction.data.from;
+            if (edgeData.from === edgeData.to) {
+              const fromId = edgeData.from;
               selfLoopCounts[fromId] = (selfLoopCounts[fromId] || 0) + 1;
               // Update node size if necessary
               const loopCount = selfLoopCounts[fromId];
