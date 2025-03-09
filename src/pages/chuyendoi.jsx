@@ -230,7 +230,7 @@ const Chuyendoi = () => {
                   </li>
                   <li>
                     <Link
-                      to="#"
+                      to="/tainguyenhoctap"
                       className="block py-2 px-3 rounded-sm md:border-0 md:p-0 text-white hover:bg-gray-700 md:hover:bg-transparent font-bold navigation"
                     >
                       Tài nguyên & Học tập

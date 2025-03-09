@@ -15,6 +15,7 @@ const Duongdingannhat = React.lazy(() => import("./pages/duongdingannhat.jsx"));
 const Xephangdothi = React.lazy(() => import("./pages/xephangdothi.jsx"));
 const Caykhungnhonhat = React.lazy(() => import("./pages/caykhungnhonhat.jsx"));
 const Timluongcucdai = React.lazy(() => import("./pages/timluongcucdai.jsx"));
+const Tainguyenhoctap = React.lazy(() => import("./pages/tainguyenhoctap.jsx"));
 const Vechungtoi = React.lazy(() => import("./pages/vechungtoi.jsx"));
 const Donate = React.lazy(() => import("./pages/donate.jsx"));
 
@@ -33,6 +34,7 @@ function App() {
                     <Route path="/xephangdothi" element={<Xephangdothi />} />
                     <Route path="/caykhungnhonhat" element={<Caykhungnhonhat />} />
                     <Route path="/timluongcucdai" element={<Timluongcucdai />} />
+                    <Route path="/tainguyenhoctap" element={<Tainguyenhoctap />} />
                     <Route path="/vechungtoi" element={<Vechungtoi />} />
                     <Route path="/donate" element={<Donate />} />
                 </Routes>

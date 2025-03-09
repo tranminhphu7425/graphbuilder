@@ -188,7 +188,7 @@ const Trangchu = () => {
                </li>
                <li>
                  <Link
-                   to="/tailieu"
+                   to="/tainguyenhoctap"
                    className="block py-2 px-3 rounded-sm hover:bg-gray-100 md:border-0 md:p-0 text-white hover:bg-gray-700 md:hover:bg-transparent font-bold navigation"
                  >
                    Tài nguyên & Học tập
