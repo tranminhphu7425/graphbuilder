@@ -1,4 +1,4 @@
-import{r as bf,j as G,L as eg}from"./index-DyTbXR7D.js";import{i as wf,L as Ef}from"./style-CQeG5cLx.js";function ln(){const A=document.querySelector("#trangchu-main"),C=window.innerHeight;window.innerWidth>=1024?A.style.height=`${C}px`:A.style.height="fit-content"}window.addEventListener("load",ln);window.addEventListener("resize",ln);/**
+import{r as bf,j as G,L as eg}from"./index-t8Ntt8U-.js";import{i as wf,L as Ef}from"./style-Dsx4itqb.js";function ln(){const A=document.querySelector("#trangchu-main"),C=window.innerHeight;window.innerWidth>=1024?A.style.height=`${C}px`:A.style.height="fit-content"}window.addEventListener("load",ln);window.addEventListener("resize",ln);/**
  * vis-network
  * https://visjs.github.io/vis-network/
  *
