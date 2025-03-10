@@ -391,7 +391,7 @@ const Tainguyenhoctap = () => {
                     VI. LUỒNG CỰC ĐẠI TRONG MẠNG
                   </Link>
                   <li>
-                    <Link to="/tainguyenhoctap#LTM">LUỒNG ( TRÊN MẠNG)</Link>
+                    <Link to="/tainguyenhoctap#LTM">LUỒNG (TRÊN MẠNG)</Link>
                   </li>
                   <li>
                     <Link to="/tainguyenhoctap#LC">LÁT CẮT</Link>
@@ -556,7 +556,7 @@ const Tainguyenhoctap = () => {
                       While (ngăn xếp chưa rỗng) do
                       <ul style={{ listStyle: "disc" }}>
                         <li>Lấy 1 đỉnh ở đỉnh ngăn xếp</li>
-                        <li>if( u đã duyệt) continue;</li>
+                        <li>if (u đã duyệt) continue;</li>
                         <li>Duyệt u(vd: in u ra màn hình)</li>
                         <li>Đánh dấu u đã duyệt</li>
                         <li>
@@ -576,10 +576,10 @@ const Tainguyenhoctap = () => {
                     Duyệt đồ thị theo chiều sâu bằng đệ quy
                   </h3>
                   <ul style={{ listStyle: "decimal" }}>
-                    <li>if ( u đã duyệt) {"return;"}</li>
+                    <li>if (u đã duyệt) {"return;"}</li>
                     <li>Đánh dấu u đã duyệt</li>
                     <li>
-                      for( các đỉnh kề v của u) do {"{"} gọi đệ quy(v) {"}"}
+                      for (các đỉnh kề v của u) do {"{"} gọi đệ quy(v) {"}"}
                     </li>
                   </ul>
                 </div>
@@ -589,7 +589,7 @@ const Tainguyenhoctap = () => {
                     className="text-gray-700  text-center"
                     style={{ textAlign: "left" }}
                   >
-                    Duyệt đồ thị theo chiều rộng ( Thuật toán BFS)
+                    Duyệt đồ thị theo chiều rộng (Thuật toán BFS)
                   </h3>
                   <ul style={{ listStyle: "decimal" }}>
                     <li>Đưa 1 đỉnh s bất kỳ vào hàng đợi</li>
@@ -597,7 +597,7 @@ const Tainguyenhoctap = () => {
                       While (hàng đợi chưa rỗng) do
                       <ul style={{ listStyle: "disc" }}>
                         <li>Lấy 1 đỉnh ở đỉnh ở đầu hàng đợi</li>
-                        <li>if( u đã duyệt) continue;</li>
+                        <li>if (u đã duyệt) continue;</li>
                         <li>Duyệt u(vd: in u ra màn hình)</li>
                         <li>Đánh dấu u đã duyệt</li>
                         <li>
@@ -626,7 +626,7 @@ const Tainguyenhoctap = () => {
                   <ul style={{ listStyle: "circle" }}>
                     <li>
                       Đồ thị vô hướng G được gọi là liên thông nếu và chỉ nếu
-                      với mọi cặp đỉnh u,v ∈ V luôn tồn tại đường đi (walk) từ u{" "}
+                      với mọi cặp đỉnh u, v ∈ V luôn tồn tại đường đi (walk) từ u{" "}
                       {"->"} v. Ngược lại, G được gọi là không liên thông.
                     </li>
                     <li>
@@ -639,13 +639,13 @@ const Tainguyenhoctap = () => {
                     </li>
                     <li>
                       Các bộ phận liên thông của đồ thị G là tập các đồ thị con
-                      liên thông lớn nhất của G( là các lớp tương đương của quan
+                      liên thông lớn nhất của G (là các lớp tương đương của quan
                       hệ liên thông)
                     </li>
                     <li>
-                      Đỉnh cô lập ( có bậc bằng 0) cũng là một bộ phận liên
+                      Đỉnh cô lập  (có bậc bằng 0) cũng là một bộ phận liên
                       thông chỉ gồm chính nó và được gọi là bộ phận liên thông
-                      tầm thường ( trivial connected component)
+                      tầm thường (trivial connected component)
                     </li>
                   </ul>
                 </div>
@@ -720,15 +720,15 @@ if (num[u] == min_num[u]) {
                       <ul style={{ listStyle: "disc" }}>
                         Trạng thái của đỉnh
                         <li style={{ marginLeft: "10px" }}>
-                          Chưa duyệt: chưa đụng tới nó ( TRẮNG/WHITE)
+                          Chưa duyệt: chưa đụng tới nó (TRẮNG/WHITE)
                         </li>
                         <li style={{ marginLeft: "10px" }}>
                           Đang duyệt: đang duyệt nó nhưng chưa duyệt hết kề của
-                          nó ( XÁM/GRAY)
+                          nó (XÁM/GRAY)
                         </li>
                         <li style={{ marginLeft: "10px" }}>
                           Đã duyệt xong: duyệt nó và đã duyệt hết các kề của nó
-                          ( ĐEN/BLACK)
+                          (ĐEN/BLACK)
                         </li>
                       </ul>
                     </li>
@@ -757,7 +757,7 @@ if (num[u] == min_num[u]) {
                   <ul className="mb-6">
                     Thuật toán kiểm tra đồ thị phân đôi
                     <li style={{ marginLeft: "5px" }}>
-                      Duyệt đồ thị + tô màu các đỉnh bằng 1 trong 2 màu ( XANH,
+                      Duyệt đồ thị + tô màu các đỉnh bằng 1 trong 2 màu (XANH,
                       ĐỎ). Hai đỉnh kề nhau có màu khác nhau
                     </li>
                   </ul>
@@ -782,11 +782,11 @@ if (num[u] == min_num[u]) {
                     Đồ thị Euler
                   </h3>
                   <p>
-                    Chu trình Euler ( Euler circuit) trong đồ thị G là một chu
+                    Chu trình Euler (Euler circuit) trong đồ thị G là một chu
                     trình đơn cung chứa tất cả các cung của G
                   </p>
                   <p>
-                    Đường đi Euler( Euler path) trong đồ thị G là đường đi đơn
+                    Đường đi Euler(Euler path) trong đồ thị G là đường đi đơn
                     cung chứa tất cả các đỉnh của G
                   </p>
                   <p
@@ -796,13 +796,13 @@ if (num[u] == min_num[u]) {
                     <ul style={{ listStyle: "circle" }}>
                       Định lý Euler:
                       <li style={{ marginLeft: "15px" }}>
-                        Đa đồ thị ( vô hướng) liên thông có ít nhất 2 đỉnh có
+                        Đa đồ thị (vô hướng) liên thông có ít nhất 2 đỉnh có
                         chu tình Euler khi và chỉ khi tất cả các đỉnh của nó đều
                         có bậc chẵn
                       </li>
                       <li style={{ marginLeft: "15px" }}>
-                        Đa đồ thị ( vô hướng) liên thông có đường đi Euler (
-                        nhưng không có chu trình Euler) khi và chỉ khi nó có
+                        Đa đồ thị (vô hướng) liên thông có đường đi Euler
+                        (nhưng không có chu trình Euler) khi và chỉ khi nó có
                         đúng 2 đỉnh bậc lẻ
                       </li>
                     </ul>
@@ -816,7 +816,7 @@ if (num[u] == min_num[u]) {
                       </li>
                       <li style={{ marginLeft: "15px" }}>
                         Các cung được chọn sao cho đỉnh đầu của cung mới là đỉnh
-                        cuối của cung cũ và nó không phải là cầu ( Cầu: xóa bỏ
+                        cuối của cung cũ và nó không phải là cầu (Cầu: xóa bỏ
                         cung này sẽ làm đồ thị mất liên thông) trừ phi không có
                         lựa chọn khác
                       </li>
@@ -835,17 +835,17 @@ if (num[u] == min_num[u]) {
                     style={{ textAlign: "left" }}
                   >
                     <ul style={{ listStyle: "circle" }}>
-                      Chu trình Hamilton ( Hamilton circuit)
+                      Chu trình Hamilton (Hamilton circuit)
                       <li style={{ marginLeft: "15px" }}>
-                        Chu trình đơn đỉnh ( simple circuit) đi qua các đỉnh của
-                        đồ thị, mỗi đỉnh đúng 1 lần ( trừ đỉnh xuất phát){" "}
+                        Chu trình đơn đỉnh (simple circuit) đi qua các đỉnh của
+                        đồ thị, mỗi đỉnh đúng 1 lần (trừ đỉnh xuất phát){" "}
                       </li>
                     </ul>
 
                     <ul style={{ listStyle: "circle" }}>
-                      Đường đi Hamilton ( Hamilton path)
+                      Đường đi Hamilton (Hamilton path)
                       <li style={{ marginLeft: "15px" }}>
-                        Đường đi đơn đỉnh ( simple path) đi qua các đỉnh của đồ
+                        Đường đi đơn đỉnh (simple path) đi qua các đỉnh của đồ
                         thị G, mỗi đỉnh đúng 1 lần
                       </li>
                     </ul>
@@ -871,9 +871,9 @@ if (num[u] == min_num[u]) {
                     biểu diễn đồ thị có trọng số
                   </p>
                   <ul>
-                    Ma trận kề ( Ma trận trọng số)
-                    <li>Nếu có ( u,v) thì W[u][v] = trọng số cung ( u,v)</li>
-                    <li>Nếu không có ( u,v) thì W[u][v] = NO_EDGE ( vd:-1)</li>
+                    Ma trận kề (Ma trận trọng số)
+                    <li>Nếu có (u, v) thì W[u][v] = trọng số cung (u, v)</li>
+                    <li>Nếu không có (u, v) thì W[u][v] = NO_EDGE (ví dụ: -1)</li>
                   </ul>
                   <ul>
                     Danh sách cung
@@ -888,19 +888,19 @@ if (num[u] == min_num[u]) {
                     Đường đi ngắn nhất
                   </h3>
                   <ul>
-                    Đường đi ngắn nhất ( shortest path) từ đỉnh u đến đỉnh v
+                    Đường đi ngắn nhất (shortest path) từ đỉnh u đến đỉnh v
                     trong đồ thị có trọng số
                     <li>
-                      Chiều dài/ chi phí ( cost) của đường đi ( path) là tổng
+                      Chiều dài/ chi phí (cost) của đường đi (path) là tổng
                       các trọng số của các cung trên đường đi
                     </li>
                     <li>
-                      Đường đi ngắn nhất ( shortest path) là đường đi có chiều
+                      Đường đi ngắn nhất (shortest path) là đường đi có chiều
                       dài nhỏ nhất
                     </li>
                   </ul>
                   <ul>
-                    Một đoạn đường đi ( sub-path) của đường đi ngắn nhất cũng là
+                    Một đoạn đường đi (sub-path) của đường đi ngắn nhất cũng là
                     đường đi ngắn nhất
                     <li>
                       Tính chất cấu trúc con tối ưu (optimal substructure) {"⇒"}{" "}
@@ -920,7 +920,7 @@ if (num[u] == min_num[u]) {
                   <ul>
                     <li>
                       Tìm đường đi ngắn nhất từ 1 đỉnh đến các đỉnh khác trên đồ
-                      thị có trọng số ( single source shortest path problem -
+                      thị có trọng số (single source shortest path problem -
                       SSSP)
                     </li>
                     <li>
@@ -950,16 +950,13 @@ if (num[u] == min_num[u]) {
                     <ul style={{ listStyle: "disc" }}>
                       Các biến hỗ trợ:
                       <li style={{ marginLeft: "15px" }}>
-                        pi[u]: chiều dài đường đi ngắn nhất ( tạm thời) từ s đến
-                        u
+                        pi[u]: chiều dài đường đi ngắn nhất (tạm thời) từ s đến u
                       </li>
                       <li style={{ marginLeft: "15px" }}>
-                        p[u]: đỉnh trước đỉnh u trên đường đi ngắn nhất ( tạm
-                        thời) từ s đến u
+                        p[u]: đỉnh trước đỉnh u trên đường đi ngắn nhất (tạm thời) từ s đến u
                       </li>
                       <li style={{ marginLeft: "15px" }}>
-                        mark[u]: đánh dấu đỉnh u ( đã tìm được đường đi ngắn
-                        nhất đến u)
+                        mark[u]: đánh dấu đỉnh u (đã tìm được đường đi ngắn nhất đến u)
                       </li>
                     </ul>
                     <ul>
@@ -981,7 +978,7 @@ if (num[u] == min_num[u]) {
                         </li>
                         <li style={{ marginLeft: "15px" }}>Đánh dấu u</li>
                         <li style={{ marginLeft: "15px" }}>
-                          Xét các đỉnh kề v( chưa đánh dấu) của u để cập nhật
+                          Xét các đỉnh kề v (chưa đánh dấu) của u để cập nhật
                           đường đi nếu đường đi qua u rồi đến v tốt hơn đường đi
                           cũ
                         </li>
@@ -1005,16 +1002,16 @@ if (num[u] == min_num[u]) {
                     Thứ tự topo
                   </h3>
                   <p>
-                    Thứ tự topo ( topological order) của các đỉnh trên đồ thị có
+                    Thứ tự topo (topological order) của các đỉnh trên đồ thị có
                     hướng G là một cách sắp xếp thứ tự các đỉnh của G sao cho
-                    với mọi cung ( u,v), đỉnh gốc u phải đứng trước đỉnh ngọn v
+                    với mọi cung (u, v), đỉnh gốc u phải đứng trước đỉnh ngọn v
                   </p>
                   <p>
-                    Sắp xếp topo ( topological ordering/sort): sắp xếp các đỉnh
+                    Sắp xếp topo (topological ordering/sort): sắp xếp các đỉnh
                     theo thứ tự topo
                   </p>
                   <ul style={{ listStyle: "disc" }}>
-                    Đồ thị có hướng không chu trình ( Directed Acyclic Graph -
+                    Đồ thị có hướng không chu trình (Directed Acyclic Graph -
                     DAG)
                     <li style={{ marginLeft: "15px" }}>Có hướng</li>
                     <li style={{ marginLeft: "15px" }}>Không chứa chu trình</li>
@@ -1072,14 +1069,14 @@ if (num[u] == min_num[u]) {
                     Xếp hạng các đỉnh của đồ thị
                   </h3>
                   <ul>
-                    Gốc/ nguồn ( root/ source) của đồ thị
+                    Gốc/ nguồn (root/ source) của đồ thị
                     <li style={{ marginLeft: "15px" }}>
-                      Đỉnh không có cung đi vào ( indegree = 0)
+                      Đỉnh không có cung đi vào (indegree = 0)
                     </li>
                     <li style={{ marginLeft: "15px" }}>DAG có ít nhất 1 gốc</li>
                   </ul>
                   <ul>
-                    Hạng ( rank) của 1 đỉnh
+                    Hạng (rank) của 1 đỉnh
                     <li style={{ marginLeft: "15px" }}>
                       u là gốc, rank[u] = 0
                     </li>
@@ -1089,15 +1086,15 @@ if (num[u] == min_num[u]) {
                     </li>
                   </ul>
                   <ul style={{ listStyle: "decimal" }}>
-                    Thuật toán xếp hạng đồ thị ( dựa trên BFS):
+                    Thuật toán xếp hạng đồ thị (dựa trên BFS):
                     <li style={{ marginLeft: "25px" }}>
-                      Xếp hạng cho ( các) gốc ( hạng 0)
+                      Xếp hạng cho (các) gốc (hạng 0)
                     </li>
                     <li style={{ marginLeft: "25px" }}>
                       Loại bỏ gốc ra khỏi đồ thị {"⇒"} xuất hiện gốc mới
                     </li>
                     <li style={{ marginLeft: "25px" }}>
-                      Xếp hạng cho gốc mới ( hạng 1)
+                      Xếp hạng cho gốc mới (hạng 1)
                     </li>
                     <li style={{ marginLeft: "25px" }}>
                       Loại bỏ gốc ra khỏi đồ thị {"⇒"} xuất hiện gốc mới
@@ -1113,13 +1110,13 @@ if (num[u] == min_num[u]) {
                     Quản lý dự án
                   </h3>
                   <ul style={{ listStyle: "disc" }}>
-                    Dự án ( project):
+                    Dự án (project):
                     <li style={{ marginLeft: "15px" }}>
-                      Danh sách công việc ( activities/ tasks), mỗi công việc có
+                      Danh sách công việc (activities/ tasks), mỗi công việc có
                       thời gian hoàn thành
                     </li>
                     <li style={{ marginLeft: "15px" }}>
-                      Có sự phụ thuộc giữa các công việc( vd: công việc B chỉ có
+                      Có sự phụ thuộc giữa các công việc(vd: công việc B chỉ có
                       thể bắt đầu làm khi làm xong công việc A)
                     </li>
                   </ul>
@@ -1139,11 +1136,11 @@ if (num[u] == min_num[u]) {
                       Sự phụ thuộc giữa 2 công việc {"⇒"} Cung
                     </li>
                     <li style={{ marginLeft: "15px" }}>
-                      Thời gian hoàn thành công việc u ( d) {"⇒"} Trọng số của
+                      Thời gian hoàn thành công việc u (d) {"⇒"} Trọng số của
                       đỉnh u
                     </li>
                     <li style={{ marginLeft: "15px" }}>
-                      Thêm 2 đỉnh: &alpha; &beta;( tương ứng với 2 công việc
+                      Thêm 2 đỉnh: &alpha; &beta;(tương ứng với 2 công việc
                       giả)
                     </li>
                     <li style={{ marginLeft: "15px" }}>
@@ -1154,7 +1151,7 @@ if (num[u] == min_num[u]) {
                     </li>
                   </ul>
                   <ul style={{ listStyle: "circle" }}>
-                    Người quản lý dự án ( project manager)
+                    Người quản lý dự án (project manager)
                     <li style={{ marginLeft: "15px" }}>
                       <ul style={{ listStyle: "disc" }}>
                         Tổ chức thực hiện công việc như nào để
@@ -1168,7 +1165,7 @@ if (num[u] == min_num[u]) {
                     </li>
                   </ul>
                   <ul style={{ listStyle: "disc" }}>
-                    Thời điểm bắt đầu sớm nhất ( early start time) của công
+                    Thời điểm bắt đầu sớm nhất (early start time) của công
                     việc, ký hiệu là t[u]:
                     <li style={{ marginLeft: "15px" }}>
                       Thời điểm sớm nhất có thể bắt đầu công việc u
@@ -1182,7 +1179,7 @@ if (num[u] == min_num[u]) {
                     <li style={{ marginLeft: "15px" }}>t[&alpha;] = 0</li>
                     <li style={{ marginLeft: "15px" }}>
                       <ul>
-                        Xét các đỉnh u theo thứ tự hạng tăng dần ( theo thứ tự
+                        Xét các đỉnh u theo thứ tự hạng tăng dần (theo thứ tự
                         topo)
                         <li>
                           t[u] = max&#123;t[x] + d[x]&#125; với x là đỉnh tương
@@ -1204,7 +1201,7 @@ if (num[u] == min_num[u]) {
                       </ul>
                     </li>
                   </ul>
-                  <p>Công việc then chốt ( critical activities): t[u] = T</p>
+                  <p>Công việc then chốt (critical activities): t[u] = T</p>
                   <p>
                     Đường nối các công việc then chốt: đường then chốt (
                     critical path)
@@ -1228,12 +1225,12 @@ if (num[u] == min_num[u]) {
                   <ul>
                     Định nghĩa:
                     <li>
-                      Cây ( tree): đồ thị vô hướng liên thông và không có chu
+                      Cây (tree): đồ thị vô hướng liên thông và không có chu
                       trình
                     </li>
-                    <li>T là cây {"⇒"} T là đồ thị đơn ( simple graph)</li>
+                    <li>T là cây {"⇒"} T là đồ thị đơn (simple graph)</li>
                     <li>
-                      Đồ thị liên thông tối thiểu ( minimally connected): Đồ thị
+                      Đồ thị liên thông tối thiểu (minimally connected): Đồ thị
                       liên thông nếu xóa một cung bất kỳ thì nó không còn liên
                       thông nữa
                     </li>
@@ -1254,7 +1251,7 @@ if (num[u] == min_num[u]) {
                   </p>
                   <p>
                     Định lý 6: Cây có ít nhất 2 đỉnh thì sẽ có ít nhất 2 đỉnh
-                    treo ( đỉnh bậc 1)
+                    treo (đỉnh bậc 1)
                   </p>
                   <p>Định lý 7: 1 rừng có n đỉnh, k cây sẽ có n-k cung</p>
                   <ul>
@@ -1275,7 +1272,7 @@ if (num[u] == min_num[u]) {
                       </ul>
                     </li>
                     <li style={{ marginLeft: "15px" }}>
-                      Đồ thị( liên thông) có thể có nhiều cây khung
+                      Đồ thị(liên thông) có thể có nhiều cây khung
                     </li>
                   </ul>
                 </div>
@@ -1292,13 +1289,13 @@ if (num[u] == min_num[u]) {
                       Sắp xếp các cung của G theo thứ tự trọng số tăng dần
                     </li>
                     <li style={{ marginLeft: "15px" }}>
-                      Khởi tạo cây T rỗng ( không chứa cung nào cả)
+                      Khởi tạo cây T rỗng (không chứa cung nào cả)
                     </li>
                     <li style={{ marginLeft: "15px" }}>
                       <ul style={{ listStyle: "disc" }}>
-                        Lần lượt xét từng cung của G ( theo thứ tự đã sắp xếp)
+                        Lần lượt xét từng cung của G (theo thứ tự đã sắp xếp)
                         <li>
-                          Nếu thêm cung e = ( u,v) vào T mà không tạo thành chu
+                          Nếu thêm cung e = (u, v) vào T mà không tạo thành chu
                           trình thì thêm e vào T
                         </li>
                         <li>Ngược lại, bỏ qua cung e</li>
@@ -1322,7 +1319,7 @@ if (num[u] == min_num[u]) {
                     <li style={{ marginLeft: "15px" }}>Khởi tạo cây T rỗng</li>
                     <li style={{ marginLeft: "15px" }}>
                       Chọn 1 đỉnh u bất kỳ làm đỉnh bắt đầu, đánh dấu nó đã xét
-                      ( mark[u] =1), các đỉnh khác đều chưa xét
+                      (mark[u] =1), các đỉnh khác đều chưa xét
                     </li>
                     <li style={{ marginLeft: "15px" }}>
                       <ul style={{ listStyle: "disc" }}>
@@ -1331,7 +1328,7 @@ if (num[u] == min_num[u]) {
                           Tìm đỉnh v chưa xét, gần với 1 trong các đỉnh u đã xét
                           nhất
                         </li>
-                        <li>Thêm cung ( u,v) vào T</li>
+                        <li>Thêm cung (u, v) vào T</li>
                         <li>Đánh dấu v đã xét</li>
                       </ul>
                     </li>
@@ -1353,7 +1350,7 @@ if (num[u] == min_num[u]) {
                     Cây có hướng
                   </h3>
                   <ul style={{ listStyle: "decimal" }}>
-                    Các tính chất ( định lý): G là cây có hướng gốc r
+                    Các tính chất (định lý): G là cây có hướng gốc r
                     <li style={{ marginLeft: "20px" }}>
                       Tồn tại đỉnh r được nối với mỗi một đỉnh khác bằng một
                       đường đi duy nhất xuất phát từ r
@@ -1431,7 +1428,7 @@ if (num[u] == min_num[u]) {
                         Giãn cây khung T<sub>t+1</sub> thành cây khung T
                         <sub>t</sub> của đồ thị G<sub>t</sub>
                         <li style={{ marginLeft: "25px" }}>
-                          Mở đỉnh ( được gom lại trong pha co) {"⇒"} chu trình
+                          Mở đỉnh (được gom lại trong pha co) {"⇒"} chu trình
                         </li>
                         <li style={{ marginLeft: "25px" }}>
                           Điều chỉnh trọng số của cung đi đến chu trình
@@ -1444,7 +1441,7 @@ if (num[u] == min_num[u]) {
                     <li style={{ marginLeft: "15px" }}>
                       Xây dựng đồ thị xấp xỉ H<sub>t</sub> từ G<sub>t</sub>: Trừ
                       gốc ra, với mỗi đỉnh còn lại giữ 1 cung đi đến nó có trọng
-                      số nhỏ nhất ( bỏ các cung khác đi)
+                      số nhỏ nhất (bỏ các cung khác đi)
                     </li>
                   </ul>
                 </div>
@@ -1461,20 +1458,20 @@ if (num[u] == min_num[u]) {
                     className="text-gray-700  text-center"
                     style={{ textAlign: "left" }}
                   >
-                    Luồng ( trên mạng)
+                    Luồng (trên mạng)
                   </h3>
                   <ul style={{ listStyle: "circle" }}>
-                    ( Network) Flow: thứ lưu thông trên mạng
+                    (Network) Flow: thứ lưu thông trên mạng
                     <li style={{ marginLeft: "15px" }}>
-                      Một luồng đi từ đỉnh phát ( s) đến đỉnh thu ( t) là 1 hàm
-                      f: ( u,v) {"->"}
-                      f(u,v)
+                      Một luồng đi từ đỉnh phát (s) đến đỉnh thu (t) là 1 hàm
+                      f: (u, v) {"->"}
+                      f(u, v)
                     </li>
                     <li style={{ marginLeft: "15px" }}>
                       <ul style={{ listStyle: "disc" }}>
                         Thỏa mãn các điều kiện sao
                         <li style={{ marginLeft: "25px" }}>
-                          Với mỗi cung: 0 &lt;= f( u,v) &lt;= c(u,v)
+                          Với mỗi cung: 0 &lt;= f(u, v) &lt;= c(u, v)
                         </li>
                         <li style={{ marginLeft: "25px" }}>
                           Với mỗi đỉnh khác s và t: tổng luồng vào = tổng luồng
@@ -1501,15 +1498,15 @@ if (num[u] == min_num[u]) {
                   >
                     Lát Cắt
                   </h3>
-                  <p>Một lát cắt tách s và t,( gọi là: s-t cut)</p>
+                  <p>Một lát cắt tách s và t, (gọi là: s-t cut)</p>
                   <p>
                     Các cung của một lát cắt (tách s và t): Tập các cung xuất
                     phát từ S đi đến T {"{"}(u, v) | u ∈ S và v ∈ T{"}"}
                   </p>
 
                   <p>
-                    Khả năng thông qua của 1 lát cắt ( tách s và t): c( S, T) =
-                    &sum; c( u, v)
+                    Khả năng thông qua của 1 lát cắt (tách s và t): c(S, T) =
+                    &sum; c(u, v)
                   </p>
                 </div>
                 <div id="L&LC" className="mb-6">
@@ -1528,7 +1525,7 @@ if (num[u] == min_num[u]) {
                           f là luồng đi qua mạng N
                         </li>
                         <li style={{ marginLeft: "25px" }}>
-                          ( S, T) là 1 lát cắt tách s và t
+                          (S, T) là 1 lát cắt tách s và t
                         </li>
                       </ul>
                     </li>
@@ -1555,7 +1552,7 @@ if (num[u] == min_num[u]) {
                           f là luồng đi qua mạng N
                         </li>
                         <li style={{ marginLeft: "25px" }}>
-                          ( S, T) là 1 lát cắt tách s và t
+                          (S, T) là 1 lát cắt tách s và t
                         </li>
                       </ul>
                     </li>
@@ -1578,17 +1575,17 @@ if (num[u] == min_num[u]) {
                           f là luồng đi qua mạng N
                         </li>
                         <li style={{ marginLeft: "25px" }}>
-                          ( S, T) là 1 lát cắt tách s và t
+                          (S, T) là 1 lát cắt tách s và t
                         </li>
                       </ul>
                     </li>
                     <li style={{ marginLeft: "25px" }}>
-                      Nếu |f| = c( S, T) thì f là luồng lớn nhất ( luồng cực
-                      đại) và ( S, T) là lát cắt hẹp nhất
+                      Nếu |f| = c(S, T) thì f là luồng lớn nhất (luồng cực
+                      đại) và (S, T) là lát cắt hẹp nhất
                     </li>
                   </ul>
                   <p>
-                    Định lý luồng cực đại lát cắt hẹp nhất ( Ford - Fulkerson,
+                    Định lý luồng cực đại lát cắt hẹp nhất (Ford - Fulkerson,
                     1956): Giá trị luồng cực đại = khả năng thông qua của lát
                     cắt hẹp nhất
                   </p>
@@ -1604,8 +1601,7 @@ if (num[u] == min_num[u]) {
                     Ý tưởng: tìm lát cắt hẹp nhất bằng cách tăng luồng đi qua
                     mạng
                     <li style={{ marginLeft: "15px" }}>
-                      Khởi tạo 1 luồng hợp lệ ( thường là luồng có giá trị bằng
-                      0)
+                      Khởi tạo 1 luồng hợp lệ (thường là luồng có giá trị bằng 0)
                     </li>
                     <li style={{ marginLeft: "15px" }}>
                       Tìm cách tăng luồng đi qua mạng cho đến khi bị ngẽn {"⇒"}{" "}
@@ -1613,7 +1609,7 @@ if (num[u] == min_num[u]) {
                     </li>
                   </ul>
                   <ul style={{ listStyle: "disc" }}>
-                    Tìm đường tăng luồng ( augmenting path)
+                    Tìm đường tăng luồng (augmenting path)
                     <li style={{ marginLeft: "15px" }}>
                       Tìm đường đi từ s đến t sao cho có thể tăng thêm luồng
                       trên đường đi đó
