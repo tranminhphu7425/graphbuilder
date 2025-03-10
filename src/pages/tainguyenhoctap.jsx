@@ -223,7 +223,7 @@ const Tainguyenhoctap = () => {
               </Link>
               <div>
                 <ul>
-                  <Link to="/tainguyenhoctap#ĐN&PL">
+                  <Link to="/tainguyenhoctap#DN&PL">
                     I. ĐỊNH NGHĨA VÀ PHÂN LOẠI
                   </Link>
                   <li>
@@ -246,14 +246,14 @@ const Tainguyenhoctap = () => {
               </div>
               <div>
                 <ul>
-                  <Link to="/tainguyenhoctap#DĐT">II. DUYỆT ĐỒ THỊ</Link>
+                  <Link to="/tainguyenhoctap#DDT">II. DUYỆT ĐỒ THỊ</Link>
                   <li>
-                    <Link to="/tainguyenhoctap#BFS">
+                    <Link to="/tainguyenhoctap#DFS">
                       DUYỆT ĐỒ THỊ THEO CHIỀU SÂU
                     </Link>
                   </li>
                   <li>
-                    <Link to="/tainguyenhoctap#DFSĐQ">
+                    <Link to="/tainguyenhoctap#DFSDQ">
                       DUYỆT ĐỒ THỊ THEO CHIỀU SÂU BẰNG ĐỆ QUY
                     </Link>
                   </li>
@@ -266,11 +266,11 @@ const Tainguyenhoctap = () => {
               </div>
               <div>
                 <ul>
-                  <Link to="/tainguyenhoctap#TLTĐT">
+                  <Link to="/tainguyenhoctap#TLTDT">
                     III. TÍNH LIÊN THÔNG CỦA ĐỒ THỊ
                   </Link>
                   <li>
-                    <Link to="/tainguyenhoctap#ĐNLT">ĐỊNH NGHĨA</Link>
+                    <Link to="/tainguyenhoctap#DNLT">ĐỊNH NGHĨA</Link>
                   </li>
                   <li>
                     <Link to="/tainguyenhoctap#SCC">
@@ -290,22 +290,7 @@ const Tainguyenhoctap = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link to="/tainguyenhoctap#KTPĐ">
-                      KIỂM TRA ĐỒ THỊ PHÂN ĐÔI
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <ul>
-                  <Link to="/tainguyenhoctap#">V. </Link>
-                  <li>
-                    <Link to="/tainguyenhoctap#KTCT">
-                      KIỂM TRA ĐỒ THỊ CHỨA CHU TRÌNH
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/tainguyenhoctap#KTPĐ">
+                    <Link to="/tainguyenhoctap#KTPD">
                       KIỂM TRA ĐỒ THỊ PHÂN ĐÔI
                     </Link>
                   </li>
@@ -335,7 +320,7 @@ const Tainguyenhoctap = () => {
                     II. TÌM ĐƯỜNG ĐI NGẮN NHẤT
                   </Link>
                   <li>
-                    <Link to="/tainguyenhoctap#ĐTTS">
+                    <Link to="/tainguyenhoctap#DTTS">
                       BIỂU DIỄN ĐỒ THỊ CÓ TRỌNG SỐ
                     </Link>
                   </li>
@@ -358,7 +343,7 @@ const Tainguyenhoctap = () => {
                     <Link to="/tainguyenhoctap#TOPO">THỨ TỰ TOPO</Link>
                   </li>
                   <li>
-                    <Link to="/tainguyenhoctap#XHĐT">
+                    <Link to="/tainguyenhoctap#XHDT">
                       XẾP HẠNG CÁC ĐỈNH CỦA ĐỒ THỊ
                     </Link>
                   </li>
@@ -426,7 +411,7 @@ const Tainguyenhoctap = () => {
           <section className="max-w-6xl mx-auto bg-white p-8 rounded-lg shadow-lg w-[60%]">
             <div id="PCB" className="mb-6">
               <h1>PHẦN CƠ BẢN</h1>
-              <div id="ĐN&PL" className="mb-6">
+              <div id="DN&PL" className="mb-6">
                 <h2
                   className="text-gray-700 mb-6 text-center"
                   style={{ textAlign: "left" }}
@@ -476,7 +461,7 @@ const Tainguyenhoctap = () => {
                   </ul>
                 </div>
               </div>
-              <div className="mb-6 " id="MSDTDB">
+              <div className="mb-6" id="MSDTDB">
                 <h2
                   className="text-gray-700 mb-6 text-center"
                   style={{ textAlign: "left" }}
@@ -537,7 +522,7 @@ const Tainguyenhoctap = () => {
                     </li>
                   </ul>
                 </div>
-                <div id="SDCCDT">
+                <div className="mb-6" id="SDCCDT">
                   <h3
                     className="text-gray-700  text-center"
                     style={{ textAlign: "left" }}
@@ -550,16 +535,16 @@ const Tainguyenhoctap = () => {
                   </p>
                 </div>
               </div>
-              <div id="DĐT" className="mb-6">
+              <div id="DDT" className="mb-6">
                 <h2
                   className="text-gray-700 mb-6 text-center"
                   style={{ textAlign: "left" }}
                 >
-                  Duyệt Đồ Thị
+                  II. Duyệt Đồ Thị
                 </h2>
-                <div className="mb-6">
+                <div className="mb-6" id="DFS">
                   <h3
-                    id="DFS"
+                    
                     className="text-gray-700  text-center"
                     style={{ textAlign: "left" }}
                   >
@@ -582,9 +567,9 @@ const Tainguyenhoctap = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="mb-6">
+                <div className="mb-6" id="DFSDQ">
                   <h3
-                    id="DFSĐQ"
+                    
                     className="text-gray-700  text-center"
                     style={{ textAlign: "left" }}
                   >
@@ -598,9 +583,9 @@ const Tainguyenhoctap = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="mb-6">
+                <div className="mb-6" id="BFS">
                   <h3
-                    id="BFS"
+                    
                     className="text-gray-700  text-center"
                     style={{ textAlign: "left" }}
                   >
@@ -629,7 +614,7 @@ const Tainguyenhoctap = () => {
                   className="text-gray-700 mb-6 text-center"
                   style={{ textAlign: "left" }}
                 >
-                  Tính Liên Thông Của Đồ Thị
+                  III. Tính Liên Thông Của Đồ Thị
                 </h2>
                 <div id="DNLT" className="mb-6">
                   <h3
@@ -666,7 +651,7 @@ const Tainguyenhoctap = () => {
                 </div>
                 <div id="SCC" className="mb-6">
                   <h3
-                    id="BFS"
+                    
                     className="text-gray-700  text-center"
                     style={{ textAlign: "left" }}
                   >
@@ -719,11 +704,11 @@ if (num[u] == min_num[u]) {
                   className="text-gray-700 mb-6 text-center"
                   style={{ textAlign: "left" }}
                 >
-                  Duyệt đồ thị và ứng dụng
+                  IV. Duyệt đồ thị và ứng dụng
                 </h2>
                 <div id="KTCT" className="mb-6">
                   <h3
-                    id="BFS"
+                   
                     className="text-gray-700  text-center"
                     style={{ textAlign: "left" }}
                   >
@@ -761,9 +746,9 @@ if (num[u] == min_num[u]) {
                     </li>
                   </ul>
                 </div>
-                <div id="KTPĐ" className="mb-6">
+                <div id="KTPD" className="mb-6">
                   <h3
-                    id="BFS"
+                  
                     className="text-gray-700  text-center"
                     style={{ textAlign: "left" }}
                   >
@@ -787,7 +772,7 @@ if (num[u] == min_num[u]) {
                   className="text-gray-700 mb-6 text-center"
                   style={{ textAlign: "left" }}
                 >
-                  Đồ Thị Euler & Đồ Thị Hamilton
+                  I. Đồ Thị Euler & Đồ Thị Hamilton
                 </h2>
                 <div id="EULER" className="mb-6">
                   <h3
@@ -872,9 +857,9 @@ if (num[u] == min_num[u]) {
                   className="text-gray-700 mb-6 text-center"
                   style={{ textAlign: "left" }}
                 >
-                  Tìm Đường Đi Ngắn Nhất
+                  II. Tìm Đường Đi Ngắn Nhất
                 </h2>
-                <div id="ĐTTS" className="mb-6">
+                <div id="DTTS" className="mb-6">
                   <h3
                     className="text-gray-700  text-center"
                     style={{ textAlign: "left" }}
@@ -924,44 +909,7 @@ if (num[u] == min_num[u]) {
                     </li>
                   </ul>
                 </div>
-                <div id="MOORE-DIJKSTRA" className="mb-6">
-                  <h3
-                    className="text-gray-700  text-center"
-                    style={{ textAlign: "left" }}
-                  >
-                    Thuật toán Moore - Dijkstra
-                  </h3>
-                  <ul>
-                    <li>
-                      Tìm đường đi ngắn nhất từ 1 đỉnh đến các đỉnh khác trên đồ
-                      thị có trọng số ( single source shortest path problem -
-                      SSSP)
-                    </li>
-                    <li>
-                      <ul style={{ listStyle: "disc" }}>
-                        Điều kiện áp dụng:
-                        <li style={{ marginLeft: "15px" }}>
-                          Đồ thị có trọng số không âm
-                        </li>
-                        <li style={{ marginLeft: "15px" }}>
-                          Có hướng hoặc vô hướng đều được
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <ul style={{ listStyle: "disc" }}>
-                        Ý tưởng chính:
-                        <li style={{ marginLeft: "15px" }}>
-                          Khởi tạo đường đi trực tiếp từ s đến các đỉnh
-                        </li>
-                        <li style={{ marginLeft: "15px" }}>
-                          Lần lượt cập nhật lại đường đi nếu tìm được đường đi
-                          mới tốt hơn đường đi cũ
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
+                
                 <div id="MOORE-DIJKSTRA" className="mb-6">
                   <h3
                     className="text-gray-700  text-center"
@@ -1047,7 +995,7 @@ if (num[u] == min_num[u]) {
                   className="text-gray-700 mb-6 text-center"
                   style={{ textAlign: "left" }}
                 >
-                  Thứ Tự Topo & Ứng Dụng
+                  III. Thứ Tự Topo & Ứng Dụng
                 </h2>
                 <div id="TOPO" className="mb-6">
                   <h3
@@ -1116,7 +1064,7 @@ if (num[u] == min_num[u]) {
                     </ul>
                   </ul>
                 </div>
-                <div id="XHĐT" className="mb-6">
+                <div id="XHDT" className="mb-6">
                   <h3
                     className="text-gray-700  text-center"
                     style={{ textAlign: "left" }}
@@ -1268,7 +1216,7 @@ if (num[u] == min_num[u]) {
                   className="text-gray-700 mb-6 text-center"
                   style={{ textAlign: "left" }}
                 >
-                  Cây & Cây Khung Tối Thiểu
+                  IV. Cây & Cây Khung Tối Thiểu
                 </h2>
                 <div id="CVH" className="mb-6">
                   <h3
@@ -1395,7 +1343,7 @@ if (num[u] == min_num[u]) {
                   className="text-gray-700 mb-6 text-center"
                   style={{ textAlign: "left" }}
                 >
-                  Cây Có Hướng & Cây Khung Tối Thiểu
+                  V. Cây Có Hướng & Cây Khung Tối Thiểu
                 </h2>
                 <div id="CCH" className="mb-6">
                   <h3
@@ -1501,12 +1449,12 @@ if (num[u] == min_num[u]) {
                   </ul>
                 </div>
               </div>
-              <div id="LCĐTM" className="mb-6">
+              <div id="LCDTM" className="mb-6">
                 <h2
                   className="text-gray-700 mb-6 text-center"
                   style={{ textAlign: "left" }}
                 >
-                  Luồng Cực Đại Trong Mạng
+                  VI. Luồng Cực Đại Trong Mạng
                 </h2>
                 <div id="LTM" className="mb-6">
                   <h3
