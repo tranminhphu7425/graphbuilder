@@ -227,10 +227,20 @@ const Tainguyenhoctap = () => {
                     I. ĐỊNH NGHĨA VÀ PHÂN LOẠI
                   </Link>
                   <li>
-                    <Link to="/tainguyenhoctap#ĐN">ĐỊNH NGHĨA</Link>
+                    <Link to="/tainguyenhoctap#DN">ĐỊNH NGHĨA</Link>
                   </li>
                   <li>
-                    <Link to="/tainguyenhoctap#BCĐT">BẬC CỦA ĐỒ THỊ</Link>
+                    <Link to="/tainguyenhoctap#BCDT">BẬC CỦA ĐỒ THỊ</Link>
+                  </li>
+                  <li>
+                    <Link to="/tainguyenhoctap#MSDTDB">
+                      MỘT SỐ ĐỒ THỊ ĐẶC BIỆT
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/tainguyenhoctap#SDCCDT">
+                      SỰ ĐẲNG CẤU CỦA ĐỒ THỊ
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -295,7 +305,9 @@ const Tainguyenhoctap = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link to="/tainguyenhoctap#KTPĐ">KIỂM TRA ĐỒ THỊ PHÂN ĐÔI</Link>
+                    <Link to="/tainguyenhoctap#KTPĐ">
+                      KIỂM TRA ĐỒ THỊ PHÂN ĐÔI
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -419,11 +431,10 @@ const Tainguyenhoctap = () => {
                   className="text-gray-700 mb-6 text-center"
                   style={{ textAlign: "left" }}
                 >
-                  Định Nghĩa & Phân Loại
+                  I. Định Nghĩa & Phân Loại
                 </h2>
-                <div>
+                <div id="DN">
                   <h3
-                    id="ĐN"
                     className="text-gray-700 text-center"
                     style={{ textAlign: "left" }}
                   >
@@ -442,9 +453,8 @@ const Tainguyenhoctap = () => {
                     </ul>
                   </p>
                 </div>
-                <div className="mb-6">
+                <div className="mb-6" id="BCDT">
                   <h3
-                    id="BCĐT"
                     className="text-gray-700  text-center"
                     style={{ textAlign: "left" }}
                   >
@@ -466,7 +476,7 @@ const Tainguyenhoctap = () => {
                   </ul>
                 </div>
               </div>
-              <div className="mb-6">
+              <div className="mb-6 " id="MSDTDB">
                 <h2
                   className="text-gray-700 mb-6 text-center"
                   style={{ textAlign: "left" }}
@@ -527,17 +537,18 @@ const Tainguyenhoctap = () => {
                     </li>
                   </ul>
                 </div>
-                <h3
-                  id="SĐCCĐT"
-                  className="text-gray-700  text-center"
-                  style={{ textAlign: "left" }}
-                >
-                  Sự đẳng cấu của đồ thị
-                </h3>
-                <p>
-                  2 đồ thị G<sub>1</sub> = &lt;V<sub>1</sub>, E<sub>1</sub>&gt;
-                  và G<sub>2</sub> = &lt;V<sub>2</sub>, E<sub>2</sub>&gt;
-                </p>
+                <div id="SDCCDT">
+                  <h3
+                    className="text-gray-700  text-center"
+                    style={{ textAlign: "left" }}
+                  >
+                    Sự đẳng cấu của đồ thị
+                  </h3>
+                  <p>
+                    2 đồ thị G<sub>1</sub> = &lt;V<sub>1</sub>, E<sub>1</sub>
+                    &gt; và G<sub>2</sub> = &lt;V<sub>2</sub>, E<sub>2</sub>&gt;
+                  </p>
+                </div>
               </div>
               <div id="DĐT" className="mb-6">
                 <h2
@@ -613,14 +624,20 @@ const Tainguyenhoctap = () => {
                   </ul>
                 </div>
               </div>
-              <div id="TLTĐT" className="mb-6">
+              <div id="TLTDT" className="mb-6">
                 <h2
                   className="text-gray-700 mb-6 text-center"
                   style={{ textAlign: "left" }}
                 >
                   Tính Liên Thông Của Đồ Thị
                 </h2>
-                <div id="ĐNLT" className="mb-6">
+                <div id="DNLT" className="mb-6">
+                  <h3
+                    className="text-gray-700 text-center"
+                    style={{ textAlign: "left" }}
+                  >
+                    Định Nghĩa
+                  </h3>
                   <ul style={{ listStyle: "circle" }}>
                     <li>
                       Đồ thị vô hướng G được gọi là liên thông nếu và chỉ nếu
@@ -702,7 +719,7 @@ if (num[u] == min_num[u]) {
                   className="text-gray-700 mb-6 text-center"
                   style={{ textAlign: "left" }}
                 >
-                  Dựng Cây Duyệt Đồ Thị
+                  Duyệt đồ thị và ứng dụng
                 </h2>
                 <div id="KTCT" className="mb-6">
                   <h3
