@@ -215,8 +215,8 @@ const Tainguyenhoctap = () => {
           </nav>
         </header>
 
-        <main className="p-2 bg-gray-100 fullmain">
-          <nav className="menu p-8">
+        <main className="p-2 bg-gray-100 fullmain gap-3">
+          <nav className="menu p-8" id="menutainguyenhoctap">
             <div>
               <Link to="/tainguyenhoctap#PCB">
                 <h2>PHẦN CƠ BẢN</h2>
@@ -408,7 +408,7 @@ const Tainguyenhoctap = () => {
               </div>
             </div>
           </nav>
-          <section className="max-w-6xl mx-auto bg-white p-8 rounded-lg shadow-lg w-[60%]">
+          <section className="max-w-7xl mx-auto bg-white p-10 rounded-lg shadow-lg w-[80%]">
             <div id="PCB" className="mb-6">
               <h1>PHẦN CƠ BẢN</h1>
               <div id="DN&PL" className="mb-6">

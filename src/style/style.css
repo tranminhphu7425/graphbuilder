@@ -760,14 +760,12 @@ input[type="number"], textarea, textarea::placeholder {
 /* tainguyenhoctap */
 
 #tainguyenhoctap .menu {
-  background-color: aliceblue;
+  background-color: rgb(255, 255, 255);
   width: 30%;
-  /* max-width: 500px; */
-  position: sticky;
+  max-width: 480px;
   height: 720px;
   overflow-y: scroll;
   margin: 0px;
-
 
 
 }
@@ -784,9 +782,14 @@ input[type="number"], textarea, textarea::placeholder {
 
 #tainguyenhoctap h1 {
   text-align: center;
-  margin: 10px 0 ;
+  margin: 10px auto ;
   font-size: 30px ;
   font-weight: bold ;
+
+}
+#tainguyenhoctap section h2 {
+  color: #000000;
+  font-size: 24px;
 
 }
 
@@ -795,5 +798,42 @@ input[type="number"], textarea, textarea::placeholder {
   margin: 10px 0 ;
   font-size: 20px ;
   font-weight: bold ;
+  color: #000000;
+
+}
+
+#menutainguyenhoctap ul > li{
+  font-size: 16px;
+  font-weight: initial;
+}
+
+#menutainguyenhoctap ul {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#menutainguyenhoctap a:hover {
+  color: #000000;
+  font-weight: bold;
+}
+
+#tainguyenhoctap section , #tainguyenhoctap .menu{
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+@media screen and (max-width: 1100px) {
+  #tainguyenhoctap main{
+    flex-direction: column;
+  }
+
+  #tainguyenhoctap .menu {
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    height: auto;
+  }
+  #tainguyenhoctap section {
+    width: 100%;
+  }
 
 }
