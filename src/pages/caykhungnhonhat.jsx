@@ -237,7 +237,7 @@ const Caykhungnhonhat = () => {
 
       <main>
         <div className="container" id="formbox">
-          <h2>Tìm cây khung nhỏ nhất</h2>
+          <h2>Tìm cây khung nhỏ nhất vô hướng</h2>
           <form id="graphForm" onSubmit={(e) => e.preventDefault()}>
             <div className="form-group" id="munberNodes">
               <label htmlFor="nodes">Nhập số đỉnh:</label>
@@ -274,16 +274,16 @@ const Caykhungnhonhat = () => {
                 checked={isWeightedGraph}
                 onChange={() => setIsWeightedGraph(!isWeightedGraph)}
               />
-              <label className="switch m-0">
-        
+               <label className="switch m-0">
+                {/* Có hướng */}
                 <input
-                  type="hidden"
+                  type="none"
                   id="directed"
                   name="directed"
                   checked={directed}
                   onChange={() => setDirected(!directed)}
                 />
-        
+                {/* <span className="slider"></span> */}
               </label>
               <div className="typeOfBrowe">
                 <div>

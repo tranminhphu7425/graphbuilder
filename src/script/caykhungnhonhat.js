@@ -27,7 +27,8 @@ export const CaykhungnhonhatEffect = () => {
         })
         .filter((edge) => edge !== null);
 
-      const mstEdges = kruskal(nodes, edges);
+      // Sử dụng thuật toán phù hợp dựa trên loại đồ thị
+      const mstEdges = directed ? caykhungcohuongnhonhat(nodes, edges, 1) : kruskal(nodes, edges);
 
       // Hiển thị kết quả trên giao diện
       displayResults(mstEdges);
@@ -97,6 +98,166 @@ export const CaykhungnhonhatEffect = () => {
       return mstEdges;
     }
 
+    function caykhungcohuongnhonhat(nodes, edges, root) {
+      // Kiểm tra điều kiện dừng
+      if (nodes <= 1 || edges.length === 0) {
+        return [];
+      }
+
+      // Kiểm tra xem có đủ cạnh để tạo cây khung không
+      const reachableNodes = new Set([root]);
+      let changed;
+      do {
+        changed = false;
+        edges.forEach(edge => {
+          if (reachableNodes.has(edge.from) && !reachableNodes.has(edge.to)) {
+            reachableNodes.add(edge.to);
+            changed = true;
+          }
+        });
+      } while (changed);
+
+      // Nếu không thể đến được tất cả các đỉnh từ root
+      if (reachableNodes.size !== nodes) {
+        return [];
+      }
+
+      // Khởi tạo mảng để lưu cây khung có hướng nhỏ nhất
+      const mstEdges = [];
+    
+      // Khởi tạo mảng để lưu cạnh vào mỗi đỉnh với trọng số nhỏ nhất
+      const minInEdge = new Array(nodes + 1).fill(null);
+    
+      // Bước 1: Tìm cạnh vào có trọng số nhỏ nhất cho mỗi đỉnh (trừ đỉnh gốc)
+      for (const edge of edges) {
+        if (edge.to !== root) {
+          if (
+            minInEdge[edge.to] === null ||
+            edge.weight < minInEdge[edge.to].weight
+          ) {
+            minInEdge[edge.to] = edge;
+          }
+        }
+      }
+    
+      // Bước 2: Kiểm tra xem có chu trình trong đồ thị hay không
+      const visited = new Array(nodes + 1).fill(false);
+      const inCycle = new Array(nodes + 1).fill(false);
+      let hasCycle = false;
+    
+      for (let i = 1; i <= nodes; i++) {
+        if (!visited[i] && i !== root) {
+          let current = i;
+          const path = [];
+    
+          // Duyệt theo cạnh vào nhỏ nhất để tìm chu trình
+          while (current !== root && !visited[current]) {
+            visited[current] = true;
+            path.push(current);
+            if (minInEdge[current] === null) {
+              break; // Không có cạnh vào, không tạo thành chu trình
+            }
+            current = minInEdge[current].from;
+          }
+    
+          if (current !== root && visited[current]) {
+            // Tìm thấy chu trình
+            hasCycle = true;
+            const cycleStartIndex = path.indexOf(current);
+            const cycle = path.slice(cycleStartIndex);
+            cycle.forEach((node) => (inCycle[node] = true));
+          }
+        }
+      }
+    
+      // Bước 3: Nếu không có chu trình, thêm tất cả cạnh vào cây khung
+      if (!hasCycle) {
+        for (let i = 1; i <= nodes; i++) {
+          if (i !== root && minInEdge[i] !== null) {
+            mstEdges.push(minInEdge[i]);
+          }
+        }
+        return mstEdges;
+      }
+    
+      // Bước 4: Nếu có chu trình, co chu trình thành một đỉnh ảo và tiếp tục
+      const cycleNodes = [];
+      for (let i = 1; i <= nodes; i++) {
+        if (inCycle[i]) {
+          cycleNodes.push(i);
+        }
+      }
+    
+      // Tạo đồ thị mới với chu trình được co lại thành một đỉnh ảo
+      const newNodes = nodes - cycleNodes.length + 1;
+      const newEdges = [];
+      const cycleId = newNodes; // ID của đỉnh ảo
+    
+      // Thêm các cạnh không thuộc chu trình vào đồ thị mới
+      for (const edge of edges) {
+        if (!inCycle[edge.from] && !inCycle[edge.to]) {
+          newEdges.push({...edge});
+        } else if (inCycle[edge.from] && !inCycle[edge.to]) {
+          newEdges.push({ from: cycleId, to: edge.to, weight: edge.weight });
+        } else if (!inCycle[edge.from] && inCycle[edge.to]) {
+          const minEdgeInCycle = minInEdge[edge.to];
+          if (minEdgeInCycle) {
+            newEdges.push({
+              from: edge.from,
+              to: cycleId,
+              weight: edge.weight - minEdgeInCycle.weight,
+            });
+          }
+        }
+      }
+
+      // Kiểm tra xem đồ thị mới có hợp lệ không
+      if (newEdges.length === 0 || newNodes <= 1) {
+        return [];
+      }
+    
+      // Gọi đệ quy để tìm cây khung có hướng nhỏ nhất trên đồ thị mới
+      const newMstEdges = caykhungcohuongnhonhat(newNodes, newEdges, root === cycleId ? root : (root > cycleId ? root - cycleNodes.length + 1 : root));
+      
+      // Nếu không tìm được cây khung trên đồ thị mới
+      if (newMstEdges.length === 0) {
+        return [];
+      }
+    
+      // Khôi phục chu trình từ đỉnh ảo
+      for (const edge of newMstEdges) {
+        if (edge.from === cycleId) {
+          // Tìm cạnh thích hợp từ chu trình
+          const bestEdge = edges.find(e => 
+            inCycle[e.from] && e.to === edge.to && 
+            (!minInEdge[e.to] || e.weight <= minInEdge[e.to].weight)
+          );
+          if (bestEdge) mstEdges.push(bestEdge);
+        } else if (edge.to === cycleId) {
+          // Tìm cạnh thích hợp vào chu trình
+          const cycleNode = cycleNodes.find(node => 
+            minInEdge[node] && minInEdge[node].from === edge.from
+          );
+          if (cycleNode && minInEdge[cycleNode]) {
+            mstEdges.push(minInEdge[cycleNode]);
+          }
+        } else {
+          mstEdges.push(edge);
+        }
+      }
+
+      // Thêm các cạnh trong chu trình
+      cycleNodes.forEach(node => {
+        if (minInEdge[node] && inCycle[minInEdge[node].from]) {
+          mstEdges.push(minInEdge[node]);
+        }
+      });
+    
+      return mstEdges;
+    }
+   
+
+
     // Hàm vẽ đồ thị với các cạnh thuộc cây khung nhỏ nhất được đánh dấu
     function drawGraph(nodes, edges, directed, mstEdges) {
       const nodesArray = Array.from({ length: nodes }, (_, i) => ({
@@ -117,8 +278,7 @@ export const CaykhungnhonhatEffect = () => {
         if (
           mstEdges.some(
             (e) =>
-              (e.from === edge.from && e.to === edge.to) ||
-              (e.from === edge.to && e.to === edge.from)
+              (e.from === edge.from && e.to === edge.to)
           )
         ) {
           edge.color = { color: "red" }; // Tô đậm bằng màu đỏ
