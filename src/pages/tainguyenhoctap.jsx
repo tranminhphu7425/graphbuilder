@@ -434,7 +434,7 @@ const Tainguyenhoctap = () => {
                     style={{ textAlign: "left" }}
                   >
                     <ul style={{ listStyle: "circle" }}>
-                      Đồ thị (Graph) là một bộ đôi {"{<V, E>}"}, trong đó:
+                      Đồ thị (Graph) là một bộ đôi &lt;V, E&gt;, trong đó:
                       <li>V: tập các đỉnh (Vertex set)</li>
                       <li>
                         E: tập các cung (Edge Set), mỗi cung nối 2 đỉnh trong V
@@ -452,7 +452,7 @@ const Tainguyenhoctap = () => {
                   </h3>
                   <ul style={{ listStyle: "circle" }}>
                     <li>
-                      Định lý 1( định lý bắt tay): Tổng bậc của tất cả các đỉnh
+                      Định lý 1 (định lý bắt tay): Tổng bậc của tất cả các đỉnh
                       trong một đồ thị bằng 2 lần số cung
                     </li>
                     <li>
@@ -460,7 +460,7 @@ const Tainguyenhoctap = () => {
                       chẵn
                     </li>
                     <li>
-                      Định lý 3(Cho một đồ thị có hướng): Tổng bậc vào = Tổng
+                      Định lý 3 (Cho một đồ thị có hướng): Tổng bậc vào = Tổng
                       bậc ra = Tổng số cung
                     </li>
                   </ul>
@@ -481,21 +481,21 @@ const Tainguyenhoctap = () => {
                       một kề nhau
                     </li>
                     <li>
-                      Clique tối đại ( maximal clique): là một clique không thể
+                      Clique tối đại (maximal clique): là một clique không thể
                       thêm vào nó bất cứ đỉnh nào nữa
                     </li>
                     <li>
-                      Clique lớn nhất( maximum clique)L là Clique có nhiều phần
+                      Clique lớn nhất (maximum clique): L là Clique có nhiều phần
                       tử nhất trong đồ thị
                     </li>
                   </ul>
                   <ul className="mb-6" style={{ listStyle: "circle" }}>
-                    Đồ thị đầy đủ ( complete graph)
+                    Đồ thị đầy đủ (complete graph)
                     <li>Đơn đồ thị vô hướng</li>
                     <li>Mỗi cặp đỉnh đều có đúng 1 cung</li>
                   </ul>
                   <ul style={{ listStyle: "circle" }}>
-                    Đồ thị phân đôi( bipartite graph/bigraph)
+                    Đồ thị phân đôi (bipartite graph/bigraph)
                     <li>Tập đỉnh được chia thành 2 tập không giao nhau</li>
                     <li>Mỗi cung nối 1 đỉnh trong U và 1 đỉnh trong V</li>
                   </ul>
@@ -519,11 +519,11 @@ const Tainguyenhoctap = () => {
                   <ul style={{ listStyle: "circle" }}>
                     Đồ thị con
                     <li>
-                      Đồ thị con G{"<sub>s</sub>"} ={" "}
-                      {"<V<sub>s</sub>, E<sub>s</sub>>"}, V{"<sub>s</sub>"}{" "}
-                      {"⊂"} V, E{"<sub>s</sub>"} {"⊂"} E được xây dựng từ G là
+                      Đồ thị con G<sub>s</sub> =
+                      &lt;V<sub>s</sub>, E<sub>s</sub>&gt;, V<sub>s</sub>
+                      {"⊂"} V, E<sub>s</sub> {"⊂"} E được xây dựng từ G là
                       đồ thị có được sau khi loại bỏ các cung không thuộc E
-                      {"<sub>s</sub>"}
+                      <sub>s</sub>
                     </li>
                   </ul>
                 </div>
@@ -552,7 +552,7 @@ const Tainguyenhoctap = () => {
                     className="text-gray-700  text-center"
                     style={{ textAlign: "left" }}
                   >
-                    Duyệt đồ thị theo chiều sâu ( Thuật toán DFS)
+                    Duyệt đồ thị theo chiều sâu (Thuật toán DFS)
                   </h3>
                   <ul style={{ listStyle: "decimal" }}>
                     <li>Đưa 1 đỉnh s bất kỳ vào ngăn xếp</li>
