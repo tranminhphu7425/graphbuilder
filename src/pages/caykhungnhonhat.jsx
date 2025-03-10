@@ -237,7 +237,7 @@ const Caykhungnhonhat = () => {
 
       <main>
         <div className="container" id="formbox">
-          <h2>Tìm cây khung nhỏ nhất vô hướng</h2>
+          <h2>Tìm cây khung nhỏ nhất</h2>
           <form id="graphForm" onSubmit={(e) => e.preventDefault()}>
             <div className="form-group" id="munberNodes">
               <label htmlFor="nodes">Nhập số đỉnh:</label>
