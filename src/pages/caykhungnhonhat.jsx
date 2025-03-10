@@ -275,15 +275,15 @@ const Caykhungnhonhat = () => {
                 onChange={() => setIsWeightedGraph(!isWeightedGraph)}
               />
                <label className="switch m-0">
-                {/* Có hướng */}
+                Có hướng
                 <input
-                  type="none"
+                  type="checkbox"
                   id="directed"
                   name="directed"
                   checked={directed}
                   onChange={() => setDirected(!directed)}
                 />
-                {/* <span className="slider"></span> */}
+                <span className="slider"></span>
               </label>
               <div className="typeOfBrowe">
                 <div>
