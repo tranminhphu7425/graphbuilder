@@ -38,7 +38,7 @@ const Caykhungnhonhat = () => {
       NhapdothiEffect();
       setFound(0);
     }
-  }, [nodes, edges, found]);
+  }, [nodes, edges, directed, found]);
 
 
   const handleSubmit = (e) => {

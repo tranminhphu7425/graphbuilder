@@ -38,7 +38,7 @@ const Duyetdothi = () => {
       NhapdothiEffect();
       setFound(0);
     }
-  }, [nodes, edges, found]);
+  }, [nodes, edges, directed, startNode, found]);
 
 
   const handleSubmit = (e) => {
