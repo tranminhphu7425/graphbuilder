@@ -19,6 +19,7 @@ const Caykhungnhonhat = () => {
   const [edges, setEdges] = useState("");
   const [isWeightedGraph, setIsWeightedGraph] = useState(true);
   const [directed, setDirected] = useState(false);
+  var [found, setFound] = useState(0);
 
   useEffect(() => {
     adjustHeight();
@@ -28,7 +29,24 @@ const Caykhungnhonhat = () => {
     
   }, []);
 
-  NhapdothiEffect();
+  useEffect(() => {
+    NhapdothiEffect();
+  }, []);
+
+  useEffect(() => {
+    if (found === 1) {
+      NhapdothiEffect();
+      setFound(0);
+    }
+  }, [nodes, edges, found]);
+
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setFound(1);
+  };
+
+
   CaykhungnhonhatEffect();
 
   return (
@@ -238,7 +256,7 @@ const Caykhungnhonhat = () => {
       <main>
         <div className="container" id="formbox">
           <h2>Tìm cây khung nhỏ nhất</h2>
-          <form id="graphForm" onSubmit={(e) => e.preventDefault()}>
+          <form id="graphForm" onSubmit={handleSubmit}>
             <div className="form-group" id="munberNodes">
               <label htmlFor="nodes">Nhập số đỉnh:</label>
               <input
@@ -287,7 +305,7 @@ const Caykhungnhonhat = () => {
               </label>
               <div className="typeOfBrowe">
                 <div>
-                  <input type="submit" id="run" value="Chạy" />
+                  <input type="submit" id="run" value="Chạy" onClick={() => setFound(1)}/>
                 </div>
               </div>
             </div>

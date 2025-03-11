@@ -21,6 +21,7 @@ const Duyetdothi = () => {
   const [directed, setDirected] = useState(false);
   // const [physics, setPhysics] = useState(true);
   const [startNode, setStartNodes] = useState("");
+  var [found, setFound] = useState(0);
   useEffect(() => {
     adjustHeight();
     configFullPage();
@@ -28,7 +29,23 @@ const Duyetdothi = () => {
    
   }, []);
 
-  NhapdothiEffect();
+  useEffect(() => {
+    NhapdothiEffect();
+  }, []);
+
+  useEffect(() => {
+    if (found === 1) {
+      NhapdothiEffect();
+      setFound(0);
+    }
+  }, [nodes, edges, found]);
+
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setFound(1);
+  };
+
   DuyetdothiEffect();
  
 
@@ -240,7 +257,7 @@ const Duyetdothi = () => {
       <main>
         <div className="container" id="formbox">
           <h2>Duyệt đồ thị</h2>
-          <form id="graphForm">
+          <form id="graphForm" onSubmit={handleSubmit}>
             <div className="form-group" id="munberNodes">
               <label htmlFor="nodes">Nhập số đỉnh:</label>
               <input
@@ -295,8 +312,8 @@ const Duyetdothi = () => {
               <div className="typeOfBrowe">
                 <p>Dựng cây duyệt đồ thị</p>
                 <div>
-                  <input type="submit" value="DFS" />
-                  <input type="submit" value="BFS" />
+                  <input type="submit" value="DFS" onClick={() => setFound(1)} />
+                  <input type="submit" value="BFS" onClick={() => setFound(1)}/>
                 </div>
               </div>
             </div>

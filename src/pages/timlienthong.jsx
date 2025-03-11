@@ -20,7 +20,7 @@ const Timlienthong = () => {
   // const [isWeightedGraph, setIsWeightedGraph] = useState(false);
   // const [directed, setDirected] = useState(false);
   // const [physics, setPhysics] = useState(true);
-  
+  var [found, setFound] = useState(0);
 
   useEffect(() => {
     adjustHeight();
@@ -30,7 +30,22 @@ const Timlienthong = () => {
     
   }, []);
 
-  NhapdothiEffect();
+  useEffect(() => {
+    NhapdothiEffect();
+  }, []);
+
+  useEffect(() => {
+    if (found === 1) {
+      NhapdothiEffect();
+      setFound(0);
+    }
+  }, [nodes, edges, found]);
+
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setFound(1);
+  };
 
   TimlienthongEffect(nodes, edges);
 
@@ -242,7 +257,7 @@ const Timlienthong = () => {
       <main>
         <div className="container" id="formbox">
           <h2>Tìm các bộ phận liên thông</h2>
-          <form id="graphForm" onSubmit={(e) => e.preventDefault()}>
+          <form id="graphForm" onSubmit={handleSubmit}>
             <div className="form-group" id="munberNodes">
               <label htmlFor="nodes">Nhập số đỉnh:</label>
               <input
@@ -273,7 +288,7 @@ const Timlienthong = () => {
             <div id="graphOption">
               <div className="typeOfBrowe">
                 <div>
-                  <input type="submit" id="run" value="Chạy" />
+                  <input type="submit" id="run" value="Chạy" onClick={() => setFound(1)} />
                 </div>
               </div>
             </div>

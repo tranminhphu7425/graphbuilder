@@ -1,14 +1,10 @@
 import vis from "../tool/vis-network-wrapper.js";
-import { useEffect } from "react";
+
 
 export const NhapdothiEffect = (
-  nodes,
-  edges,
-  isWeightedGraph,
-  directed,
-  physics
+  
 ) => {
-  useEffect(() => {
+ 
     let network = null;
     let nodesDataSet = new vis.DataSet();
     let edgesDataSet = new vis.DataSet();
@@ -228,10 +224,4 @@ export const NhapdothiEffect = (
       if (directed) directed.removeEventListener("change", updateGraph);
       if (physics) physics.removeEventListener("change", updateGraph);
     };
-  }, [nodes,
-    edges,
-    isWeightedGraph,
-    directed,
-    physics]);
-    
 };

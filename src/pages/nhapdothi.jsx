@@ -24,9 +24,10 @@ const Nhapdothi = () => {
     adjustHeight();
     configFullPage();
     initFlowbite();
+    NhapdothiEffect();
   }, []);
 
-  NhapdothiEffect();
+  
 
   return (
     <>

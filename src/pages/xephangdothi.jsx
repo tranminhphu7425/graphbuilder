@@ -20,6 +20,7 @@ const Xephangdothi = () => {
   // const [isWeightedGraph, setIsWeightedGraph] = useState(false);
   // const [directed, setDirected] = useState(false);
   // const [physics, setPhysics] = useState(true);
+  var [found, setFound] = useState(0);
 
   useEffect(() => {
     adjustHeight();
@@ -28,7 +29,24 @@ const Xephangdothi = () => {
     
   }, []);
 
-  NhapdothiEffect();
+  
+  useEffect(() => {
+    NhapdothiEffect();
+  }, []);
+
+  useEffect(() => {
+    if (found === 1) {
+      NhapdothiEffect();
+      setFound(0);
+    }
+  }, [nodes, edges, found]);
+
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setFound(1);
+  };
+
   XephangdothiEffect();
 
   return (
@@ -239,7 +257,7 @@ const Xephangdothi = () => {
       <main>
         <div className="container" id="formbox">
           <h2>Xếp hạng đồ thị</h2>
-          <form id="graphForm">
+          <form id="graphForm" onSubmit={handleSubmit}>
             <div className="form-group" id="munberNodes">
               <label htmlFor="nodes">Nhập số đỉnh:</label>
               <input
@@ -270,7 +288,7 @@ const Xephangdothi = () => {
             <div id="graphOption">
               <div className="typeOfBrowe">
                 <div>
-                  <input type="submit" id="run" value="Chạy" />
+                  <input type="submit" id="run" value="Chạy" onClick={() => setFound(1)} />
                 </div>
               </div>
             </div>

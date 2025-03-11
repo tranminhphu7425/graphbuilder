@@ -20,7 +20,7 @@ const Duongdingannhat = () => {
   const [isWeightedGraph, setIsWeightedGraph] = useState(true);
   const [directed, setDirected] = useState(false);
   const [startNode, setStartNodes] = useState("");
-
+  var [found, setFound] = useState(0);
   useEffect(() => {
     adjustHeight();
     configFullPage();
@@ -29,7 +29,25 @@ const Duongdingannhat = () => {
     
   }, []);
 
-  NhapdothiEffect();
+
+  useEffect(() => {
+    NhapdothiEffect();
+  }, []);
+
+  useEffect(() => {
+    if (found === 1) {
+      NhapdothiEffect();
+      setFound(0);
+    }
+  }, [nodes, edges, directed, startNode, found]);
+
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setFound(1);
+  };
+
+ 
   DuongdingannhatEffect();
 
   return (
@@ -240,7 +258,7 @@ const Duongdingannhat = () => {
       <main>
         <div className="container" id="formbox">
           <h2>Tìm đường ngắn nhất</h2>
-          <form id="graphForm" onSubmit={(e) => e.preventDefault()}>
+          <form id="graphForm" onSubmit={handleSubmit}>
             <div className="form-group" id="munberNodes">
               <label htmlFor="nodes">Nhập số đỉnh:</label>
               <input
@@ -301,7 +319,7 @@ const Duongdingannhat = () => {
               </div>
               <div className="typeOfBrowe">
                 <div>
-                  <input type="submit" id="run" value="Chạy" />
+                  <input type="submit" id="run" value="Chạy" onClick={() => setFound(1)} />
                 </div>
               </div>
             </div>
