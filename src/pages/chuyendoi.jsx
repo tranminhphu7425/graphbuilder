@@ -53,9 +53,9 @@ const Chuyendoi = () => {
 
         input.shift();
         if (outputType !== 'danhsachdinhke') {
-          output = convertAdjMatrixToEdgeList(input);
+          output = convertAdjMatrixToEdgeList(input, isDirected);
         } else if (outputType === 'danhsachdinhke') {
-          output = convertAdjMatrixToAdjList(input, isDirected);
+          output = convertAdjMatrixToAdjList(input);
         }
       }
       

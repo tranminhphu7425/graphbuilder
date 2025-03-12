@@ -39,13 +39,13 @@ export const convertEdgeListToAdjList = (edgeList, isDirected) => {
 };
 
 // Hàm chuyển đổi từ ma trận kề sang danh sách cung
-export const convertAdjMatrixToEdgeList = (adjMatrix) => {
+export const convertAdjMatrixToEdgeList = (adjMatrix, isDirected) => {
   const numVertices = adjMatrix.length;
   const edgeList = [];
   let numEdges = 0;
 
   for (let i = 0; i < numVertices; i++) {
-    for (let j = i; j < numVertices; j++) {
+    for (let j = isDirected ? 0 : i; j < numVertices; j++) {
       if (adjMatrix[i][j] > 0) {
         for (let k = 0; k < adjMatrix[i][j]; k++) {
           edgeList.push([i + 1, j + 1]);
@@ -60,12 +60,12 @@ export const convertAdjMatrixToEdgeList = (adjMatrix) => {
 };
 
 // Hàm chuyển đổi từ ma trận kề sang danh sách đỉnh kề
-export const convertAdjMatrixToAdjList = (adjMatrix, isDirected) => {
+export const convertAdjMatrixToAdjList = (adjMatrix) => {
   const numVertices = adjMatrix.length;
   const adjList = Array.from({ length: numVertices }, () => []);
 
   for (let i = 0; i < numVertices; i++) {
-    for (let j = isDirected ? i : 0; j < numVertices; j++) {
+    for (let j =  0; j < numVertices; j++) {
       if (adjMatrix[i][j] > 0) {
         for (let k = 0; k < adjMatrix[i][j]; k++) {
           adjList[i].push(j + 1);
