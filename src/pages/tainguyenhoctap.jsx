@@ -215,7 +215,7 @@ const Tainguyenhoctap = () => {
           </nav>
         </header>
 
-        <main className="p-2 bg-gray-100 fullmain gap-3">
+        <main className="p-2 fullmain gap-3">
           <nav className="menu p-8" id="menutainguyenhoctap">
             <div>
               <Link to="/tainguyenhoctap#PCB">
