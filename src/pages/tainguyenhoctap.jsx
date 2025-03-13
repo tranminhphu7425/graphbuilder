@@ -409,27 +409,25 @@ const Tainguyenhoctap = () => {
             </div>
           </nav>
           <section className="max-w-7xl mx-auto bg-white p-10 rounded-lg shadow-lg w-[80%]">
-            <div id="PCB" className="mb-6">
+            <div id="PCB" className="mb-4">
               <h1>PHẦN CƠ BẢN</h1>
-              <div id="DN&PL" className="mb-6">
-                <h2 className="text-gray-700 mb-6 text-left">
+              <div id="DN&PL" className="mb-4">
+                <h2 className="font-bold mb-4 text-left">
                   I. Định Nghĩa & Phân Loại
                 </h2>
                 <div id="DN">
-                  <h3 className="text-gray-700 text-left">Định Nghĩa</h3>
-                  <p className="text-gray-700 text-left">
-                    <ul className="list-disc">
-                      Đồ thị (Graph) là một bộ đôi &lt;V, E&gt;, trong đó:
-                      <li>V: tập các đỉnh (Vertex set)</li>
-                      <li>
-                        E: tập các cung (Edge Set), mỗi cung nối 2 đỉnh trong V
-                      </li>
-                    </ul>
-                  </p>
+                  <h3 className="font-bold">Định Nghĩa</h3>
+                  <p><strong>Đồ thị (Graph)</strong> là một bộ đôi &lt;V, E&gt;, trong đó:</p>
+                  <ul className="list-disc ml-4">
+                    <li>V: tập các đỉnh (Vertex set)</li>
+                    <li>
+                      E: tập các cung (Edge Set), mỗi cung nối 2 đỉnh trong V
+                    </li>
+                  </ul>
                 </div>
-                <div className="mb-6" id="BCDT">
-                  <h3 className="text-gray-700 text-left">Bậc của đồ thị</h3>
-                  <ul className="list-disc">
+                <div className="mb-4" id="BCDT">
+                  <h3 className="font-bold">Bậc của đồ thị</h3>
+                  <ul className="list-disc ml-4">
                     <li>
                       Định lý 1 (định lý bắt tay): Tổng bậc của tất cả các đỉnh
                       trong một đồ thị bằng 2 lần số cung
@@ -445,13 +443,11 @@ const Tainguyenhoctap = () => {
                   </ul>
                 </div>
               </div>
-              <div className="mb-6" id="MSDTDB">
-                <h2 className="text-gray-700 mb-6 text-left">
-                  Một Số Đồ Thị Đặc Biệt
-                </h2>
+              <div className="mb-4" id="MSDTDB">
+                <h3 className="font-bold mb-4 ">Một Số Đồ Thị Đặc Biệt</h3>
                 <div>
-                  <ul className="mb-6 list-disc">
-                    Clique
+                  <p><strong>Clique</strong></p>
+                  <ul className="mb-4 list-disc ml-4">
                     <li>
                       Clique trên đồ thị vô hướng là tập các đỉnh mà chúng đôi
                       một kề nhau
@@ -465,25 +461,25 @@ const Tainguyenhoctap = () => {
                       phần tử nhất trong đồ thị
                     </li>
                   </ul>
-                  <ul className="mb-6 list-disc">
-                    Đồ thị đầy đủ (complete graph)
+                  <p><strong>Đồ thị đầy đủ (complete graph)</strong></p>
+                  <ul className="mb-4 list-disc ml-4">
                     <li>Đơn đồ thị vô hướng</li>
                     <li>Mỗi cặp đỉnh đều có đúng 1 cung</li>
                   </ul>
-                  <ul className="list-disc">
-                    Đồ thị phân đôi (bipartite graph/bigraph)
+                  <p><strong>Đồ thị phân đôi (bipartite graph/bigraph)</strong></p>
+                  <ul className="list-disc ml-4">
                     <li>Tập đỉnh được chia thành 2 tập không giao nhau</li>
                     <li>Mỗi cung nối 1 đỉnh trong U và 1 đỉnh trong V</li>
                   </ul>
-                  <ul className="list-disc">
-                    Đồ thị phân đôi đầy đủ
+                  <p><strong>Đồ thị phân đôi đầy đủ</strong></p>
+                  <ul className="list-disc ml-4">
                     <li>Còn gọi là đồ thị 2 clique</li>
                     <li>
                       Mỗi đỉnh của phần này nối với tất cả các đỉnh của phần kia
                     </li>
                   </ul>
-                  <ul className="list-disc">
-                    Đồ thị vô hướng nền
+                  <p><strong>Đồ thị vô hướng nền</strong></p>
+                  <ul className="list-disc ml-4">
                     <li>
                       Là đồ thị vô hướng sau khi đã loại bỏ hướng của các cạnh
                     </li>
@@ -492,8 +488,8 @@ const Tainguyenhoctap = () => {
                       cạnh
                     </li>
                   </ul>
-                  <ul className="list-disc">
-                    Đồ thị con
+                  <p><strong>Đồ thị con</strong></p>
+                  <ul className="list-disc ml-4">
                     <li>
                       Đồ thị con G<sub>s</sub> = &lt;V<sub>s</sub>, E
                       <sub>s</sub>&gt;, V<sub>s</sub>
@@ -503,25 +499,23 @@ const Tainguyenhoctap = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="mb-6" id="SDCCDT">
-                  <h3 className="text-gray-700 text-left">
-                    Sự đẳng cấu của đồ thị
-                  </h3>
+                <div className="mb-4" id="SDCCDT">
+                  <h3 className="font-bold ">Sự đẳng cấu của đồ thị</h3>
                   <p>
                     2 đồ thị G<sub>1</sub> = &lt;V<sub>1</sub>, E<sub>1</sub>
                     &gt; và G<sub>2</sub> = &lt;V<sub>2</sub>, E<sub>2</sub>&gt;
-                    được gọi là đẳng cấu với nhau nếu tồn tại một song ánh f: V<sub>1</sub>
-                    {" → "} V<sub>2</sub>, v<sub>2</sub> = f(v<sub>1</sub>) ∈ V<sub>2</sub> sao cho:
-                    (x, y) ∈ E<sub>1</sub> {"<=>"} (f(x), f(y)) ∈ V<sub>2</sub>
+                    được gọi là đẳng cấu với nhau nếu tồn tại một song ánh f: V
+                    <sub>1</sub>
+                    {" → "} V<sub>2</sub>, v<sub>2</sub> = f(v<sub>1</sub>) ∈ V
+                    <sub>2</sub> sao cho: (x, y) ∈ E<sub>1</sub> {"<=>"} (f(x),
+                    f(y)) ∈ V<sub>2</sub>
                   </p>
                 </div>
               </div>
-              <div id="DDT" className="mb-6">
-                <h2 className="text-gray-700 mb-6 text-left">
-                  II. Duyệt Đồ Thị
-                </h2>
-                <div className="mb-6" id="DFS">
-                  <h3 className="text-gray-700 text-left">
+              <div id="DDT" className="mb-4">
+                <h2 className="font-bold mb-4 text-left">II. Duyệt Đồ Thị</h2>
+                <div className="mb-4" id="DFS">
+                  <h3 className="font-bold ">
                     Duyệt đồ thị theo chiều sâu (Thuật toán DFS)
                   </h3>
                   <pre>
@@ -536,8 +530,8 @@ const Tainguyenhoctap = () => {
                     </code>
                   </pre>
                 </div>
-                <div className="mb-6" id="DFSDQ">
-                  <h3 className="text-gray-700 text-left">
+                <div className="mb-4" id="DFSDQ">
+                  <h3 className="font-bold ">
                     Duyệt đồ thị theo chiều sâu bằng đệ quy
                   </h3>
                   <pre>
@@ -548,8 +542,8 @@ const Tainguyenhoctap = () => {
                     </code>
                   </pre>
                 </div>
-                <div className="mb-6" id="BFS">
-                  <h3 className="text-gray-700 text-left">
+                <div className="mb-4" id="BFS">
+                  <h3 className="font-bold ">
                     Duyệt đồ thị theo chiều rộng (Thuật toán BFS)
                   </h3>
                   <pre>
@@ -565,13 +559,13 @@ const Tainguyenhoctap = () => {
                   </pre>
                 </div>
               </div>
-              <div id="TLTDT" className="mb-6">
-                <h2 className="text-gray-700 mb-6 text-left">
+              <div id="TLTDT" className="mb-4">
+                <h2 className="font-bold mb-4 text-left">
                   III. Tính Liên Thông Của Đồ Thị
                 </h2>
-                <div id="DNLT" className="mb-6">
-                  <h3 className="text-gray-700 text-left">Định Nghĩa</h3>
-                  <ul className="list-disc">
+                <div id="DNLT" className="mb-4">
+                  <h3 className="font-bold ">Định Nghĩa</h3>
+                  <ul className="list-disc ml-4">
                     <li>
                       Đồ thị vô hướng G được gọi là liên thông nếu và chỉ nếu
                       với mọi cặp đỉnh u, v ∈ V luôn tồn tại đường đi (walk) từ
@@ -597,8 +591,8 @@ const Tainguyenhoctap = () => {
                     </li>
                   </ul>
                 </div>
-                <div id="SCC" className="mb-6">
-                  <h3 className="text-gray-700 text-left">
+                <div id="SCC" className="mb-4">
+                  <h3 className="font-bold ">
                     Tìm các bộ phận liên thông mạnh
                   </h3>
                   <pre>
@@ -643,19 +637,17 @@ if (num[u] == min_num[u]) {
                   </pre>
                 </div>
               </div>
-              <div id="DC" className="mb-6">
-                <h2 className="text-gray-700 mb-6 text-left">
+              <div id="DC" className="mb-4">
+                <h2 className="font-bold mb-4 text-left">
                   IV. Duyệt đồ thị và ứng dụng
                 </h2>
-                <div id="KTCT" className="mb-6">
-                  <h3 className="text-gray-700 text-left">
-                    Kiểm tra đồ thị chứa chu trình
-                  </h3>
-                  <ul className="mb-6">
-                    Thuật toán kiểm tra đồ thị chứa chu trình
+                <div id="KTCT" className="mb-4">
+                  <h3 className="font-bold ">Kiểm tra đồ thị chứa chu trình</h3>
+                  <p><strong>Thuật toán kiểm tra đồ thị chứa chu trình</strong></p>
+                  <ul className="mb-4 ml-4">
                     <li className="ml-1">
-                      <ul className="list-disc">
-                        Trạng thái của đỉnh
+                      <p>Trạng thái của đỉnh</p>
+                      <ul className="list-disc ml-4">
                         <li className="ml-2">
                           Chưa duyệt: chưa đụng tới nó (TRẮNG/WHITE)
                         </li>
@@ -670,8 +662,8 @@ if (num[u] == min_num[u]) {
                       </ul>
                     </li>
                     <li className="ml-1">
-                      <ul className="list-disc">
-                        Thuật toán:
+                      <p>Thuật toán:</p>
+                      <ul className="list-disc ml-4">
                         <li className="ml-2">
                           DFS + tô màu các đỉnh trong quá trình duyệt
                         </li>
@@ -683,61 +675,59 @@ if (num[u] == min_num[u]) {
                     </li>
                   </ul>
                 </div>
-                <div id="KTPD" className="mb-6">
-                  <h3 className="text-gray-700 text-left">
-                    Kiểm tra đồ thị phân đôi
-                  </h3>
-                  <ul className="mb-6">
-                    Thuật toán kiểm tra đồ thị phân đôi
+                <div id="KTPD" className="mb-4">
+                  <h3 className="font-bold ">Kiểm tra đồ thị phân đôi</h3>
+                  <p><strong>Thuật toán kiểm tra đồ thị phân đôi</strong></p>
+                  <ul className="mb-4 ml-4">
                     <li className="ml-1">
                       Duyệt đồ thị + tô màu các đỉnh bằng 1 trong 2 màu (XANH,
-                      ĐỎ). Hai đỉnh kề nhau có màu khác nhau
+                      ĐỎ). Hai đỉnh kề nhau có màu khác nhau.
                     </li>
                   </ul>
                 </div>
               </div>
             </div>
             <hr />
-            <div id="PNC" className="mb-6">
+            <div id="PNC" className="mb-4">
               <h1>PHẦN NÂNG CAO</h1>
-              <div id="EULER&HAMILTON" className="mb-6">
-                <h2 className="text-gray-700 mb-6 text-left">
+              <div id="EULER&HAMILTON" className="mb-4">
+                <h2 className="font-bold mb-4 text-left">
                   I. Đồ Thị Euler & Đồ Thị Hamilton
                 </h2>
-                <div id="EULER" className="mb-6">
-                  <h3 className="text-gray-700 text-left">Đồ thị Euler</h3>
+                <div id="EULER" className="mb-4">
+                  <h3 className="font-bold">Đồ thị Euler</h3>
                   <p>
-                    Chu trình Euler (Euler circuit) trong đồ thị G là một chu
+                   <strong>Chu trình Euler (Euler circuit) </strong>trong đồ thị G là một chu
                     trình đơn cung chứa tất cả các cung của G
                   </p>
                   <p>
-                    Đường đi Euler (Euler path) trong đồ thị G là đường đi đơn
+                    <strong>Đường đi Euler (Euler path)</strong>  trong đồ thị G là đường đi đơn
                     cung chứa tất cả các đỉnh của G
                   </p>
-                  <div className="text-gray-700 text-left">
-                    <ul className="list-disc pl-4">
-                      <li className="font-semibold">Định lý Euler:</li>
-                      <li className="ml-4">
+                  <div>
+                    <p><strong>Định lý Euler:</strong></p>
+                    <ul className="list-disc pl-4 ml-4">
+                      <li>
                         Đa đồ thị (vô hướng) liên thông có ít nhất 2 đỉnh có chu
                         trình Euler khi và chỉ khi tất cả các đỉnh của nó đều có
                         bậc chẵn
                       </li>
-                      <li className="ml-4">
+                      <li>
                         Đa đồ thị (vô hướng) liên thông có đường đi Euler (nhưng
                         không có chu trình Euler) khi và chỉ khi nó có đúng 2
                         đỉnh bậc lẻ
                       </li>
                     </ul>
-                    <ul className="list-disc pl-4 mt-4">
-                      <li className="font-semibold">
-                        Thuật toán Fleury xây dựng chu trình Euler
-                      </li>
-                      <li className="ml-4">Chọn 1 đỉnh bất kỳ</li>
-                      <li className="ml-4">
+                    <p>
+                     <strong> Thuật toán Fleury xây dựng chu trình Euler</strong>
+                    </p>
+                    <ul className="list-disc pl-4  ml-4">
+                      <li>Chọn 1 đỉnh bất kỳ</li>
+                      <li>
                         Chọn tiếp các cung liên tiếp cho đến khi tạo thành chu
                         trình. Mỗi khi 1 cung được chọn, xóa nó ra khỏi đồ thị
                       </li>
-                      <li className="ml-4">
+                      <li>
                         Các cung được chọn sao cho đỉnh đầu của cung mới là đỉnh
                         cuối của cung cũ và nó không phải là cầu (Cầu: xóa bỏ
                         cung này sẽ làm đồ thị mất liên thông) trừ phi không có
@@ -746,150 +736,123 @@ if (num[u] == min_num[u]) {
                     </ul>
                   </div>
                 </div>
-                <div id="HAMILTON" className="mb-6">
-                  <h3 className="text-gray-700 text-left">Đồ thị Hamilton</h3>
-                  <div className="text-gray-700 text-left">
-                    <ul className="list-disc pl-4">
-                      <li className="font-semibold">
-                        Chu trình Hamilton (Hamilton circuit)
-                      </li>
-                      <li className="ml-4">
-                        Chu trình đơn đỉnh (simple circuit) đi qua các đỉnh của
-                        đồ thị, mỗi đỉnh đúng 1 lần (trừ đỉnh xuất phát)
-                      </li>
-                    </ul>
-                    <ul className="list-disc pl-4 mt-4">
-                      <li className="font-semibold">
-                        Đường đi Hamilton (Hamilton path)
-                      </li>
-                      <li className="ml-4">
-                        Đường đi đơn đỉnh (simple path) đi qua các đỉnh của đồ
-                        thị G, mỗi đỉnh đúng 1 lần
-                      </li>
-                    </ul>
-                  </div>
+                <div id="HAMILTON" className="mb-4">
+                  <h3 className="font-bold ">Đồ thị Hamilton</h3>
+
+                  <p><strong>Chu trình Hamilton (Hamilton circuit)</strong></p>
+                  <ul className="list-disc ml-4">
+                    <li>
+                      Chu trình đơn đỉnh (simple circuit) đi qua các đỉnh của đồ
+                      thị, mỗi đỉnh đúng 1 lần (trừ đỉnh xuất phát)
+                    </li>
+                  </ul>
+                  <p><strong>Đường đi Hamilton (Hamilton path)</strong></p>
+                  <ul className="list-disc ml-4">
+                    <li>
+                      Đường đi đơn đỉnh (simple path) đi qua các đỉnh của đồ thị
+                      G, mỗi đỉnh đúng 1 lần
+                    </li>
+                  </ul>
                 </div>
               </div>
 
-              <div id="TDDNN" className="mb-6">
-                <h2 className="text-gray-700 mb-6 text-left">
+              <div id="TDDNN" className="mb-4">
+                <h2 className="font-bold mb-4 text-left">
                   II. Tìm Đường Đi Ngắn Nhất
                 </h2>
-                <div id="DTTS" className="mb-6">
-                  <h3 className="text-gray-700 text-left">
-                    Biểu diễn đồ thị có trọng số
-                  </h3>
+                <div id="DTTS" className="mb-4">
+                  <h3>Biểu diễn đồ thị có trọng số</h3>
                   <p>
                     Có thể mở rộng các phương pháp biểu diễn đồ thị trước đây để
                     biểu diễn đồ thị có trọng số
                   </p>
-                  <ul className="list-disc pl-4">
-                    <li className="font-semibold">
-                      Ma trận kề (Ma trận trọng số)
-                    </li>
-                    <li className="ml-4">
-                      Nếu có (u, v) thì W[u][v] = trọng số cung (u, v)
-                    </li>
-                    <li className="ml-4">
+                  <p><strong>Ma trận kề (Ma trận trọng số)</strong></p>
+                  <ul className="list-disc ml-4">
+                    <li>Nếu có (u, v) thì W[u][v] = trọng số cung (u, v)</li>
+                    <li>
                       Nếu không có (u, v) thì W[u][v] = NO_EDGE (ví dụ: -1)
                     </li>
                   </ul>
-                  <ul className="list-disc pl-4 mt-4">
-                    <li className="font-semibold">Danh sách cung</li>
-                    <li className="ml-4">
-                      Mỗi cung lưu trữ: đỉnh đầu, đỉnh cuối và trọng số
-                    </li>
+                  <p><strong>Danh sách cung</strong></p>
+                  <ul className="list-disc ml-4">
+                    <li>Mỗi cung lưu trữ: đỉnh đầu, đỉnh cuối và trọng số</li>
                   </ul>
                 </div>
-                <div id="DDNN" className="mb-6">
-                  <h3 className="text-gray-700 text-left">
-                    Đường đi ngắn nhất
-                  </h3>
-                  <ul className="list-disc pl-4">
-                    <li className="font-semibold">
-                      Đường đi ngắn nhất (shortest path)
-                    </li>
-                    <li className="ml-4">
+                <div id="DDNN" className="mb-4">
+                  <h3 className="font-bold ">Đường đi ngắn nhất</h3>
+                  <p><strong>Đường đi ngắn nhất (shortest path)</strong></p>
+                  <ul className="list-disc ml-4">
+                    <li>
                       Chiều dài/ chi phí (cost) của đường đi (path) là tổng các
                       trọng số của các cung trên đường đi
                     </li>
-                    <li className="ml-4">
+                    <li>
                       Đường đi ngắn nhất (shortest path) là đường đi có chiều
                       dài nhỏ nhất
                     </li>
                   </ul>
-                  <ul className="list-disc pl-4 mt-4">
-                    <li className="font-semibold">
-                      Một đoạn đường đi (sub-path) của đường đi ngắn nhất cũng
-                      là đường đi ngắn nhất
-                    </li>
-                    <li className="ml-4">
+                  <p>
+                    <strong>Một đoạn đường đi (sub-path)</strong> của đường đi ngắn nhất cũng là
+                    đường đi ngắn nhất
+                  </p>
+                  <ul className="list-disc ml-4">
+                    <li>
                       Tính chất cấu trúc con tối ưu (optimal substructure) ⇒ có
                       thể áp dụng kỹ thuật quy hoạch động để thiết kế các giải
                       thuật tìm đường đi ngắn nhất
                     </li>
                   </ul>
                 </div>
-                <div id="MOORE-DIJKSTRA" className="mb-6">
-                  <h3 className="text-gray-700 text-left">
-                    Thuật toán Moore - Dijkstra
-                  </h3>
-                  <ul className="list-disc pl-4">
+                <div id="MOORE-DIJKSTRA" className="mb-4">
+                  <h3 className="font-bold ">Thuật toán Moore - Dijkstra</h3>
+
+                  <p>
+                    Tìm đường đi ngắn nhất từ 1 đỉnh đến các đỉnh khác trên đồ
+                    thị có trọng số (single source shortest path problem - SSSP)
+                  </p>
+
+                  <p><strong>Điều kiện áp dụng:</strong></p>
+                  <ul className="list-disc ml-4">
+                    <li>Đồ thị có trọng số không âm</li>
+                    <li>Có hướng hoặc vô hướng đều được</li>
+                  </ul>
+
+                  <p><strong>Ý tưởng chính:</strong></p>
+                  <ul className="list-disc ml-4">
+                    <li>Khởi tạo đường đi trực tiếp từ s đến các đỉnh</li>
                     <li>
-                      Tìm đường đi ngắn nhất từ 1 đỉnh đến các đỉnh khác trên đồ
-                      thị có trọng số (single source shortest path problem -
-                      SSSP)
-                    </li>
-                  </ul>
-                  <ul className="list-disc pl-4 mt-4">
-                    <li className="font-semibold">Điều kiện áp dụng:</li>
-                    <li className="ml-4">Đồ thị có trọng số không âm</li>
-                    <li className="ml-4">Có hướng hoặc vô hướng đều được</li>
-                  </ul>
-                  <ul className="list-disc pl-4 mt-4">
-                    <li className="font-semibold">Ý tưởng chính:</li>
-                    <li className="ml-4">
-                      Khởi tạo đường đi trực tiếp từ s đến các đỉnh
-                    </li>
-                    <li className="ml-4">
                       Lần lượt cập nhật lại đường đi nếu tìm được đường đi mới
                       tốt hơn đường đi cũ
                     </li>
                   </ul>
-                  <ul className="list-disc pl-4 mt-4">
-                    <li>Gọi đỉnh bắt đầu là s</li>
-                  </ul>
-                  <ul className="list-disc pl-4 mt-4">
-                    <li className="font-semibold">Các biến hỗ trợ:</li>
-                    <li className="ml-4">
+                  <p><strong>Gọi đỉnh bắt đầu là s</strong></p>
+                  <p><strong>Các biến hỗ trợ:</strong></p>
+                  <ul className="list-disc ml-4">
+                    <li>
                       pi[u]: chiều dài đường đi ngắn nhất (tạm thời) từ s đến u
                     </li>
-                    <li className="ml-4">
+                    <li>
                       p[u]: đỉnh trước đỉnh u trên đường đi ngắn nhất (tạm thời)
                       từ s đến u
                     </li>
-                    <li className="ml-4">
+                    <li>
                       mark[u]: đánh dấu đỉnh u (đã tìm được đường đi ngắn nhất
                       đến u)
                     </li>
                   </ul>
-                  <ul className="list-disc pl-4 mt-4">
-                    <li className="font-semibold">Giải thuật:</li>
-                    <ul className="list-disc pl-6">
-                      <li className="font-semibold">Khởi tạo:</li>
-                      <li className="ml-4">
-                        pi[u] = oo với mọi u, p[u] = -1 với mọi u
-                      </li>
-                      <li className="ml-4">pi[s] = 0</li>
-                      <li className="ml-4">mark[u] = 0 với mọi u</li>
+                  <p><strong>Giải thuật:</strong></p>
+                  <ul className="list-disc ml-4">
+                    <p>1. Khởi tạo:</p>
+                    <ul className="list-disc ml-4">
+                      <li>pi[u] = oo với mọi u, p[u] = -1 với mọi u</li>
+                      <li>pi[s] = 0</li>
+                      <li>mark[u] = 0 với mọi u</li>
                     </ul>
-                    <ul className="list-disc pl-6 mt-4">
-                      <li className="font-semibold">Lặp n-1:</li>
-                      <li className="ml-4">
-                        Chọn đỉnh chưa đánh dấu và có pi[u] nhỏ nhất
-                      </li>
-                      <li className="ml-4">Đánh dấu u</li>
-                      <li className="ml-4">
+                    <p>2. Lặp n-1:</p>
+                    <ul className="list-disc ml-4">
+                      <li>Chọn đỉnh chưa đánh dấu và có pi[u] nhỏ nhất</li>
+                      <li>Đánh dấu u</li>
+                      <li>
                         Xét các đỉnh kề v (chưa đánh dấu) của u để cập nhật
                         đường đi nếu đường đi qua u rồi đến v tốt hơn đường đi
                         cũ
@@ -898,89 +861,81 @@ if (num[u] == min_num[u]) {
                   </ul>
                 </div>
               </div>
-              <div id="TOPO&UD" className="mb-6">
-                <h2 className="text-gray-700 mb-6 text-left">
+              <div id="TOPO&UD" className="mb-4">
+                <h2 className="font-bold mb-4 text-left">
                   III. Thứ Tự Topo & Ứng Dụng
                 </h2>
-                <div id="TOPO" className="mb-6">
-                  <h3 className="text-gray-700 text-left">Thứ tự topo</h3>
+                <div id="TOPO" className="mb-4">
+                  <h3 className="font-bold ">Thứ tự topo</h3>
                   <p>
-                    Thứ tự topo (topological order) của các đỉnh trên đồ thị có
+                    <strong>Thứ tự topo</strong> (topological order) của các đỉnh trên đồ thị có
                     hướng G là một cách sắp xếp thứ tự các đỉnh của G sao cho
                     với mọi cung (u, v), đỉnh gốc u phải đứng trước đỉnh ngọn v.
                   </p>
                   <p>
-                    Sắp xếp topo (topological ordering/sort): sắp xếp các đỉnh
+                    <strong>Sắp xếp topo (topological ordering/sort):</strong> sắp xếp các đỉnh
                     theo thứ tự topo.
                   </p>
-                  <ul className="list-disc pl-4">
-                    <li className="font-semibold">
-                      Đồ thị có hướng không chu trình (DAG)
-                    </li>
-                    <li className="ml-4">Có hướng</li>
-                    <li className="ml-4">Không chứa chu trình</li>
-                    <li className="ml-4">Tồn tại ít nhất 1 thứ tự topo</li>
+                  <p><strong>Đồ thị có hướng không chu trình (DAG)</strong></p>
+                  <ul className="list-disc ml-4">
+                    <li>Có hướng</li>
+                    <li>Không chứa chu trình</li>
+                    <li>Tồn tại ít nhất 1 thứ tự topo</li>
                   </ul>
-                  <h4 className="text-gray-700 text-left mt-4">
+                  <h3 className="font-bold mt-4">
                     Thuật toán sắp xếp topo dựa trên BFS
-                  </h4>
-                  <ul className="list-disc pl-4">
-                    <li className="font-semibold">Khởi tạo:</li>
-                    <li className="ml-4">Tính bậc vào của các đỉnh, d[u]</li>
-                    <li className="ml-4">
-                      Hàng đợi Q chứa các đỉnh có bậc vào = 0
-                    </li>
-                    <li className="ml-4">Danh sách L ban đầu rỗng</li>
+                  </h3>
+                  <p><strong>1. Khởi tạo:</strong></p>
+                  <ul className="list-disc ml-4">
+                    <li>Tính bậc vào của các đỉnh, d[u]</li>
+                    <li>Hàng đợi Q chứa các đỉnh có bậc vào = 0</li>
+                    <li>Danh sách L ban đầu rỗng</li>
                   </ul>
-                  <h4 className="text-gray-700 text-left mt-4">Lặp:</h4>
-                  <ul className="list-decimal pl-6">
+                  <p><strong>2. Lặp:</strong></p>
+                  <ul className="list-decimal ml-8">
                     <li>Trong khi Q không rỗng:</li>
-                    <li className="ml-4">
-                      Lấy phần tử đầu hàng đợi Q, gọi là u
-                    </li>
-                    <li className="ml-4">Thêm u vào danh sách L</li>
-                    <li className="ml-4">Giảm bậc vào của các đỉnh kề v</li>
-                    <li className="ml-4">
-                      Nếu bậc vào của v = 0, thêm v vào Q
-                    </li>
+                    <ul className="list-decimal">
+                      <li className="ml-4">
+                        Lấy phần tử đầu hàng đợi Q, gọi là u
+                      </li>
+                      <li className="ml-4">Thêm u vào danh sách L</li>
+                      <li className="ml-4">Giảm bậc vào của các đỉnh kề v</li>
+                      <li className="ml-4">
+                        Nếu bậc vào của v = 0, thêm v vào Q
+                      </li>
+                    </ul>
                   </ul>
                 </div>
-                <div id="XHDT" className="mb-6">
-                  <h3 className="text-gray-700 text-left">
-                    Xếp hạng các đỉnh của đồ thị
-                  </h3>
-                  <h4 className="text-black text-left mt-4">
-                    Gốc/ nguồn (root/ source) của đồ thị
-                  </h4>
-                  <ul className="list-disc pl-4">
+                <div id="XHDT" className="mb-4">
+                  <h3>Xếp hạng các đỉnh của đồ thị</h3>
+                  <p>
+                    <strong>Gốc/ nguồn (root/ source) của đồ thị</strong>
+                  </p>
+                  <ul className="list-disc ml-4">
                     <li>Đỉnh không có cung đi vào (indegree = 0)</li>
                     <li>DAG có ít nhất 1 gốc</li>
                   </ul>
-                  <h4 className="text-gray-700 text-left mt-4">
-                    Hạng (rank) của một đỉnh
-                  </h4>
-                  <ul className="list-disc pl-4">
+                  <p><strong>Hạng (rank) của một đỉnh</strong></p>
+                  <ul className="list-disc ml-4">
                     <li>u là gốc, rank[u] = 0</li>
                     <li>
                       Ngược lại, rank[u] = số cung trên đường đi dài nhất từ gốc
                       đến u
                     </li>
                   </ul>
-                  <h4 className="text-gray-700 text-left mt-4">
-                    Thuật toán xếp hạng đồ thị (dựa trên BFS):
-                  </h4>
-                  <ul className="list-decimal pl-6">
+                  <p>
+                    <strong>Thuật toán xếp hạng đồ thị (dựa trên BFS):</strong>
+                  </p>
+                  <ul className="list-decimal ml-4">
                     <li>Xếp hạng cho (các) gốc (hạng 0)</li>
                     <li>Loại bỏ gốc ra khỏi đồ thị ⇒ xuất hiện gốc mới</li>
                     <li>Xếp hạng cho gốc mới (hạng 1)</li>
                     <li>Tiếp tục loại bỏ gốc và xếp hạng cho gốc mới...</li>
                   </ul>
                 </div>
-                <div id="QLDA" className="mb-6">
-                  <h3 className="text-gray-700 text-left">Quản lý dự án</h3>
-                  <h4 className="text-gray-700 text-left mt-4">
-                    Dự án (project):
-                  </h4>
+                <div id="QLDA" className="mb-4">
+                  <h3 className="font-bold ">Quản lý dự án</h3>
+                  <h4 className="font-bold  mt-4">Dự án (project):</h4>
                   <ul className="list-disc pl-4">
                     <li>
                       Danh sách công việc (activities/tasks), mỗi công việc có
@@ -988,14 +943,12 @@ if (num[u] == min_num[u]) {
                     </li>
                     <li>Có sự phụ thuộc giữa các công việc</li>
                   </ul>
-                  <h4 className="text-gray-700 text-left mt-4">Vấn đề:</h4>
+                  <h4 className="font-bold  mt-4">Vấn đề:</h4>
                   <ul className="list-disc pl-4">
                     <li>Kế hoạch thực hiện các công việc</li>
                     <li>Ước tính thời gian hoàn thành</li>
                   </ul>
-                  <h4 className="text-gray-700 text-left mt-4">
-                    Mô hình hóa đồ thị:
-                  </h4>
+                  <h4 className="font-bold  mt-4">Mô hình hóa đồ thị:</h4>
                   <ul className="list-disc pl-4">
                     <li>Công việc ⇒ Đỉnh</li>
                     <li>Sự phụ thuộc ⇒ Cung</li>
@@ -1006,7 +959,7 @@ if (num[u] == min_num[u]) {
                       bậc ra 0 đến β
                     </li>
                   </ul>
-                  <h4 className="text-gray-700 text-left mt-4">
+                  <h4 className="font-bold  mt-4">
                     Thời điểm bắt đầu sớm nhất (early start time):
                   </h4>
                   <ul className="list-disc pl-4">
@@ -1015,9 +968,7 @@ if (num[u] == min_num[u]) {
                     </li>
                     <li>t[β]: thời điểm sớm nhất để hoàn thành dự án</li>
                   </ul>
-                  <h4 className="text-gray-700 text-left mt-4">
-                    Tính toán t[u]:
-                  </h4>
+                  <h4 className="font-bold  mt-4">Tính toán t[u]:</h4>
                   <ul className="list-disc pl-4">
                     <li>t[α] = 0</li>
                     <li>
@@ -1025,9 +976,7 @@ if (num[u] == min_num[u]) {
                       d[x]) với x là công việc trước của u
                     </li>
                   </ul>
-                  <h4 className="text-gray-700 text-left mt-4">
-                    Tính toán T[u]:
-                  </h4>
+                  <h4 className="font-bold  mt-4">Tính toán T[u]:</h4>
                   <ul className="list-disc pl-4">
                     <li>Xét các đỉnh theo thứ tự giảm dần</li>
                     <li>T[u] = min(T[v] - d[u]) với v là đỉnh kề của u</li>
@@ -1040,16 +989,14 @@ if (num[u] == min_num[u]) {
                 </div>
               </div>
 
-              <div id="C&CKTT" className="mb-6">
-                <h2 className="text-gray-700 mb-6 text-left">
+              <div id="C&CKTT" className="mb-4">
+                <h2 className="font-bold mb-4 text-left">
                   IV. Cây & Cây Khung Tối Thiểu
                 </h2>
-                <div id="CVH" className="mb-6">
-                  <h3 className="text-gray-700 text-left">Cây vô hướng</h3>
-                  <ul className="list-disc pl-4">
-                    <li>
-                      <strong>Định nghĩa:</strong>
-                    </li>
+                <div id="CVH" className="mb-4">
+                  <h3 className="font-bold ">Cây vô hướng</h3>
+                  <p><strong>Định nghĩa:</strong></p>
+                  <ul className="list-disc ml-4">
                     <li>
                       Cây (tree): đồ thị vô hướng liên thông và không có chu
                       trình.
@@ -1063,7 +1010,7 @@ if (num[u] == min_num[u]) {
                   <p>
                     <strong>Rừng:</strong> đồ thị vô hướng, không có chu trình.
                   </p>
-                  <h4 className="text-gray-700 text-left mt-4">Định lý</h4>
+                  <h4 className="font-bold mt-4">Định lý</h4>
                   <ul className="list-disc pl-4">
                     <li>
                       Định lý 1: Đồ thị G là cây ⇄ giữa mỗi cặp đỉnh có đúng 1
@@ -1087,11 +1034,9 @@ if (num[u] == min_num[u]) {
                     <li>Định lý 7: 1 rừng có n đỉnh, k cây sẽ có n-k cung.</li>
                   </ul>
                 </div>
-                <div id="Kruskal" className="mb-6">
-                  <h3 className="text-gray-700 text-left">
-                    Thuật toán Kruskal
-                  </h3>
-                  <ul className="list-decimal pl-6">
+                <div id="Kruskal" className="mb-4">
+                  <h3>Thuật toán Kruskal</h3>
+                  <ul className="list-decimal ml-4">
                     <li>Sắp xếp các cung của G theo trọng số tăng dần.</li>
                     <li>Khởi tạo cây T rỗng.</li>
                     <li>
@@ -1104,9 +1049,9 @@ if (num[u] == min_num[u]) {
                     </li>
                   </ul>
                 </div>
-                <div id="Prim" className="mb-6">
-                  <h3 className="text-gray-700 text-left">Thuật toán Prim</h3>
-                  <ul className="list-decimal pl-6">
+                <div id="Prim" className="mb-4">
+                  <h3 className="font-bold">Thuật toán Prim</h3>
+                  <ul className="list-decimal ml-4">
                     <li>Khởi tạo cây T rỗng.</li>
                     <li>Chọn 1 đỉnh u bất kỳ làm đỉnh bắt đầu.</li>
                     <li>
@@ -1122,12 +1067,12 @@ if (num[u] == min_num[u]) {
                   </ul>
                 </div>
               </div>
-              <div id="CCH&CKTT" className="mb-6">
-                <h2 className="text-gray-700 mb-6 text-left">
+              <div id="CCH&CKTT" className="mb-4">
+                <h2 className="font-bold mb-4 text-left">
                   V. Cây Có Hướng & Cây Khung Tối Thiểu
                 </h2>
-                <div id="CCH" className="mb-6">
-                  <h3 className="text-gray-700 text-left">Cây có hướng</h3>
+                <div id="CCH" className="mb-4">
+                  <h3 className="font-bold ">Cây có hướng</h3>
                   <ul className="list-decimal pl-6">
                     <li>
                       Tồn tại một đỉnh r được nối với mỗi đỉnh khác bằng một
@@ -1147,9 +1092,7 @@ if (num[u] == min_num[u]) {
                     <li>Gần liên thông mạnh và không có chu trình.</li>
                     <li>Gần liên thông mạnh và có n-1 cung.</li>
                   </ul>
-                  <h4 className="text-gray-700 text-left mt-4">
-                    Cây khung có hướng
-                  </h4>
+                  <h4 className="font-bold  mt-4">Cây khung có hướng</h4>
                   <ul className="list-disc pl-4">
                     <li>Là một cây có hướng.</li>
                     <li>Gồm tất cả các đỉnh của đồ thị G.</li>
@@ -1158,11 +1101,9 @@ if (num[u] == min_num[u]) {
                     </li>
                   </ul>
                 </div>
-                <div id="ChuLiu/Edmonds" className="mb-6">
-                  <h3 className="text-gray-700 text-left">
-                    Thuật toán Chu-Liu/Edmonds
-                  </h3>
-                  <h4 className="text-gray-700 text-left mt-4">Pha co</h4>
+                <div id="ChuLiu/Edmonds" className="mb-4">
+                  <h3 className="font-bold ">Thuật toán Chu-Liu/Edmonds</h3>
+                  <h4 className="font-bold  mt-4">Pha co</h4>
                   <ul className="list-decimal pl-6">
                     <li>Gọi đồ thị gốc là G₀, đặt t = 0.</li>
                     <li>
@@ -1185,7 +1126,7 @@ if (num[u] == min_num[u]) {
                       </ul>
                     </li>
                   </ul>
-                  <h4 className="text-gray-700 text-left mt-4">Pha giãn</h4>
+                  <h4 className="font-bold  mt-4">Pha giãn</h4>
                   <ul className="list-disc pl-6">
                     <li>Giãn cây khung Tₜ₊₁ thành cây khung Tₜ.</li>
                     <li>Mở đỉnh bị gom lại → khôi phục chu trình.</li>
@@ -1199,12 +1140,12 @@ if (num[u] == min_num[u]) {
                 </div>
               </div>
 
-              <div id="CCH&CKTT" className="mb-6">
-                <h2 className="text-gray-700 mb-6 text-left">
+              <div id="CCH&CKTT" className="mb-4">
+                <h2 className="font-bold mb-4 text-left">
                   V. Cây Có Hướng & Cây Khung Tối Thiểu
                 </h2>
-                <div id="CCH" className="mb-6">
-                  <h3 className="text-gray-700 text-left">Cây có hướng</h3>
+                <div id="CCH" className="mb-4">
+                  <h3>Cây có hướng</h3>
                   <ul className="list-decimal pl-6">
                     <li>
                       Tồn tại một đỉnh r được nối với mỗi đỉnh khác bằng một
@@ -1224,9 +1165,7 @@ if (num[u] == min_num[u]) {
                     <li>Gần liên thông mạnh và không có chu trình.</li>
                     <li>Gần liên thông mạnh và có n-1 cung.</li>
                   </ul>
-                  <h4 className="text-gray-700 text-left mt-4">
-                    Cây khung có hướng
-                  </h4>
+                  <p className="font-bold  mt-4">Cây khung có hướng</p>
                   <ul className="list-disc pl-4">
                     <li>Là một cây có hướng.</li>
                     <li>Gồm tất cả các đỉnh của đồ thị G.</li>
@@ -1235,11 +1174,9 @@ if (num[u] == min_num[u]) {
                     </li>
                   </ul>
                 </div>
-                <div id="ChuLiu/Edmonds" className="mb-6">
-                  <h3 className="text-gray-700 text-left">
-                    Thuật toán Chu-Liu/Edmonds
-                  </h3>
-                  <h4 className="text-gray-700 text-left mt-4">Pha co</h4>
+                <div id="ChuLiu/Edmonds" className="mb-4">
+                  <h3 className="font-bold ">Thuật toán Chu-Liu/Edmonds</h3>
+                  <p className="font-bold  mt-4">Pha co</p>
                   <ul className="list-decimal pl-6">
                     <li>Gọi đồ thị gốc là G₀, đặt t = 0.</li>
                     <li>
@@ -1262,7 +1199,7 @@ if (num[u] == min_num[u]) {
                       </ul>
                     </li>
                   </ul>
-                  <h4 className="text-gray-700 text-left mt-4">Pha giãn</h4>
+                  <p className="font-bold  mt-4">Pha giãn</p>
                   <ul className="list-disc pl-6">
                     <li>Giãn cây khung Tₜ₊₁ thành cây khung Tₜ.</li>
                     <li>Mở đỉnh bị gom lại → khôi phục chu trình.</li>
@@ -1274,14 +1211,12 @@ if (num[u] == min_num[u]) {
                     </li>
                   </ul>
                 </div>
-                <div id="LCDTM" className="mb-6">
-                  <h2 className="text-gray-700 mb-6 text-left">
+                <div id="LCDTM" className="mb-4">
+                  <h2 className="font-bold mb-4 text-left">
                     VI. Luồng Cực Đại Trong Mạng
                   </h2>
-                  <div id="LTM" className="mb-6">
-                    <h3 className="text-gray-700 text-left">
-                      Luồng (trên mạng)
-                    </h3>
+                  <div id="LTM" className="mb-4">
+                    <h3 className="font-bold ">Luồng (trên mạng)</h3>
                     <ul className="list-disc pl-6">
                       <li>
                         Luồng trên mạng là dòng chảy từ đỉnh phát (s) đến đỉnh
@@ -1304,8 +1239,8 @@ if (num[u] == min_num[u]) {
                       </li>
                     </ul>
                   </div>
-                  <div id="LC" className="mb-6">
-                    <h3 className="text-gray-700 text-left">Lát Cắt</h3>
+                  <div id="LC" className="mb-4">
+                    <h3 className="font-bold ">Lát Cắt</h3>
                     <p>Một lát cắt tách s và t, gọi là s-t cut.</p>
                     <p>
                       Tập các cung xuất phát từ S đi đến T được gọi là các cung
@@ -1313,8 +1248,8 @@ if (num[u] == min_num[u]) {
                     </p>
                     <p>Khả năng thông qua lát cắt: c(S, T) = ∑ c(u, v).</p>
                   </div>
-                  <div id="L&LC" className="mb-6">
-                    <h3 className="text-gray-700 text-left">Luồng & Lát Cắt</h3>
+                  <div id="L&LC" className="mb-4">
+                    <h3 className="font-bold ">Luồng & Lát Cắt</h3>
                     <ul className="list-disc pl-6">
                       <li>Bổ đề 1: Luồng qua lát cắt = giá trị luồng.</li>
                       <li>
@@ -1331,14 +1266,11 @@ if (num[u] == min_num[u]) {
                       năng thông qua lát cắt hẹp nhất.
                     </p>
                   </div>
-                  <div id="Ford-Fulkerson" className="mb-6">
-                    <h3 className="text-gray-700 text-left">
-                      Thuật Toán Ford - Fulkerson
-                    </h3>
+                  <div id="Ford-Fulkerson" className="mb-4">
+                    <h3 className="font-bold ">Thuật Toán Ford - Fulkerson</h3>
+                    <p><strong>Ý tưởng:</strong> Tìm lát cắt hẹp nhất bằng cách tăng luồng.</p>
                     <ul className="list-disc pl-6">
-                      <li>
-                        Ý tưởng: Tìm lát cắt hẹp nhất bằng cách tăng luồng.
-                      </li>
+                     
                       <li>Bước 1: Khởi tạo luồng hợp lệ (thường là 0).</li>
                       <li>Bước 2: Tìm đường tăng luồng từ s đến t.</li>
                       <li>Bước 3: Lặp đến khi không thể tăng thêm luồng.</li>
