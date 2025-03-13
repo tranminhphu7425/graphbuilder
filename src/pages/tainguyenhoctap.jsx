@@ -510,6 +510,9 @@ const Tainguyenhoctap = () => {
                   <p>
                     2 đồ thị G<sub>1</sub> = &lt;V<sub>1</sub>, E<sub>1</sub>
                     &gt; và G<sub>2</sub> = &lt;V<sub>2</sub>, E<sub>2</sub>&gt;
+                    được gọi là đẳng cấu với nhau nếu tồn tại một song ánh f: V<sub>1</sub>
+                    {" → "} V<sub>2</sub>, v<sub>2</sub> = f(v<sub>1</sub>) ∈ V<sub>2</sub> sao cho:
+                    (x, y) ∈ E<sub>1</sub> {"<=>"} (f(x), f(y)) ∈ V<sub>2</sub>
                   </p>
                 </div>
               </div>
@@ -572,11 +575,11 @@ const Tainguyenhoctap = () => {
                     <li>
                       Đồ thị vô hướng G được gọi là liên thông nếu và chỉ nếu
                       với mọi cặp đỉnh u, v ∈ V luôn tồn tại đường đi (walk) từ
-                      u {"->"} v. Ngược lại, G được gọi là không liên thông.
+                      u {"→"} v. Ngược lại, G được gọi là không liên thông.
                     </li>
                     <li>
                       Đỉnh u được gọi là liên thông với đỉnh v {"<=>"} tồn tại
-                      đường đi từ u {"->"} v.
+                      đường đi từ u {"→"} v.
                     </li>
                     <li>
                       Quan hệ liên thông trên G là tập các cặp có thứ tự (u, v)
@@ -946,7 +949,7 @@ if (num[u] == min_num[u]) {
                   <h3 className="text-gray-700 text-left">
                     Xếp hạng các đỉnh của đồ thị
                   </h3>
-                  <h4 className="text-gray-700 text-left mt-4">
+                  <h4 className="text-black text-left mt-4">
                     Gốc/ nguồn (root/ source) của đồ thị
                   </h4>
                   <ul className="list-disc pl-4">

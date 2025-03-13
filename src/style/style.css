@@ -759,6 +759,10 @@ input[type="number"], textarea, textarea::placeholder {
 
 /* tainguyenhoctap */
 
+pre {
+  white-space: pre-wrap;
+}
+
 #tainguyenhoctap .menu {
   background-color: rgb(255, 255, 255);
   width: 30%;
