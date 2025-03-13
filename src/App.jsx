@@ -21,7 +21,7 @@ const Donate = React.lazy(() => import("./pages/donate.jsx"));
 
 function App() {
     return (
-        <HashRouter>
+        <HashRouter  basename="/graphbuilder">
             <Suspense fallback={<Loading />}>
                 <Routes>
                     <Route path="/" element={<Trangchu />} />
