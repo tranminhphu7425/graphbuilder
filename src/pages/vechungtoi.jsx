@@ -5,7 +5,7 @@ import { initFlowbite } from "flowbite";
 import { Link } from "react-router-dom";
 
 import LogoWithTitle from "../components/LogoWithTitle.jsx";
-
+import donatePic from "/src/assets/img/save-money.png";
 import '../style/style.css';
 
 const Vechungtoi = () => {
@@ -265,20 +265,31 @@ const Vechungtoi = () => {
                 tích cực, nơi mọi người có thể trao đổi kiến thức một cách an
                 toàn, hiệu quả và sáng tạo.
               </p>
+              <h2 className="text-2xl font-semibold mb-4">NHỮNG DỰ ÁN KHÁC CỦA TÔI</h2>
+              <p className="text-gray-700 mb-4">
+                <Link
+                  to="https://classroom.google.com/c/NjExNjQ5MzQzNTI2?cjc=x3yvztf"
+                  className="items-center flex m-auto w-fit text-white px-4 py-2 rounded-full bg-[linear-gradient(135deg,#006a67,#3f9d99)] transition-all duration-300 hover:bg-[linear-gradient(135deg,#004442,#1c6360)] hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0.5 active:shadow-md px-4 py-2 rounded-lg text-white font-semibold"
+                >
+                 
+                  <span>Lớp học kiến trúc máy tính</span>
+                </Link>
+              </p>
               <h2 className="text-2xl font-semibold mb-4">ỦNG HỘ</h2>
               <p className="text-gray-700 mb-4">
                 Nguồn tài trợ của các bạn sẽ giúp nhóm chúng tôi duy trì và phát
                 triển những dự án tiếp theo
               </p>
 
-              <div className="flex items-center w-full">
+              <div className="items-center w-full">
                 <Link
                   to="/donate"
-                  className="items-center flex m-auto w-fit text-white px-4 py-2 rounded-full bg-[linear-gradient(135deg,#006a67,#3f9d99)] transition-all duration-300 hover:bg-[linear-gradient(135deg,#004442,#1c6360)] hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0.5 active:shadow-md px-4 py-2 rounded-lg text-white font-semibold"
+                  className="items-center flex m-auto mb-4 w-fit text-white px-4 py-2 rounded-full bg-[linear-gradient(135deg,#006a67,#3f9d99)] transition-all duration-300 hover:bg-[linear-gradient(135deg,#004442,#1c6360)] hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0.5 active:shadow-md px-4 py-2 rounded-lg text-white font-semibold"
                 >
-                  <img src="../img/save-money.png" alt="" />
+                  <img src={donatePic} alt="" />
                   <span>Donate</span>
                 </Link>
+                <p className="text-gray-700 mb-4"><strong>Lưu ý: </strong>Sử dụng tài khoản Google cá nhân để đăng nhập</p>
               </div>
 
               <h2 className="text-2xl font-semibold mb-4">LIÊN HỆ</h2>

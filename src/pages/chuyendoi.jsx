@@ -282,7 +282,7 @@ const Chuyendoi = () => {
                     value={graphInput}
                     onChange={(e) => setGraphInput(e.target.value)}
                 ></textarea>
-                <button type="submit"  className="px-6 py-2 bg-green-600 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition duration-200 cursor-pointer">Chuyển đổi</button>
+                <button type="submit"  className="flex w-fit text-white px-4 py-2 rounded-full bg-[linear-gradient(135deg,#006a67,#3f9d99)] transition-all duration-300 hover:bg-[linear-gradient(135deg,#004442,#1c6360)] hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0.5 active:shadow-md px-4 py-2 rounded-lg text-white font-semibold">Chuyển đổi</button>
             </form>
 
             <div className="flex mt-3">
