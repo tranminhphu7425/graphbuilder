@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import updateMenuHeight from "../tool/adjustHeightMenu.js";
 import configFullPage from "../tool/configfullpage.js";
 import { initFlowbite } from "flowbite";
 import { Link, useLocation } from "react-router-dom";
@@ -11,6 +12,7 @@ const Tainguyenhoctap = () => {
   useEffect(() => {
     configFullPage();
     initFlowbite();
+    updateMenuHeight();
   }, []);
 
   useEffect(() => {
