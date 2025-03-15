@@ -1,2 +1,8 @@
-import 'vis-network';
-export default window.vis;
+import { DataSet, Network } from 'vis-network/standalone';
+
+const vis = {
+  DataSet,
+  Network
+};
+
+export default vis;
