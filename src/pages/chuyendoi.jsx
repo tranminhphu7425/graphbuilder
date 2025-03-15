@@ -251,7 +251,7 @@ const Chuyendoi = () => {
         </header>
 
         <main className="p-2 h-fit fullmain" id="chuyendoi">
-          <section className="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+          <section className="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-[0_0_20px_rgba(0,0,0,0.144)]">
             <h1 className="w-full text-3xl font-bold text-center mb-6">
               Chuyển đổi giữa các định dạng
             </h1>

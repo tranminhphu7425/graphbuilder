@@ -271,6 +271,7 @@ h2 {
   height: fit-content;
   width: 230px;
   min-width: 230px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.144);
 }
 #munberNodes {
   grid-area: munberNodes;
@@ -353,6 +354,7 @@ input:focus + label {
   position: relative;
   padding: 0;
   height: 100%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.144);
 }
 #mynetwork {
   width: 100%;
@@ -774,6 +776,10 @@ pre {
   height: 720px;
   overflow-y: scroll;
   margin: 0px;
+  position: sticky;
+  top: 18px;
+  z-index: 1000;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
 
 
 }
@@ -827,7 +833,7 @@ pre {
 
 #tainguyenhoctap section , #tainguyenhoctap .menu{
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.144);
 }
 @media screen and (max-width: 1100px) {
   #tainguyenhoctap main{
@@ -837,8 +843,11 @@ pre {
   #tainguyenhoctap .menu {
     width: 100%;
     max-width: 100%;
-    position: relative;
+    position:static;
     height: auto;
+    overflow-y: initial;
+    ;
+    
   }
   #tainguyenhoctap section {
     width: 100%;
