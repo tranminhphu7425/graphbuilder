@@ -2,6 +2,32 @@
 
 Welcome to **GraphBuilder**, a comprehensive platform designed to provide visual examples and practical tools for understanding graph theory. Whether you're a student, educator, or enthusiast, our website offers a wide range of resources to help you explore and master the concepts, algorithms, and applications of graph theory.
 
+##Support and Donations
+GraphBuilder is a non-profit project developed with the goal of providing free tools for creating and analyzing graphs. However, to maintain and improve the quality of our services, we rely on the support of our community. Your donations help us keep the platform running and enable us to develop new features and educational resources.
+
+Why Donate?
+Your contributions are crucial for the following reasons:
+
+Server Maintenance: Help us cover the costs of server hosting and infrastructure.
+
+Feature Development: Support the development of new features and improvements to enhance user experience.
+
+Educational Initiatives: Fund research and educational activities related to graph theory.
+
+How to Donate
+You can support GraphBuilder through the following methods:
+
+Bank Transfer
+You can make a donation via bank transfer to the following account:
+
+Bank: Vietcombank
+
+Account Number: 9911550054
+
+Account Holder: Trần Minh Phú
+
+Thank You!
+
 ## Table of Contents
 - [Introduction](#introduction)
 - [Features](#features)
