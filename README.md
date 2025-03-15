@@ -2,7 +2,7 @@
 
 Welcome to **GraphBuilder**, a comprehensive platform designed to provide visual examples and practical tools for understanding graph theory. Whether you're a student, educator, or enthusiast, our website offers a wide range of resources to help you explore and master the concepts, algorithms, and applications of graph theory.
 
-##Support and Donations
+## Support and Donations
 GraphBuilder is a non-profit project developed with the goal of providing free tools for creating and analyzing graphs. However, to maintain and improve the quality of our services, we rely on the support of our community. Your donations help us keep the platform running and enable us to develop new features and educational resources.
 
 Why Donate?
