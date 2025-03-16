@@ -47,7 +47,7 @@ const Timlienthong = () => {
     setFound(1);
   };
 
-  TimlienthongEffect(nodes, edges);
+  TimlienthongEffect();
 
   return (
     <>
