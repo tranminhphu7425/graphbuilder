@@ -163,6 +163,7 @@ export const DuyetdothiEffect = () => {
           hierarchical: {
             direction: "UD",
             sortMethod: "directed",
+            shakeTowards: "roots",
           },
         },
       };
